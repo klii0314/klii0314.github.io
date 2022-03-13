@@ -17,7 +17,7 @@
 
 
 <div class="note note-primary">
-            <ul><li><p><a href="https://www.luogu.com.cn/problem/CF685C">$\texttt{CF685C}$</a>口胡：考虑将曼哈顿距离转化为切比雪夫距离：<br>设选定的整点为 $(x,y,z)$，与点 $i$ 的曼哈顿距离为 $|x-x_i|+|y-y_i|+|z-z_i|$，将其化为一个绝对值：</p><ul><li>$|x+y+z-(x_i+y_i+z_i)|$</li><li>$|x+y-z-(x_i+y_i-z_i)|$</li><li>$|x-y+z-(x_i-y_i+z_i)|$</li><li>$|x-y-z-(x_i-y_i-z_i)|$</li></ul><p>两点间的切比雪夫距离即为这四种情况的最大值，于是将每个<strong>三维点</strong>变成<strong>四维点</strong>转化就完成了。<br>然后考虑转化后怎么做，</p></li></ul>
+            <ul><li><p><a href="https://www.luogu.com.cn/problem/CF685C">$\text{CF685C}$</a>：<br>考虑将曼哈顿距离转化为切比雪夫距离：<br>设选定的整点为 $(x,y,z)$，与点 $i$ 的曼哈顿距离为 $|x-x_i|+|y-y_i|+|z-z_i|$，将其化为一个绝对值：</p><ul><li>$|x+y+z-(x_i+y_i+z_i)|$</li><li>$|x+y-z-(x_i+y_i-z_i)|$</li><li>$|x-y+z-(x_i-y_i+z_i)|$</li><li>$|x-y-z-(x_i-y_i-z_i)|$</li></ul><p>两点间的切比雪夫距离即为这四种情况的最大值，于是将每个<strong>三维点</strong>变成<strong>四维点</strong>转化就完成了。<br>然后考虑转化后怎么做，</p></li></ul>
           </div>]]></content>
       <categories>
         <category>记录</category>
