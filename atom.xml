@@ -6,7 +6,7 @@
   <link href="https://klii0314.github.io/atom.xml" rel="self"/>
   
   <link href="https://klii0314.github.io/"/>
-  <updated>2022-03-13T14:30:09.653Z</updated>
+  <updated>2022-03-14T05:47:25.075Z</updated>
   <id>https://klii0314.github.io/</id>
   
   <author>
@@ -17,20 +17,14 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>联合省选2022前的记录</title>
-    <link href="https://klii0314.github.io/2022/03/11/%E8%81%94%E5%90%88%E7%9C%81%E9%80%892022%E5%89%8D%E7%9A%84%E8%AE%B0%E5%BD%95/"/>
-    <id>https://klii0314.github.io/2022/03/11/%E8%81%94%E5%90%88%E7%9C%81%E9%80%892022%E5%89%8D%E7%9A%84%E8%AE%B0%E5%BD%95/</id>
-    <published>2022-03-11T14:01:44.000Z</published>
-    <updated>2022-03-13T14:30:09.653Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="3-12"><a href="#3-12" class="headerlink" title="3.12"></a>3.12</h1><div>            <input type="checkbox" disabled="" checked="checked">人生第一场 $\text{ACM}$          </div><div class="note note-success">            <ul><li>$\text{THUPC2022}$ 初赛 $\text{rk259}$ 被干碎了（（</li></ul>          </div><h1 id="3-13"><a href="#3-13" class="headerlink" title="3.13"></a>3.13</h1><div class="note note-primary">            <ul><li>补了 <a href="https://codeforces.com/problemset/problem/1641/C">$\text{CF1641C}$</a> ，赛时写的做法过于复杂，利用好这题 “保证合法” 的性质还是比较重要的。</li></ul>          </div><div class="note note-primary">            <ul><li><p><a href="https://www.luogu.com.cn/problem/CF685C">$\text{CF685C}$</a>：<br>考虑将曼哈顿距离转化为切比雪夫距离：<br>设选定的整点为 $(x,y,z)$，与点 $i$ 的曼哈顿距离为 $|x-x_i|+|y-y_i|+|z-z_i|$，将其化为一个绝对值：</p><ul><li>$|x+y+z-(x_i+y_i+z_i)|$</li><li>$|x+y-z-(x_i+y_i-z_i)|$</li><li>$|x-y+z-(x_i-y_i+z_i)|$</li><li>$|x-y-z-(x_i-y_i-z_i)|$</li></ul><p>两点间的切比雪夫距离即为这四种情况的最大值，于是将每个<strong>三维点</strong>变成<strong>四维点</strong>转化就完成了。<br>然后考虑转化后怎么做，</p></li></ul>          </div>]]></content>
-    
-    
-    <summary type="html">From 3.12 to 4.5</summary>
+    <title>test</title>
+    <link href="https://klii0314.github.io/2022/03/14/test/"/>
+    <id>https://klii0314.github.io/2022/03/14/test/</id>
+    <published>2022-03-14T05:47:25.000Z</published>
+    <updated>2022-03-14T05:47:25.075Z</updated>
     
     
     
-    <category term="记录" scheme="https://klii0314.github.io/categories/%E8%AE%B0%E5%BD%95/"/>
     
     
   </entry>
