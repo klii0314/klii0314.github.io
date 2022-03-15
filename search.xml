@@ -1,53 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>「雅礼集训 2018 Day7」A</title>
-      <link href="/2022/03/15/%E3%80%8C%E9%9B%85%E7%A4%BC%E9%9B%86%E8%AE%AD-2018-Day7%E3%80%8DA/"/>
-      <url>/2022/03/15/%E3%80%8C%E9%9B%85%E7%A4%BC%E9%9B%86%E8%AE%AD-2018-Day7%E3%80%8DA/</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://loj.ac/p/6507">$\text{link}$</a></p><p>用线段树维护 $And,Or,Min$ 值，对于操作：</p><ul><li><p>$\text{And x}$，设当前点为 $u$，区间值分别为 $ta(u),to(u),tm(u)$：</p><ul><li><p>若 $x \And to(u) = to(u)$ ,则该操作对当前区间 $[l(u),r(u)]$ 的值无效；</p></li><li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p></li><li><p>否则直接暴力递归下去。</p></li></ul></li><li><p>$\text{Or x}$，类似的有：</p><ul><li><p>若 $ta(u) \And x = x$ ,则该操作对当前区间无效；</p></li><li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p></li><li><p>否则直接暴力递归下去。</p></li></ul></li></ul><p>分析一下时间复杂度：每次暴力递归下去都会使得当前区间内所有数的某一位相同，每个区间不同位的总数为 $\mathrm{O(n\log n\log 值域)}$，时间复杂度即为 $\mathrm{O(n\log n\log 值域)}$ 。</p><p>$\text{Code:}$</p><div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();    <span class="hljs-keyword">return</span> f ? -x : x;}<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">5e5</span> + <span class="hljs-number">5</span>;<span class="hljs-type">int</span> n, q, a[maxn];<span class="hljs-keyword">namespace</span> _Smt {    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {        <span class="hljs-type">int</span> a, o, m, tg1, tg2;        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">aladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a &amp;= x; o &amp;= x; m &amp;= x; tg1 = ~tg1 ? tg1 &amp; x : x; tg2 &amp;= x;}        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">oladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a |= x; o |= x; m |= x; tg2 |= x; tg1 = ~tg1 ? tg1 ^ (tg1 &amp; x) : tg1;}    } t[maxn &lt;&lt; <span class="hljs-number">2</span>];    <span class="hljs-meta">#<span class="hljs-keyword">define</span> ls u &lt;&lt; 1</span>    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rs u &lt;&lt; 1 | 1</span>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">up</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{        t[u].a = t[ls].a &amp; t[rs].a;        t[u].o = t[ls].o | t[rs].o;        t[u].m = <span class="hljs-built_in">min</span>(t[ls].m, t[rs].m);    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{        <span class="hljs-keyword">if</span> (~t[u].tg1) t[ls].<span class="hljs-built_in">aladd</span>(t[u].tg1), t[rs].<span class="hljs-built_in">aladd</span>(t[u].tg1);        <span class="hljs-keyword">if</span> (t[u].tg2) t[ls].<span class="hljs-built_in">oladd</span>(t[u].tg2), t[rs].<span class="hljs-built_in">oladd</span>(t[u].tg2);        t[u].tg1 = <span class="hljs-number">-1</span>; t[u].tg2 = <span class="hljs-number">0</span>;    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>{        t[u].tg1 = <span class="hljs-number">-1</span>;        <span class="hljs-keyword">if</span> (l == r) {            t[u].a = t[u].o = t[u].m = a[l];            <span class="hljs-keyword">return</span>;        }        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;        <span class="hljs-built_in">build</span>(ls, l, mid);        <span class="hljs-built_in">build</span>(rs, mid + <span class="hljs-number">1</span>, r);        <span class="hljs-built_in">up</span>(u);    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf1</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{        <span class="hljs-keyword">if</span> ((z &amp; t[u].o) == t[u].o) <span class="hljs-keyword">return</span>;        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {            <span class="hljs-keyword">if</span> (l == r) {                t[u].<span class="hljs-built_in">aladd</span>(z);                <span class="hljs-keyword">return</span>;            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {                t[u].<span class="hljs-built_in">aladd</span>(z);                <span class="hljs-keyword">return</span>;            }        }        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf1</span>(ls, l, mid, x, y, z);        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf1</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);        <span class="hljs-built_in">up</span>(u);    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{        <span class="hljs-keyword">if</span> ((t[u].a &amp; z) == z) <span class="hljs-keyword">return</span>;        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {            <span class="hljs-keyword">if</span> (l == r) {                t[u].<span class="hljs-built_in">oladd</span>(z);                <span class="hljs-keyword">return</span>;            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {                t[u].<span class="hljs-built_in">oladd</span>(z);                <span class="hljs-keyword">return</span>;            }        }        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf2</span>(ls, l, mid, x, y, z);        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf2</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);        <span class="hljs-built_in">up</span>(u);    }    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">qry</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) <span class="hljs-keyword">return</span> t[u].m;        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;        <span class="hljs-built_in">pd</span>(u);        <span class="hljs-keyword">if</span> (x &gt; mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y);        <span class="hljs-keyword">if</span> (y &lt;= mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(ls, l, mid, x, y);        <span class="hljs-keyword">return</span> <span class="hljs-built_in">min</span>(<span class="hljs-built_in">qry</span>(ls, l, mid, x, y), <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y));    }}<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> _Smt;<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{    n = <span class="hljs-built_in">read</span>(); q = <span class="hljs-built_in">read</span>();    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) a[i] = <span class="hljs-built_in">read</span>();    <span class="hljs-built_in">build</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n);    <span class="hljs-keyword">while</span> (q--) {        <span class="hljs-type">int</span> opt, l, r, x;        opt = <span class="hljs-built_in">read</span>(); l = <span class="hljs-built_in">read</span>(); r = <span class="hljs-built_in">read</span>();        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">1</span>) {            x = <span class="hljs-built_in">read</span>();            <span class="hljs-built_in">mdf1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);        }        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">2</span>) {            x = <span class="hljs-built_in">read</span>();            <span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);        }        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">3</span>) {            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, <span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r));        }    }    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;}</code></pre></div>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>联合省选2022前的记录</title>
+    <url>/2022/03/11/%E8%81%94%E5%90%88%E7%9C%81%E9%80%892022%E5%89%8D%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="f2ec1636ca4e892c0701d685fea5092fec2f3eec06d531995089bcb1cbc33258">cd67862bdd141bb2aa1c78ab2fd399f6025480595d1e8c8c68d7bb7df6fc241012de68bb08422b6f66aa40e30ff3ba9897f4891827ea4427b65670833740266d8d21bb3e199773503e6edc7740dc576743fb6d95d69b06fbcc02676aea6d19c5ac639d10dfd106bb9dc39850099af7ff65d616d0f01194b07328c65d30bd35f1d4ef0d847d78998ec34cc7bde7144dbb6ec7807c29301eec9a59e20d98c7b49e2b3305ca621c9fb133c006f3b23b17b05a78ff540ebfa2fd0fa42ac5b59e26efc9a4153b24fb14b5a475fe221f73c49e51b2722abf28548597639c30b80d6d29785675e123144650e6a53cd47553b94846a1e256dda31713ef698f9c83be6e4ce31159d0a4e5a87ae12f94c3e3658c401aa33640b1c004c8fe61d1717966e667b6dc7ae3134fa6d6a3225e18ab920212836639db9b6f5047b38f09e09f1202596358b5a7d703c525f385b2598c2a3f8094ed396a7ef0b52ed9fda5393eaaeef0a5d5719c2db14b243bf12bec10fffcec50e9a8e201e073ffee8f228ad9d173cb19a6eee0c6818823483c4c841fccd76545763ba55ca7bf802ae8145dd4d12c4a126137ae710c4ef0b0d73aefe06fbc947a8a893ef5f10607856dfe195e8c8eddaabfc256466c8938f8f5341e98037a67ac34cc5b2896f5f3a5c0ac92b8d95806202d94982be671aac05786e410bf31aca34938968b194811a91424a17db4b4f776436a43dc1d16db45bd4e9fc1734cf223d6057a2ad06e43329ae79df55d10f01294e67de7c7af95b21e44139f3ab3f221ea6965cf89c48fbfa3e1be1e27181f4d9079d8a290b6e100afa920dba627c73ab0d718ccb70870bb0d2169e4bfaf4baad5bb74f7cfe3978551bf5740be864161baf68682c47e0da3a6257921b4c0e5232ea23f1240a5e9b7eb9532d4e98e387e42f3e29271a948156a9fcb39471b093f9d9db5ccaf78d7921ca7f8a800ccbd08e2002753721700c823cb3b5994b70e62e63d0ed162efaf93a123bb1977d7f9d3b6cf337b17788dff9ef4c1322ea6758d99ab4a64b4e76aaf7cc25ffe1dbf28148328b30a88c6961d7dddf45c759c599d139182fd374856c9934ab0cb19c940b016d6e0b2812f2d9031a2c70adacbb7feb5f4bfd63809abe643ded41d7a82f7b0b6b683f3e2578320bc625a281dc0043ef54714e7807580df9981e5cc14c28f17a8dd399ae27618cafe854d20a42386222fc2d61a7b30e1236ffe7a3833c4af2c71e0979256d2ec085f3d5c5f37e4ef221666871ce57d72e688ce09d3ae446b41be33cc07041bbe0db1e070797660dddc6e06a5a07a85b750706eefa7c0b0f6252905d3d7f5f3d20d1b176e385d716ba074289a58301564e5dc0af204a32d95b6590c7b2b16aae3ea4b04d8cde401c9daae02e529f4993e5e6c394de6fe4bb8391429f77490e04ff40927f85edb5e8c9e9b762fa0cd920afd42fb484e442767dadec10ee3b577e345d55e0aaf66d1be0eaa9fea6d75cd0f303958e68ae1bf730fd96a678ee85cb8c369160bce2558c5066526f7427fc054b7cf6dd1b09edbb44086a8070b86280d6996f6a58a812a80c01361fddd719c26635093290dd244fa60c6637fba4f9210940eacc8b48f20554e1efe45bda855d6f27cc191cb025b8bb45cabe6cbe52ac0ac851f3d8abacb8c303fb7feb22f66520f2bf5a2365aa9185f9da844ea57b3a007ed65d91f02608b2a621933c7156d2b83ec87c36fb5fb1cf417d8a466bc4d87f25ee1a08144f46aeacc2f1c3dd4ec32453400bc948b347cfecd217a83eaecb36b4efbc3128eedfba89026218098462ae8e69b4885a20b54918d366ceb836d343973b272972e611466f0dadaf02cf796ad1993bdd105a43fcf41b6401cfa72d3f543a17133d0036c3f08f16db598b6edcafbea3730fde8fc80c731f3888fcf35065672ef344e7cb85cd11410497f9fbb2978fb6d01093987707e530262b382c60d89d43f283fddc7144870790fc7a89226401d3fa8435585ce1cda78592422611bdc26424b3c3bd02d960d0aeb5bcb781cc52a1bb644b3ca2b3c998333244c2ac2969486a6e42b1419a545ce542b40d50ae2281849b5ed67a8460c6754a3b89f4579bb1af614a5c806301401a56079db61cfb3b6a1e741a113c0b2d91782ec1bea4f374f0f4a7c6aaea8b3a03a734c8516dff03d15c114f25e2f6104da41b83bc9b351fe6408ef2a2085998c9e577ed1974fa0152dce8032191ced18714071d580579cfe59dda55616f17706fed51ede5141b12a008eb61545901687a56d725b732d5e57541b1b822923b796b403bd504e07861d89bc63d620d7c0b6dfdccac39537537b61abb0ee16b76678f6aac4b21e402c4105c2398535de9e0194226f6be8b8b76d88a6e543d4c583998ab1dd30fb20c33d820163ca9d44c5e81c7b105672cbd19e7539dffa0b9268767171e748902ba070f2d010ff61a1377a86d9d13f4cfc821b8909c2d5bef12d7e7e49f3b741724b5e07c51af7db02274f6a4a4fc48d21a62727e080e972b3e4493a7cde65fd74a466027b7554bd19a79fbc1de4c72c7a52ed1e84495e57eb03ffed0a2af20f62fff401e6797771dc903ab431b1299f3c8b9cb7d46b7eb7ca5144d576fb6c45098b5b438850dc4cfc32f6027a72c9f066bd55fd0b9e4cbdea75641e4815a45f94b4cae2c3b32eb280353c17c8f4d6c3e637e50085fa3893cebb62166b9a009f29a7de2431ef05cb92e619f4b2b656c51385d38b755b8c54ab71b7bc27097310fd6bf0e98e72520c14da84bcd8a0ff9c24a8ad64785badcb0cb7051c25b947eb08a8bc72e0763fd9fdad643cae65603f6ad4d3b6bb352059f15186b3ca82c2e3d655010691e7a687c4625f451ff34b791ee993a7d9a0ebe96e83aecab7f77f49077ee00eecb309f023afed1d5fc630f3aea70694a42c67e7ae23ec9db734e72557a0ed2c57d76888dc27f6589bfeac719868c8d0135828844e15978ec41e756481df59ae7beba0ff7f90b2a8e6543683628dd4dd95848cf5c7272d7265032e2172b5dcaa7cd7a4fccb61d11f282a87d3f1c1356aa8e06e147453d89ea26bcf24e043dcb7f6acf990b9ffdc5618469f6f7f0215ec56c7e0b034ae5949bc68a73a58820c425e73a91925fd7d76d8dbdd3be245fa540fdce9fb1318e577337d967fb36197142a3e1727b3e646c14e6f3f53e0cc6e165848059d1f591d19cfab7490a0f41ed898298e514031f51eb7de0848b8a6221d5337e9a1cae3c0d725fe0e8c1c00d9682c81a0394543811c4671bb6740957d19584717b5972ad642bc3bcbf7442c74901b3ad84079b9e6c09665c91787ed27e36f48b0f71a15242465e68ee6da2952a925016c68e2c053a677ef0f0f609393c210b3ae5b7422265b5c0c21cfd1a123939b5b9d</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-          
-          <category> 题解 </category>
-          
+        <category>记录</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 线段树 </tag>
-            
-            <tag> 势能分析 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>联合省选2022前的记录</title>
-      <link href="/2022/03/11/%E8%81%94%E5%90%88%E7%9C%81%E9%80%892022%E5%89%8D%E7%9A%84%E8%AE%B0%E5%BD%95/"/>
-      <url>/2022/03/11/%E8%81%94%E5%90%88%E7%9C%81%E9%80%892022%E5%89%8D%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
-      
-        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="0f0543a4317c968c06d956f7cdae1c80959ef5ed258534d4d1df99a9374cc5d5">cd67862bdd141bb2aa1c78ab2fd399f6025480595d1e8c8c68d7bb7df6fc241012de68bb08422b6f66aa40e30ff3ba9897f4891827ea4427b65670833740266d8d21bb3e199773503e6edc7740dc576743fb6d95d69b06fbcc02676aea6d19c5ac639d10dfd106bb9dc39850099af7ff65d616d0f01194b07328c65d30bd35f1d4ef0d847d78998ec34cc7bde7144dbb6ec7807c29301eec9a59e20d98c7b49e2b3305ca621c9fb133c006f3b23b17b05a78ff540ebfa2fd0fa42ac5b59e26efc9a4153b24fb14b5a475fe221f73c49e51b2722abf28548597639c30b80d6d29785675e123144650e6a53cd47553b94846a1e256dda31713ef698f9c83be6e4ce31159d0a4e5a87ae12f94c3e3658c401aa33640b1c004c8fe61d1717966e667b6dc7ae3134fa6d6a3225e18ab920212836639db9b6f5047b38f09e09f1202596358b5a7d703c525f385b2598c2a3f8094ed396a7ef0b52ed9fda5393eaaeef0a5d5719c2db14b243bf12bec10fffcec50e9a8e201e073ffee8f228ad9d173cb19a6eee0c6818823483c4c841fccd76545763ba55ca7bf802ae8145dd4d12c4a126137ae710c4ef0b0d73aefe06fbc947a8a893ef5f10607856dfe195e8c8eddaabfc256466c8938f8f5341e98037a67ac34cc5b2896f5f3a5c0ac92b8d95806202d94982be671aac05786e410bf31aca34938968b194811a91424a17db4b4f776436a43dc1d16db45bd4e9fc1734cf223d6057a2ad06e43329ae79df55d10f01294e67de7c7af95b21e44139f3ab3f221ea6965cf89c48fbfa3e1be1e27181f4d9079d8a290b6e100afa920dba627c73ab0d718ccb70870bb0d2169e4bfaf4baad5bb74f7cfe3978551bf5740be864161baf68682c47e0da3a6257921b4c0e5232ea23f1240a5e9b7eb9532d4e98e387e42f3e29271a948156a9fcb39471b093f9d9db5ccaf78d7921ca7f8a800ccbd08e2002753721700c823cb3b5994b70e62e63d0ed162efaf93a123bb1977d7f9d3b6cf337b17788dff9ef4c1322ea6758d99ab4a64b4e76aaf7cc25ffe1dbf28148328b30a88c6961d7dddf45c759c599d139182fd374856c9934ab0cb19c940b016d6e0b2812f2d9031a2c70adacbb7feb5f4bfd63809abe643ded41d7a82f7b0b6b683f3e2578320bc625a281dc0043ef54714e7807580df9981e5cc14c28f17a8dd399ae27618cafe854d20a42386222fc2d61a7b30e1236ffe7a3833c4af2c71e0979256d2ec085f3d5c5f37e4ef221666871ce57d72e688ce09d3ae446b41be33cc07041bbe0db1e070797660dddc6e06a5a07a85b750706eefa7c0b0f6252905d3d7f5f3d20d1b176e385d716ba074289a58301564e5dc0af204a32d95b6590c7b2b16aae3ea4b04d8cde401c9daae02e529f4993e5e6c394de6fe4bb8391429f77490e04ff40927f85edb5e8c9e9b762fa0cd920afd42fb484e442767dadec10ee3b577e345d55e0aaf66d1be0eaa9fea6d75cd0f303958e68ae1bf730fd96a678ee85cb8c369160bce2558c5066526f7427fc054b7cf6dd1b09edbb44086a8070b86280d6996f6a58a812a80c01361fddd719c26635093290dd244fa60c6637fba4f9210940eacc8b48f20554e1efe45bda855d6f27cc191cb025b8bb45cabe6cbe52ac0ac851f3d8abacb8c303fb7feb22f66520f2bf5a2365aa9185f9da844ea57b3a007ed65d91f02608b2a621933c7156d2b83ec87c36fb5fb1cf417d8a466bc4d87f25ee1a08144f46aeacc2f1c3dd4ec32453400bc948b347cfecd217a83eaecb36b4efbc3128eedfba89026218098462ae8e69b4885a20b54918d366ceb836d343973b272972e611466f0dadaf02cf796ad1993bdd105a43fcf41b6401cfa72d3f543a17133d0036c3f08f16db598b6edcafbea3730fde8fc80c731f3888fcf35065672ef344e7cb85cd11410497f9fbb2978fb6d01093987707e530262b382c60d89d43f283fddc7144870790fc7a89226401d3fa8435585ce1cda78592422611bdc26424b3c3bd02d960d0aeb5bcb781cc52a1bb644b3ca2b3c998333244c2ac2969486a6e42b1419a545ce542b40d50ae2281849b5ed67a8460c6754a3b89f4579bb1af614a5c806301401a56079db61cfb3b6a1e741a113c0b2d91782ec1bea4f374f0f4a7c6aaea8b3a03a734c8516dff03d15c114f25e2f6104da41b83bc9b351fe6408ef2a2085998c9e577ed1974fa0152dce8032191ced18714071d580579cfe59dda55616f17706fed51ede5141b12a008eb61545901687a56d725b732d5e57541b1b822923b796b403bd504e07861d89bc63d620d7c0b6dfdccac39537537b61abb0ee16b76678f6aac4b21e402c4105c2398535de9e0194226f6be8b8b76d88a6e543d4c583998ab1dd30fb20c33d820163ca9d44c5e81c7b105672cbd19e7539dffa0b9268767171e748902ba070f2d010ff61a1377a86d9d13f4cfc821b8909c2d5bef12d7e7e49f3b741724b5e07c51af7db02274f6a4a4fc48d21a62727e080e972b3e4493a7cde65fd74a466027b7554bd19a79fbc1de4c72c7a52ed1e84495e57eb03ffed0a2af20f62fff401e6797771dc903ab431b1299f3c8b9cb7d46b7eb7ca5144d576fb6c45098b5b438850dc4cfc32f6027a72c9f066bd55fd0b9e4cbdea75641e4815a45f94b4cae2c3b32eb280353c17c8f4d6c3e637e50085fa3893cebb62166b9a009f29a7de2431ef05cb92e619f4b2b656c51385d38b755b8c54ab71b7bc27097310fd6bf0e98e72520c14da84bcd8a0ff9c24a8ad64785badcb0cb7051c25b947eb08a8bc72e0763fd9fdad643cae65603f6ad4d3b6bb352059f15186b3ca82c2e3d655010691e7a687c4625f451ff34b791ee993a7d9a0ebe96e83aecab7f77f49077ee00eecb309f023afed1d5fc630f3aea70694a42c67e7ae23ec9db734e72557a0ed2c57d76888dc27f6589bfeac719868c8d0135828844e15978ec41e756481df59ae7beba0ff7f90b2a8e6543683628dd4dd95848cf5c7272d7265032e2172b5dcaa7cd7a4fccb61d11f282a87d3f1c1356aa8e06e147453d89ea26bcf24e043dcb7f6acf990b9ffdc5618469f6f7f0215ec56c7e0b034ae5949bc68a73a58820c425e73a98163d877373c0be98b5e1c7f32ac98cbd1c3f8bce1bfa660d0b62780af64e9ae70f26ac7c37e193c5501193ae926f70f77f5219f7e8f542a251c019b03e0766fc6c632be3c043053bc68b73433753705</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      
-      
+  </entry>
+  <entry>
+    <title>「雅礼集训 2018 Day7」A</title>
+    <url>/2022/03/15/%E3%80%8C%E9%9B%85%E7%A4%BC%E9%9B%86%E8%AE%AD-2018-Day7%E3%80%8DA/</url>
+    <content><![CDATA[<p><a href="https://loj.ac/p/6507">$\text{link}$</a></p>
+<p>用线段树维护 $And,Or,Min$ 值，对于操作：</p>
+<ul>
+<li><p>$\text{And x}$，设当前点为 $u$，区间值分别为 $ta(u),to(u),tm(u)$：</p>
+<ul>
+<li><p>若 $x \And to(u) = to(u)$ ,则该操作对当前区间 $[l(u),r(u)]$ 的值无效；</p>
+</li>
+<li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p>
+</li>
+<li><p>否则直接暴力递归下去。</p>
+</li>
+</ul>
+</li>
+<li><p>$\text{Or x}$，类似的有：</p>
+<ul>
+<li><p>若 $ta(u) \And x = x$ ,则该操作对当前区间无效；</p>
+</li>
+<li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p>
+</li>
+<li><p>否则直接暴力递归下去。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>分析一下时间复杂度：每次暴力递归下去都会使得当前区间内所有数的某一位相同，每个区间不同位的总数为 $\mathrm{O(n\log n\log 值域)}$，时间复杂度即为 $\mathrm{O(n\log n\log 值域)}$ 。</p>
+<p>$\text{Code:}$</p>
+<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">return</span> f ? -x : x;
+}
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">5e5</span> + <span class="hljs-number">5</span>;
+<span class="hljs-type">int</span> n, q, a[maxn];
+<span class="hljs-keyword">namespace</span> _Smt {
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {
+        <span class="hljs-type">int</span> a, o, m, tg1, tg2;
+        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">aladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a &amp;= x; o &amp;= x; m &amp;= x; tg1 = ~tg1 ? tg1 &amp; x : x; tg2 &amp;= x;}
+        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">oladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a |= x; o |= x; m |= x; tg2 |= x; tg1 = ~tg1 ? tg1 ^ (tg1 &amp; x) : tg1;}
+    } t[maxn &lt;&lt; <span class="hljs-number">2</span>];
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> ls u &lt;&lt; 1</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rs u &lt;&lt; 1 | 1</span>
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">up</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
+        t[u].a = t[ls].a &amp; t[rs].a;
+        t[u].o = t[ls].o | t[rs].o;
+        t[u].m = <span class="hljs-built_in">min</span>(t[ls].m, t[rs].m);
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
+        <span class="hljs-keyword">if</span> (~t[u].tg1) t[ls].<span class="hljs-built_in">aladd</span>(t[u].tg1), t[rs].<span class="hljs-built_in">aladd</span>(t[u].tg1);
+        <span class="hljs-keyword">if</span> (t[u].tg2) t[ls].<span class="hljs-built_in">oladd</span>(t[u].tg2), t[rs].<span class="hljs-built_in">oladd</span>(t[u].tg2);
+        t[u].tg1 = <span class="hljs-number">-1</span>; t[u].tg2 = <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>{
+        t[u].tg1 = <span class="hljs-number">-1</span>;
+        <span class="hljs-keyword">if</span> (l == r) {
+            t[u].a = t[u].o = t[u].m = a[l];
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">build</span>(ls, l, mid);
+        <span class="hljs-built_in">build</span>(rs, mid + <span class="hljs-number">1</span>, r);
+        <span class="hljs-built_in">up</span>(u);
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf1</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{
+        <span class="hljs-keyword">if</span> ((z &amp; t[u].o) == t[u].o) <span class="hljs-keyword">return</span>;
+        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {
+            <span class="hljs-keyword">if</span> (l == r) {
+                t[u].<span class="hljs-built_in">aladd</span>(z);
+                <span class="hljs-keyword">return</span>;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {
+                t[u].<span class="hljs-built_in">aladd</span>(z);
+                <span class="hljs-keyword">return</span>;
+            }
+        }
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf1</span>(ls, l, mid, x, y, z);
+        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf1</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);
+        <span class="hljs-built_in">up</span>(u);
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{
+        <span class="hljs-keyword">if</span> ((t[u].a &amp; z) == z) <span class="hljs-keyword">return</span>;
+        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {
+            <span class="hljs-keyword">if</span> (l == r) {
+                t[u].<span class="hljs-built_in">oladd</span>(z);
+                <span class="hljs-keyword">return</span>;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {
+                t[u].<span class="hljs-built_in">oladd</span>(z);
+                <span class="hljs-keyword">return</span>;
+            }
+        }
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf2</span>(ls, l, mid, x, y, z);
+        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf2</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);
+        <span class="hljs-built_in">up</span>(u);
+    }
+    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">qry</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) <span class="hljs-keyword">return</span> t[u].m;
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (x &gt; mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y);
+        <span class="hljs-keyword">if</span> (y &lt;= mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(ls, l, mid, x, y);
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">min</span>(<span class="hljs-built_in">qry</span>(ls, l, mid, x, y), <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y));
+    }
+}
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> _Smt;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    n = <span class="hljs-built_in">read</span>(); q = <span class="hljs-built_in">read</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) a[i] = <span class="hljs-built_in">read</span>();
+    <span class="hljs-built_in">build</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n);
+    <span class="hljs-keyword">while</span> (q--) {
+        <span class="hljs-type">int</span> opt, l, r, x;
+        opt = <span class="hljs-built_in">read</span>(); l = <span class="hljs-built_in">read</span>(); r = <span class="hljs-built_in">read</span>();
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">1</span>) {
+            x = <span class="hljs-built_in">read</span>();
+            <span class="hljs-built_in">mdf1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);
+        }
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">2</span>) {
+            x = <span class="hljs-built_in">read</span>();
+            <span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);
+        }
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">3</span>) {
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, <span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r));
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre></div>]]></content>
       <categories>
-          
-          <category> 记录 </category>
-          
+        <category>题解</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>线段树</tag>
+        <tag>势能分析</tag>
+      </tags>
+  </entry>
 </search>
