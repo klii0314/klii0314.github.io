@@ -23,7 +23,7 @@
     <title>「雅礼集训 2018 Day7」A</title>
     <url>/2022/03/15/%E3%80%8C%E9%9B%85%E7%A4%BC%E9%9B%86%E8%AE%AD-2018-Day7%E3%80%8DA/</url>
     <content><![CDATA[<p><a href="https://loj.ac/p/6507">$\text{link}$</a></p>
-<p>用线段树维护 $And,Or,Min$ 值，对于操作：</p>
+<p>用线段树维护 $\text{And,Or,Min}$ 值，对于操作：</p>
 <ul>
 <li><p>$\text{And x}$，设当前点为 $u$，区间值分别为 $ta(u),to(u),tm(u)$：</p>
 <ul>
