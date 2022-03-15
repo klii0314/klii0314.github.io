@@ -16,22 +16,22 @@
   <meta name="author" content="klii">
   <meta name="keywords" content="">
   
-    <meta name="description" content="$\text{link}$ 用线段树维护 $\text{And,Or,Min}$ 值，对于操作：  $\text{And x}$，设当前点为 $u$，区间值分别为 $ta(u),to(u),tm(u)$：  若 $x \And to(u) &#x3D; to(u)$ ,则该操作对当前区间 $[l(u),r(u)]$ 的值无效；  若 $to(u) \And x &#x3D; ta(u) \And x$ ,则该操作对当">
+    <meta name="description" content="$\text{link}$ 先将询问离线下来分治，设当前分治区间为 $[l,r]$ , $mid &#x3D; (l + r) &gt;&gt; 1$，考虑处理左上角到右下角的询问，剩下的分到左右两边。 由于路径必然经过 $y&#x3D;mid$ 这条直线，考虑记 $g1(i,j,k) &#x3D; 1&#x2F;0$ 表示 $(i,j)$ 能否走到 $(k,mid)$， $g2(i,j,k) &#x3D; 1&#x2F;0$ 表示 $(k,mid)$ 能">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「雅礼集训 2018 Day7」A">
-<meta property="og:url" content="https://klii0314.github.io/2022/03/15/%E3%80%8C%E9%9B%85%E7%A4%BC%E9%9B%86%E8%AE%AD-2018-Day7%E3%80%8DA/index.html">
+<meta property="og:title" content="CF232E Quick Tortoise">
+<meta property="og:url" content="https://klii0314.github.io/2022/03/15/CF232E-Quick-Tortoise/index.html">
 <meta property="og:site_name" content="klii&#39;s blog">
-<meta property="og:description" content="$\text{link}$ 用线段树维护 $\text{And,Or,Min}$ 值，对于操作：  $\text{And x}$，设当前点为 $u$，区间值分别为 $ta(u),to(u),tm(u)$：  若 $x \And to(u) &#x3D; to(u)$ ,则该操作对当前区间 $[l(u),r(u)]$ 的值无效；  若 $to(u) \And x &#x3D; ta(u) \And x$ ,则该操作对当">
+<meta property="og:description" content="$\text{link}$ 先将询问离线下来分治，设当前分治区间为 $[l,r]$ , $mid &#x3D; (l + r) &gt;&gt; 1$，考虑处理左上角到右下角的询问，剩下的分到左右两边。 由于路径必然经过 $y&#x3D;mid$ 这条直线，考虑记 $g1(i,j,k) &#x3D; 1&#x2F;0$ 表示 $(i,j)$ 能否走到 $(k,mid)$， $g2(i,j,k) &#x3D; 1&#x2F;0$ 表示 $(k,mid)$ 能">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-03-15T00:43:45.000Z">
-<meta property="article:modified_time" content="2022-03-15T02:17:13.567Z">
+<meta property="article:published_time" content="2022-03-15T07:34:05.000Z">
+<meta property="article:modified_time" content="2022-03-15T07:41:37.792Z">
 <meta property="article:author" content="klii">
-<meta property="article:tag" content="线段树">
-<meta property="article:tag" content="势能分析">
+<meta property="article:tag" content="分治">
+<meta property="article:tag" content="bitset">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>「雅礼集训 2018 Day7」A - klii&#39;s blog</title>
+  <title>CF232E Quick Tortoise - klii&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -192,9 +192,9 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="「雅礼集训 2018 Day7」A">
+            <span class="h2" id="subtitle" title="CF232E Quick Tortoise">
               
-                「雅礼集训 2018 Day7」A
+                CF232E Quick Tortoise
               
             </span>
 
@@ -204,8 +204,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-03-15 08:43" pubdate>
-        March 15, 2022 am
+      <time datetime="2022-03-15 15:34" pubdate>
+        March 15, 2022 pm
       </time>
     </span>
   
@@ -215,7 +215,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.7k 字
+      2.5k 字
     </span>
   
 
@@ -224,7 +224,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      23 分钟
+      22 分钟
     </span>
   
 
@@ -257,40 +257,20 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">「雅礼集训 2018 Day7」A</h1>
+            <h1 style="display: none">CF232E Quick Tortoise</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：March 15, 2022 am
+                  本文最后更新于：March 15, 2022 pm
                 
               </p>
             
             <div class="markdown-body">
-              <p><a target="_blank" rel="noopener" href="https://loj.ac/p/6507">$\text{link}$</a></p>
-<p>用线段树维护 $\text{And,Or,Min}$ 值，对于操作：</p>
-<ul>
-<li><p>$\text{And x}$，设当前点为 $u$，区间值分别为 $ta(u),to(u),tm(u)$：</p>
-<ul>
-<li><p>若 $x \And to(u) = to(u)$ ,则该操作对当前区间 $[l(u),r(u)]$ 的值无效；</p>
-</li>
-<li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p>
-</li>
-<li><p>否则直接暴力递归下去。</p>
-</li>
-</ul>
-</li>
-<li><p>$\text{Or x}$，类似的有：</p>
-<ul>
-<li><p>若 $ta(u) \And x = x$ ,则该操作对当前区间无效；</p>
-</li>
-<li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p>
-</li>
-<li><p>否则直接暴力递归下去。</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>分析一下时间复杂度：每次暴力递归下去都会使得当前区间内所有数的某一位相同，每个区间不同位的总数为 $\mathrm{O(n\log n\log 值域)}$，时间复杂度即为 $\mathrm{O(n\log n\log 值域)}$ 。</p>
+              <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/CF232E">$\text{link}$</a></p>
+<p>先将询问离线下来分治，设当前分治区间为 $[l,r]$ , $mid = (l + r) &gt;&gt; 1$，考虑处理左上角到右下角的询问，剩下的分到左右两边。</p>
+<p>由于路径必然经过 $y=mid$ 这条直线，考虑记 $g1(i,j,k) = 1/0$ 表示 $(i,j)$ 能否走到 $(k,mid)$， $g2(i,j,k) = 1/0$ 表示 $(k,mid)$ 能否走到 $(i,j)$，</p>
+<p>然后转移用 $bitset$ 优化一下就可以做到 $\mathrm{O(\dfrac {n^2m\log m}{\omega} + \dfrac {qn}{\omega})}$ 。</p>
+<p>实现的时候 $(i,j)$ 的意义是反过来的（（</p>
 <p>$\text{Code:}$</p>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
@@ -300,100 +280,74 @@
     <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();
     <span class="hljs-keyword">return</span> f ? -x : x;
 }
-<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">5e5</span> + <span class="hljs-number">5</span>;
-<span class="hljs-type">int</span> n, q, a[maxn];
-<span class="hljs-keyword">namespace</span> _Smt {
-    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {
-        <span class="hljs-type">int</span> a, o, m, tg1, tg2;
-        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">aladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a &amp;= x; o &amp;= x; m &amp;= x; tg1 = ~tg1 ? tg1 &amp; x : x; tg2 &amp;= x;}
-        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">oladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a |= x; o |= x; m |= x; tg2 |= x; tg1 = ~tg1 ? tg1 ^ (tg1 &amp; x) : tg1;}
-    } t[maxn &lt;&lt; <span class="hljs-number">2</span>];
-    <span class="hljs-meta">#<span class="hljs-keyword">define</span> ls u &lt;&lt; 1</span>
-    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rs u &lt;&lt; 1 | 1</span>
-    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">up</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
-        t[u].a = t[ls].a &amp; t[rs].a;
-        t[u].o = t[ls].o | t[rs].o;
-        t[u].m = <span class="hljs-built_in">min</span>(t[ls].m, t[rs].m);
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">500</span> + <span class="hljs-number">5</span>;
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxq = <span class="hljs-number">6e5</span> + <span class="hljs-number">5</span>;
+<span class="hljs-type">int</span> n, m, ans[maxq]; <span class="hljs-type">char</span> c[maxn][maxn];
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">_ques</span> {
+    <span class="hljs-type">int</span> xl, yl, xr, yr, id;
+} qr[maxq], q0[maxq], q1[maxq];
+<span class="hljs-type">int</span> ck[maxn];
+bitset&lt;maxn&gt; g1[maxn][maxn], g2[maxn][maxn];
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> L, <span class="hljs-type">int</span> R)</span> </span>{
+    <span class="hljs-keyword">if</span> (L &gt; R) <span class="hljs-keyword">return</span>;
+    <span class="hljs-keyword">if</span> (l == r) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) ck[i] = ck[i - <span class="hljs-number">1</span>] + (c[i][r] == <span class="hljs-string">'#'</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = L; i &lt;= R; i++)
+        <span class="hljs-keyword">if</span> (ck[qr[i].xr] == ck[qr[i].xl - <span class="hljs-number">1</span>]) ans[qr[i].id] = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">return</span>;
     }
-    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
-        <span class="hljs-keyword">if</span> (~t[u].tg1) t[ls].<span class="hljs-built_in">aladd</span>(t[u].tg1), t[rs].<span class="hljs-built_in">aladd</span>(t[u].tg1);
-        <span class="hljs-keyword">if</span> (t[u].tg2) t[ls].<span class="hljs-built_in">oladd</span>(t[u].tg2), t[rs].<span class="hljs-built_in">oladd</span>(t[u].tg2);
-        t[u].tg1 = <span class="hljs-number">-1</span>; t[u].tg2 = <span class="hljs-number">0</span>;
-    }
-    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>{
-        t[u].tg1 = <span class="hljs-number">-1</span>;
-        <span class="hljs-keyword">if</span> (l == r) {
-            t[u].a = t[u].o = t[u].m = a[l];
-            <span class="hljs-keyword">return</span>;
+    <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>, c0 = <span class="hljs-number">0</span>, c1 = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = l; j &lt;= r; j++)
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) g1[j][i].<span class="hljs-built_in">reset</span>(), g2[j][i].<span class="hljs-built_in">reset</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+        <span class="hljs-keyword">if</span> (c[i][mid] == <span class="hljs-string">'.'</span>) {
+            <span class="hljs-keyword">if</span> (i) g2[mid][i] |= g2[mid][i - <span class="hljs-number">1</span>];
+            g2[mid][i].<span class="hljs-built_in">set</span>(i);
         }
-        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
-        <span class="hljs-built_in">build</span>(ls, l, mid);
-        <span class="hljs-built_in">build</span>(rs, mid + <span class="hljs-number">1</span>, r);
-        <span class="hljs-built_in">up</span>(u);
-    }
-    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf1</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{
-        <span class="hljs-keyword">if</span> ((z &amp; t[u].o) == t[u].o) <span class="hljs-keyword">return</span>;
-        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);
-        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {
-            <span class="hljs-keyword">if</span> (l == r) {
-                t[u].<span class="hljs-built_in">aladd</span>(z);
-                <span class="hljs-keyword">return</span>;
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {
-                t[u].<span class="hljs-built_in">aladd</span>(z);
-                <span class="hljs-keyword">return</span>;
-            }
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = mid; j &lt;= r; j++) {
+            <span class="hljs-keyword">if</span> (c[i][j] == <span class="hljs-string">'#'</span>) <span class="hljs-keyword">continue</span>;
+            <span class="hljs-keyword">if</span> (i) g2[j][i] |= g2[j][i - <span class="hljs-number">1</span>];
+            <span class="hljs-keyword">if</span> (j &gt; mid) g2[j][i] |= g2[j - <span class="hljs-number">1</span>][i];
         }
-        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
-        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf1</span>(ls, l, mid, x, y, z);
-        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf1</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);
-        <span class="hljs-built_in">up</span>(u);
     }
-    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{
-        <span class="hljs-keyword">if</span> ((t[u].a &amp; z) == z) <span class="hljs-keyword">return</span>;
-        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);
-        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {
-            <span class="hljs-keyword">if</span> (l == r) {
-                t[u].<span class="hljs-built_in">oladd</span>(z);
-                <span class="hljs-keyword">return</span>;
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {
-                t[u].<span class="hljs-built_in">oladd</span>(z);
-                <span class="hljs-keyword">return</span>;
-            }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = n; i &gt;= <span class="hljs-number">1</span>; i--) {
+        <span class="hljs-keyword">if</span> (c[i][mid] == <span class="hljs-string">'.'</span>) {
+            <span class="hljs-keyword">if</span> (i &lt; n) g1[mid][i] |= g1[mid][i + <span class="hljs-number">1</span>];
+            g1[mid][i].<span class="hljs-built_in">set</span>(i);
         }
-        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
-        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf2</span>(ls, l, mid, x, y, z);
-        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf2</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);
-        <span class="hljs-built_in">up</span>(u);
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = mid; j &gt;= l; j--) {
+            <span class="hljs-keyword">if</span> (c[i][j] == <span class="hljs-string">'#'</span>) <span class="hljs-keyword">continue</span>;
+            <span class="hljs-keyword">if</span> (i &lt; n) g1[j][i] |= g1[j][i + <span class="hljs-number">1</span>];
+            <span class="hljs-keyword">if</span> (j &lt; mid) g1[j][i] |= g1[j + <span class="hljs-number">1</span>][i];
+        }
     }
-    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">qry</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
-        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) <span class="hljs-keyword">return</span> t[u].m;
-        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
-        <span class="hljs-built_in">pd</span>(u);
-        <span class="hljs-keyword">if</span> (x &gt; mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y);
-        <span class="hljs-keyword">if</span> (y &lt;= mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(ls, l, mid, x, y);
-        <span class="hljs-keyword">return</span> <span class="hljs-built_in">min</span>(<span class="hljs-built_in">qry</span>(ls, l, mid, x, y), <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y));
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = L; i &lt;= R; i++)
+    <span class="hljs-keyword">if</span> (qr[i].yr &lt;= mid) q0[++c0] = qr[i];
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (qr[i].yl &gt; mid) q1[++c1] = qr[i];
+    <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// printf("%d %d %d\n", qr[i].id, g1[qr[i].yl][qr[i].xl].count(), g2[qr[i].yr][qr[i].xr].count());</span>
+        <span class="hljs-comment">// for (int j = 1; j &lt;= n; j++) printf("%d ", g1[qr[i].yl][qr[i].xl][j] ? 1 : 0); puts("");</span>
+        <span class="hljs-comment">// for (int j = 1; j &lt;= n; j++) printf("%d ", g2[qr[i].yr][qr[i].xr][j] ? 1 : 0); puts("");</span>
+        <span class="hljs-keyword">if</span> ((g1[qr[i].yl][qr[i].xl] &amp; g2[qr[i].yr][qr[i].xr]).<span class="hljs-built_in">count</span>()) ans[qr[i].id] = <span class="hljs-number">1</span>;
     }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= c0; i++) qr[L + i - <span class="hljs-number">1</span>] = q0[i];
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= c1; i++) qr[R - i + <span class="hljs-number">1</span>] = q1[i];
+    <span class="hljs-built_in">solve</span>(l, mid, L, L + c0 - <span class="hljs-number">1</span>);
+    <span class="hljs-built_in">solve</span>(mid + <span class="hljs-number">1</span>, r, R - c1 + <span class="hljs-number">1</span>, R);
 }
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> _Smt;
 <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-    n = <span class="hljs-built_in">read</span>(); q = <span class="hljs-built_in">read</span>();
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) a[i] = <span class="hljs-built_in">read</span>();
-    <span class="hljs-built_in">build</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n);
-    <span class="hljs-keyword">while</span> (q--) {
-        <span class="hljs-type">int</span> opt, l, r, x;
-        opt = <span class="hljs-built_in">read</span>(); l = <span class="hljs-built_in">read</span>(); r = <span class="hljs-built_in">read</span>();
-        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">1</span>) {
-            x = <span class="hljs-built_in">read</span>();
-            <span class="hljs-built_in">mdf1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);
-        }
-        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">2</span>) {
-            x = <span class="hljs-built_in">read</span>();
-            <span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);
-        }
-        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">3</span>) {
-            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, <span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r));
-        }
+    n = <span class="hljs-built_in">read</span>(); m = <span class="hljs-built_in">read</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, c[i] + <span class="hljs-number">1</span>);
+    <span class="hljs-type">int</span> q = <span class="hljs-built_in">read</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= q; i++) {
+        <span class="hljs-type">int</span> x = <span class="hljs-built_in">read</span>(), y = <span class="hljs-built_in">read</span>();
+        qr[i].xl = x; qr[i].yl = y;
+        x = <span class="hljs-built_in">read</span>(), y = <span class="hljs-built_in">read</span>();
+        qr[i].xr = x; qr[i].yr = y;
+        qr[i].id = i;
     }
+    <span class="hljs-built_in">solve</span>(<span class="hljs-number">1</span>, m, <span class="hljs-number">1</span>, q);
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= q; i++) <span class="hljs-built_in">puts</span>(ans[i] ? <span class="hljs-string">"Yes"</span> : <span class="hljs-string">"No"</span>);
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 }</code></pre></div>
             </div>
@@ -412,9 +366,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>
+                      <a class="hover-with-bg" href="/tags/%E5%88%86%E6%B2%BB/">分治</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E5%8A%BF%E8%83%BD%E5%88%86%E6%9E%90/">势能分析</a>
+                      <a class="hover-with-bg" href="/tags/bitset/">bitset</a>
                     
                   </div>
                 
@@ -431,18 +385,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/15/CF232E-Quick-Tortoise/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CF232E Quick Tortoise</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/11/%E8%81%94%E5%90%88%E7%9C%81%E9%80%892022%E5%89%8D%E7%9A%84%E8%AE%B0%E5%BD%95/">
-                        <span class="hidden-mobile">联合省选2022前的记录</span>
+                      <a href="/2022/03/15/%E3%80%8C%E9%9B%85%E7%A4%BC%E9%9B%86%E8%AE%AD-2018-Day7%E3%80%8DA/">
+                        <span class="hidden-mobile">「雅礼集训 2018 Day7」A</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
