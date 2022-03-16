@@ -8,7 +8,7 @@
     <link href="/2022/03/16/CF1109F-Sasha-and-Algorithm-of-Silence-s-Sounds/"/>
     <url>/2022/03/16/CF1109F-Sasha-and-Algorithm-of-Silence-s-Sounds/</url>
     
-    <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF1109F">$\text{link}$</a></p><p>首先考虑计算每个左端点对应的合法右端点的个数，可以发现随着 $l$ 的增大，使得 $[l,r]$ 不存在环的最大的 $r$ 是单调递增的，然后我就不会了。。。</p><p>看了题解才想起来可以利用树“点数-边数=1”的性质计算，于是拿棵线段树顺便维护一下“点数-边数”的最小值以及最小值的个数就好了，因为 $[l,l]$ 显然满足 $点数-边数=1$ 。</p><p>时间复杂度 $\mathrm{O(nm\log(nm))}$ 。</p><p>这种性质还是要想的起来啊。</p><p>$\text{Code:}$</p><div class="hljs code-wrapper"><pre><code class="hljs cpp"></code></pre></div>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF1109F">$\text{link}$</a></p><p>首先考虑计算每个左端点对应的合法右端点的个数，可以发现随着 $l$ 的增大，使得 $[l,r]$ 不存在环的最大的 $r$ 是单调递增的，然后我就不会了。。。</p><p>看了题解才想起来可以利用树“点数-边数=1”的性质计算，于是拿棵线段树顺便维护一下“点数-边数”的最小值以及最小值的个数就好了，因为 $[l,l]$ 显然满足 “点数-边数=1” 。</p><p>时间复杂度 $\mathrm{O(nm\log(nm))}$ 。</p><p>这种性质还是要想的起来啊。</p><p>$\text{Code:}$</p><div class="hljs code-wrapper"><pre><code class="hljs cpp"></code></pre></div>]]></content>
     
     
     <categories>
