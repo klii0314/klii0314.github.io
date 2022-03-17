@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>莫队二次离线学习笔记</title>
+    <link href="/2022/03/17/%E8%8E%AB%E9%98%9F%E4%BA%8C%E6%AC%A1%E7%A6%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <url>/2022/03/17/%E8%8E%AB%E9%98%9F%E4%BA%8C%E6%AC%A1%E7%A6%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><p><a href="https://www.luogu.com.cn/problem/P4887">$\texttt{Luogu P4887 [模板]莫队二次离线}$</a></p><p>设莫队指针移动时间复杂度为 $O(k)$ ，则普通莫队的时间复杂度为 $O(m\sqrt n k)$ ，使用莫队二次离线可以变成 $O(m\sqrt n + nk)$ 。</p><p>本题直接莫队做是 $O(m\sqrt n\binom{14}{k})$ 的，无法通过。</p><p>记 $a_x$ 对区间 $[l,r]$ 的贡献为 $f(x,[l,r])$，<strong>差分</strong>后贡献记为 $f(x,r)-f(x,l-1)$，即 $f(x,r)$ 表示 $x$ 对前缀 $[1,r]$ 的贡献。考虑莫队指针移动过程中答案的变化：</p><ul><li><p>$[l,r]\longrightarrow [l,qr]:$</p><ul><li><p>$qr &gt; r:$ 答案增加 $\sum\limits_{i=r+1}^{qr}f(i,i-1)-f(i,l-1)$</p></li><li><p>$qr &lt; r:$ 答案减少 $\sum\limits_{i=qr+1}^r f(i,i-1) - f(i,l-1$</p></li></ul></li><li><p>$[l,r]\longrightarrow [ql,r]:$</p><ul><li><p>$ql &lt; l:$ 答案增加 $\sum\limits_{i=ql}^{l-1} f(i,r)-f(i,i)$</p></li><li><p>$ql &gt; l:$ 答案减少 $\sum\limits_{i=l}^{ql-1} f(i,r)-f(i,i)$</p></li></ul></li></ul><p>$f(i,i)$ 和 $f(i,i-1)$ 都是固定的，可以预处理直接计算；</p><p>$f(i,l-1)$ 和 $f(i,r)$ 则使用扫描线解决，具体地说：</p><ul><li><p>对于每个前缀 $[1,i]$，开一个 $vector$ 存下所有的询问 $f([l,r],i)$，记 $g(x)$ 表示 $a_{[1,i]}$ 中 $\oplus x$ 的二进制表示下恰好有 $k$ 个 $1$ 的个数，则对于询问 $f([l,r],i)$ 的贡献即为 $\sum\limits_{i=l}^r g(a_i)$。</p></li><li><p>处理完 $[1,i]$ 然后处理 $[1,i+1]$ 时，枚举 $a_{i+1}$ 取反 $k$ 位更新 $g$ 即可。</p></li></ul><p>询问可以用四元组 $(l,r,id,1/-1)$ 表示询问 $f([l,r],i)$，询问编号 $id$ 以及增减 $1/-1$。</p><p>$\texttt{Code:}$</p><div class="hljs code-wrapper"><pre><code class="hljs cpp"></code></pre></div><h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><ul><li><p><a href="https://www.luogu.com.cn/problem/P5047">$\text{[Ynoi2019 模拟赛] Yuno loves sqrt technology II}$</a></p></li><li><p><a href="https://www.luogu.com.cn/problem/P5501">$\text{[LnOI2019]来者不拒，去者不追}$</a></p></li><li><p><a href="https://www.luogu.com.cn/problem/P5398">$\text{[Ynoi2018] GOSICK}$</a></p></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习笔记</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>群论学习笔记</title>
     <link href="/2022/03/16/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <url>/2022/03/16/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>

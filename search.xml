@@ -20,240 +20,145 @@
       </categories>
   </entry>
   <entry>
-    <title>「雅礼集训 2018 Day7」A</title>
-    <url>/2022/03/15/%E3%80%8C%E9%9B%85%E7%A4%BC%E9%9B%86%E8%AE%AD-2018-Day7%E3%80%8DA/</url>
-    <content><![CDATA[<p><a href="https://loj.ac/p/6507">$\text{link}$</a></p>
-<p>用线段树维护 $\text{And,Or,Min}$ 值，对于操作：</p>
+    <title>莫队二次离线学习笔记</title>
+    <url>/2022/03/17/%E8%8E%AB%E9%98%9F%E4%BA%8C%E6%AC%A1%E7%A6%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><p><a href="https://www.luogu.com.cn/problem/P4887">$\texttt{Luogu P4887 [模板]莫队二次离线}$</a></p>
+<p>设莫队指针移动时间复杂度为 $O(k)$ ，则普通莫队的时间复杂度为 $O(m\sqrt n k)$ ，使用莫队二次离线可以变成 $O(m\sqrt n + nk)$ 。</p>
+<p>本题直接莫队做是 $O(m\sqrt n\binom{14}{k})$ 的，无法通过。</p>
+<p>记 $a_x$ 对区间 $[l,r]$ 的贡献为 $f(x,[l,r])$，<strong>差分</strong>后贡献记为 $f(x,r)-f(x,l-1)$，即 $f(x,r)$ 表示 $x$ 对前缀 $[1,r]$ 的贡献。考虑莫队指针移动过程中答案的变化：</p>
 <ul>
-<li><p>$\text{And x}$，设当前点为 $u$，区间值分别为 $ta(u),to(u),tm(u)$：</p>
+<li><p>$[l,r]\longrightarrow [l,qr]:$</p>
 <ul>
-<li><p>若 $x \And to(u) = to(u)$ ,则该操作对当前区间 $[l(u),r(u)]$ 的值无效；</p>
+<li><p>$qr &gt; r:$ 答案增加 $\sum\limits_{i=r+1}^{qr}f(i,i-1)-f(i,l-1)$</p>
 </li>
-<li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p>
-</li>
-<li><p>否则直接暴力递归下去。</p>
+<li><p>$qr &lt; r:$ 答案减少 $\sum\limits_{i=qr+1}^r f(i,i-1) - f(i,l-1$</p>
 </li>
 </ul>
 </li>
-<li><p>$\text{Or x}$，类似的有：</p>
+<li><p>$[l,r]\longrightarrow [ql,r]:$</p>
 <ul>
-<li><p>若 $ta(u) \And x = x$ ,则该操作对当前区间无效；</p>
+<li><p>$ql &lt; l:$ 答案增加 $\sum\limits_{i=ql}^{l-1} f(i,r)-f(i,i)$</p>
 </li>
-<li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p>
-</li>
-<li><p>否则直接暴力递归下去。</p>
+<li><p>$ql &gt; l:$ 答案减少 $\sum\limits_{i=l}^{ql-1} f(i,r)-f(i,i)$</p>
 </li>
 </ul>
 </li>
 </ul>
-<p>分析一下时间复杂度：每次暴力递归下去都会使得当前区间内所有数的某一位相同，每个区间不同位的总数为 $\mathrm{O(n\log n\log 值域)}$，时间复杂度即为 $\mathrm{O(n\log n\log 值域)}$ 。</p>
-<p>$\text{Code:}$</p>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();
-    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();
-    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();
-    <span class="hljs-keyword">return</span> f ? -x : x;
-}
-<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">5e5</span> + <span class="hljs-number">5</span>;
-<span class="hljs-type">int</span> n, q, a[maxn];
-<span class="hljs-keyword">namespace</span> _Smt {
-    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {
-        <span class="hljs-type">int</span> a, o, m, tg1, tg2;
-        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">aladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a &amp;= x; o &amp;= x; m &amp;= x; tg1 = ~tg1 ? tg1 &amp; x : x; tg2 &amp;= x;}
-        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">oladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a |= x; o |= x; m |= x; tg2 |= x; tg1 = ~tg1 ? tg1 ^ (tg1 &amp; x) : tg1;}
-    } t[maxn &lt;&lt; <span class="hljs-number">2</span>];
-    <span class="hljs-meta">#<span class="hljs-keyword">define</span> ls u &lt;&lt; 1</span>
-    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rs u &lt;&lt; 1 | 1</span>
-    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">up</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
-        t[u].a = t[ls].a &amp; t[rs].a;
-        t[u].o = t[ls].o | t[rs].o;
-        t[u].m = <span class="hljs-built_in">min</span>(t[ls].m, t[rs].m);
-    }
-    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
-        <span class="hljs-keyword">if</span> (~t[u].tg1) t[ls].<span class="hljs-built_in">aladd</span>(t[u].tg1), t[rs].<span class="hljs-built_in">aladd</span>(t[u].tg1);
-        <span class="hljs-keyword">if</span> (t[u].tg2) t[ls].<span class="hljs-built_in">oladd</span>(t[u].tg2), t[rs].<span class="hljs-built_in">oladd</span>(t[u].tg2);
-        t[u].tg1 = <span class="hljs-number">-1</span>; t[u].tg2 = <span class="hljs-number">0</span>;
-    }
-    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>{
-        t[u].tg1 = <span class="hljs-number">-1</span>;
-        <span class="hljs-keyword">if</span> (l == r) {
-            t[u].a = t[u].o = t[u].m = a[l];
-            <span class="hljs-keyword">return</span>;
-        }
-        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
-        <span class="hljs-built_in">build</span>(ls, l, mid);
-        <span class="hljs-built_in">build</span>(rs, mid + <span class="hljs-number">1</span>, r);
-        <span class="hljs-built_in">up</span>(u);
-    }
-    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf1</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{
-        <span class="hljs-keyword">if</span> ((z &amp; t[u].o) == t[u].o) <span class="hljs-keyword">return</span>;
-        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);
-        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {
-            <span class="hljs-keyword">if</span> (l == r) {
-                t[u].<span class="hljs-built_in">aladd</span>(z);
-                <span class="hljs-keyword">return</span>;
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {
-                t[u].<span class="hljs-built_in">aladd</span>(z);
-                <span class="hljs-keyword">return</span>;
-            }
-        }
-        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
-        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf1</span>(ls, l, mid, x, y, z);
-        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf1</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);
-        <span class="hljs-built_in">up</span>(u);
-    }
-    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{
-        <span class="hljs-keyword">if</span> ((t[u].a &amp; z) == z) <span class="hljs-keyword">return</span>;
-        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);
-        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {
-            <span class="hljs-keyword">if</span> (l == r) {
-                t[u].<span class="hljs-built_in">oladd</span>(z);
-                <span class="hljs-keyword">return</span>;
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {
-                t[u].<span class="hljs-built_in">oladd</span>(z);
-                <span class="hljs-keyword">return</span>;
-            }
-        }
-        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
-        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf2</span>(ls, l, mid, x, y, z);
-        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf2</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);
-        <span class="hljs-built_in">up</span>(u);
-    }
-    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">qry</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
-        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) <span class="hljs-keyword">return</span> t[u].m;
-        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
-        <span class="hljs-built_in">pd</span>(u);
-        <span class="hljs-keyword">if</span> (x &gt; mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y);
-        <span class="hljs-keyword">if</span> (y &lt;= mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(ls, l, mid, x, y);
-        <span class="hljs-keyword">return</span> <span class="hljs-built_in">min</span>(<span class="hljs-built_in">qry</span>(ls, l, mid, x, y), <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y));
-    }
-}
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> _Smt;
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-    n = <span class="hljs-built_in">read</span>(); q = <span class="hljs-built_in">read</span>();
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) a[i] = <span class="hljs-built_in">read</span>();
-    <span class="hljs-built_in">build</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n);
-    <span class="hljs-keyword">while</span> (q--) {
-        <span class="hljs-type">int</span> opt, l, r, x;
-        opt = <span class="hljs-built_in">read</span>(); l = <span class="hljs-built_in">read</span>(); r = <span class="hljs-built_in">read</span>();
-        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">1</span>) {
-            x = <span class="hljs-built_in">read</span>();
-            <span class="hljs-built_in">mdf1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);
-        }
-        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">2</span>) {
-            x = <span class="hljs-built_in">read</span>();
-            <span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);
-        }
-        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">3</span>) {
-            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, <span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r));
-        }
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-}</code></pre></div>]]></content>
+<p>$f(i,i)$ 和 $f(i,i-1)$ 都是固定的，可以预处理直接计算；</p>
+<p>$f(i,l-1)$ 和 $f(i,r)$ 则使用扫描线解决，具体地说：</p>
+<ul>
+<li><p>对于每个前缀 $[1,i]$，开一个 $vector$ 存下所有的询问 $f([l,r],i)$，记 $g(x)$ 表示 $a_{[1,i]}$ 中 $\oplus x$ 的二进制表示下恰好有 $k$ 个 $1$ 的个数，则对于询问 $f([l,r],i)$ 的贡献即为 $\sum\limits_{i=l}^r g(a_i)$。</p>
+</li>
+<li><p>处理完 $[1,i]$ 然后处理 $[1,i+1]$ 时，枚举 $a_{i+1}$ 取反 $k$ 位更新 $g$ 即可。</p>
+</li>
+</ul>
+<p>询问可以用四元组 $(l,r,id,1/-1)$ 表示询问 $f([l,r],i)$，询问编号 $id$ 以及增减 $1/-1$。</p>
+<p>$\texttt{Code:}$</p>
+<div class="hljs code-wrapper"><pre><code class="hljs cpp"></code></pre></div>
+
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><ul>
+<li><p><a href="https://www.luogu.com.cn/problem/P5047">$\text{[Ynoi2019 模拟赛] Yuno loves sqrt technology II}$</a></p>
+</li>
+<li><p><a href="https://www.luogu.com.cn/problem/P5501">$\text{[LnOI2019]来者不拒，去者不追}$</a></p>
+</li>
+<li><p><a href="https://www.luogu.com.cn/problem/P5398">$\text{[Ynoi2018] GOSICK}$</a></p>
+</li>
+</ul>
+]]></content>
       <categories>
-        <category>题解</category>
+        <category>学习笔记</category>
       </categories>
-      <tags>
-        <tag>线段树</tag>
-        <tag>势能分析</tag>
-      </tags>
   </entry>
   <entry>
-    <title>CF232E Quick Tortoise</title>
-    <url>/2022/03/15/CF232E-Quick-Tortoise/</url>
-    <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF232E">$\text{link}$</a></p>
-<p>先将询问离线下来分治，设当前分治区间为 $[l,r]$ , $mid = (l + r) &gt;&gt; 1$，考虑处理左上角到右下角的询问，剩下的分到左右两边。</p>
-<p>由于路径必然经过 $y=mid$ 这条直线，考虑记 $g1(i,j,k) = 1/0$ 表示 $(i,j)$ 能否走到 $(k,mid)$， $g2(i,j,k) = 1/0$ 表示 $(k,mid)$ 能否走到 $(i,j)$，</p>
-<p>然后转移用 $bitset$ 优化一下就可以做到 $\mathrm{O(\dfrac {n^2m\log m}{\omega} + \dfrac {qn}{\omega})}$ 。</p>
-<p>实现的时候 $(i,j)$ 的意义是反过来的（（</p>
-<p>$\text{Code:}$</p>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();
-    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();
-    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();
-    <span class="hljs-keyword">return</span> f ? -x : x;
-}
-<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">500</span> + <span class="hljs-number">5</span>;
-<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxq = <span class="hljs-number">6e5</span> + <span class="hljs-number">5</span>;
-<span class="hljs-type">int</span> n, m, ans[maxq]; <span class="hljs-type">char</span> c[maxn][maxn];
-<span class="hljs-keyword">struct</span> <span class="hljs-title class_">_ques</span> {
-    <span class="hljs-type">int</span> xl, yl, xr, yr, id;
-} qr[maxq], q0[maxq], q1[maxq];
-<span class="hljs-type">int</span> ck[maxn];
-bitset&lt;maxn&gt; g1[maxn][maxn], g2[maxn][maxn];
-<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> L, <span class="hljs-type">int</span> R)</span> </span>{
-    <span class="hljs-keyword">if</span> (L &gt; R) <span class="hljs-keyword">return</span>;
-    <span class="hljs-keyword">if</span> (l == r) {
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) ck[i] = ck[i - <span class="hljs-number">1</span>] + (c[i][r] == <span class="hljs-string">'#'</span>);
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = L; i &lt;= R; i++)
-        <span class="hljs-keyword">if</span> (ck[qr[i].xr] == ck[qr[i].xl - <span class="hljs-number">1</span>]) ans[qr[i].id] = <span class="hljs-number">1</span>;
-        <span class="hljs-keyword">return</span>;
-    }
-    <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>, c0 = <span class="hljs-number">0</span>, c1 = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = l; j &lt;= r; j++)
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) g1[j][i].<span class="hljs-built_in">reset</span>(), g2[j][i].<span class="hljs-built_in">reset</span>();
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
-        <span class="hljs-keyword">if</span> (c[i][mid] == <span class="hljs-string">'.'</span>) {
-            <span class="hljs-keyword">if</span> (i) g2[mid][i] |= g2[mid][i - <span class="hljs-number">1</span>];
-            g2[mid][i].<span class="hljs-built_in">set</span>(i);
-        }
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = mid; j &lt;= r; j++) {
-            <span class="hljs-keyword">if</span> (c[i][j] == <span class="hljs-string">'#'</span>) <span class="hljs-keyword">continue</span>;
-            <span class="hljs-keyword">if</span> (i) g2[j][i] |= g2[j][i - <span class="hljs-number">1</span>];
-            <span class="hljs-keyword">if</span> (j &gt; mid) g2[j][i] |= g2[j - <span class="hljs-number">1</span>][i];
-        }
-    }
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = n; i &gt;= <span class="hljs-number">1</span>; i--) {
-        <span class="hljs-keyword">if</span> (c[i][mid] == <span class="hljs-string">'.'</span>) {
-            <span class="hljs-keyword">if</span> (i &lt; n) g1[mid][i] |= g1[mid][i + <span class="hljs-number">1</span>];
-            g1[mid][i].<span class="hljs-built_in">set</span>(i);
-        }
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = mid; j &gt;= l; j--) {
-            <span class="hljs-keyword">if</span> (c[i][j] == <span class="hljs-string">'#'</span>) <span class="hljs-keyword">continue</span>;
-            <span class="hljs-keyword">if</span> (i &lt; n) g1[j][i] |= g1[j][i + <span class="hljs-number">1</span>];
-            <span class="hljs-keyword">if</span> (j &lt; mid) g1[j][i] |= g1[j + <span class="hljs-number">1</span>][i];
-        }
-    }
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = L; i &lt;= R; i++)
-    <span class="hljs-keyword">if</span> (qr[i].yr &lt;= mid) q0[++c0] = qr[i];
-    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (qr[i].yl &gt; mid) q1[++c1] = qr[i];
-    <span class="hljs-keyword">else</span> {
-        <span class="hljs-comment">// printf("%d %d %d\n", qr[i].id, g1[qr[i].yl][qr[i].xl].count(), g2[qr[i].yr][qr[i].xr].count());</span>
-        <span class="hljs-comment">// for (int j = 1; j &lt;= n; j++) printf("%d ", g1[qr[i].yl][qr[i].xl][j] ? 1 : 0); puts("");</span>
-        <span class="hljs-comment">// for (int j = 1; j &lt;= n; j++) printf("%d ", g2[qr[i].yr][qr[i].xr][j] ? 1 : 0); puts("");</span>
-        <span class="hljs-keyword">if</span> ((g1[qr[i].yl][qr[i].xl] &amp; g2[qr[i].yr][qr[i].xr]).<span class="hljs-built_in">count</span>()) ans[qr[i].id] = <span class="hljs-number">1</span>;
-    }
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= c0; i++) qr[L + i - <span class="hljs-number">1</span>] = q0[i];
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= c1; i++) qr[R - i + <span class="hljs-number">1</span>] = q1[i];
-    <span class="hljs-built_in">solve</span>(l, mid, L, L + c0 - <span class="hljs-number">1</span>);
-    <span class="hljs-built_in">solve</span>(mid + <span class="hljs-number">1</span>, r, R - c1 + <span class="hljs-number">1</span>, R);
-}
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-    n = <span class="hljs-built_in">read</span>(); m = <span class="hljs-built_in">read</span>();
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, c[i] + <span class="hljs-number">1</span>);
-    <span class="hljs-type">int</span> q = <span class="hljs-built_in">read</span>();
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= q; i++) {
-        <span class="hljs-type">int</span> x = <span class="hljs-built_in">read</span>(), y = <span class="hljs-built_in">read</span>();
-        qr[i].xl = x; qr[i].yl = y;
-        x = <span class="hljs-built_in">read</span>(), y = <span class="hljs-built_in">read</span>();
-        qr[i].xr = x; qr[i].yr = y;
-        qr[i].id = i;
-    }
-    <span class="hljs-built_in">solve</span>(<span class="hljs-number">1</span>, m, <span class="hljs-number">1</span>, q);
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= q; i++) <span class="hljs-built_in">puts</span>(ans[i] ? <span class="hljs-string">"Yes"</span> : <span class="hljs-string">"No"</span>);
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-}</code></pre></div>]]></content>
+    <title>群论学习笔记</title>
+    <url>/2022/03/16/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<blockquote>
+<p>参考资料： <a href="https://www.luogu.com.cn/blog/command-block/qun-lun-xiao-ji">command_block’s blog</a></p>
+</blockquote>
+<h1 id="群的概念及基本性质"><a href="#群的概念及基本性质" class="headerlink" title="群的概念及基本性质"></a>群的概念及基本性质</h1><ul>
+<li><p>由集合 $G\neq \emptyset$ 和 $G$ 上的二元运算 $*$ 组成。</p>
+</li>
+<li><p>满足以下性质：</p>
+<ul>
+<li><p>封闭性：$\forall a,b\in G,$ 均有 $(a*b)\in G$。</p>
+</li>
+<li><p>结合律：$(a*b)*c=a*(b*c)$ 。</p>
+</li>
+<li><p>存在单位元：存在 $\epsilon\in G$ 使得 $\forall a\in G$，均有 $a*\epsilon=\epsilon *a=a$ 。</p>
+</li>
+<li><p>存在逆元：$\forall a \in G,$ 均存在 $b\in G$ 使得 $a*b=\epsilon$。</p>
+</li>
+</ul>
+</li>
+<li><p>定理：单位元唯一。证明略去。</p>
+</li>
+<li><p>定理：每个元素的逆元唯一。证明略去。</p>
+</li>
+<li><p>定理：对于任意的有限群 $G={\epsilon,a_1,…,a_n}$，$\forall a\in G$，均存在一个常数 $b$ 使得 $a^b=\epsilon$，且有 $a^{-1}=a^{b-1}$ ，称 $b$ 为 $a$ 的阶。证明略去。</p>
+</li>
+</ul>
+<h1 id="置换与置换群"><a href="#置换与置换群" class="headerlink" title="置换与置换群"></a>置换与置换群</h1><ul>
+<li><p>置换的定义：有限集合到自身的双射称作置换。</p>
+<p>  可以写作</p>
+<p>  $$\large\begin{pmatrix}1&amp;2&amp;3&amp;…&amp;n\\p_1&amp;p_2&amp;p_3&amp;…&amp;p_n\end{pmatrix}$$</p>
+</li>
+<li><p>置换的乘法：相当于将映射叠加。</p>
+<p>  性质：</p>
+<ul>
+<li><p>置换的乘积还是置换。</p>
+</li>
+<li><p>满足交换律。</p>
+</li>
+<li><p>单位元为 $\large\begin{pmatrix}1&amp;2&amp;3&amp;…&amp;n\\1&amp;2&amp;3&amp;…&amp;n\end{pmatrix}$</p>
+</li>
+<li><p>$\begin{pmatrix}1&amp;2&amp;3&amp;…&amp;n\\p_1&amp;p_2&amp;p_3&amp;…&amp;p_n\end{pmatrix}$ 的逆元为 $\begin{pmatrix}p_1&amp;p_2&amp;p_3&amp;…&amp;p_n\\1&amp;2&amp;3&amp;…&amp;n\end{pmatrix}$</p>
+</li>
+</ul>
+<p>  一般不满足交换律。</p>
+</li>
+<li><p>置换群：由上面的性质可知对 $1..n$ 作用的所有置换形成一个群。一般只研究一个子群。</p>
+</li>
+<li><p>置换的循环：把置换看作有向图，连边 $(i,p_i)$，会形成若干个环。</p>
+<p>  置换可以用这些环来表示，并且是唯一的。</p>
+</li>
+</ul>
+<h1 id="text-Burnside-引理-与-text-Polya-定理"><a href="#text-Burnside-引理-与-text-Polya-定理" class="headerlink" title="$\text{Burnside}$ 引理 与 $\text{Polya}$ 定理"></a>$\text{Burnside}$ 引理 与 $\text{Polya}$ 定理</h1><p>设 $G$ 为 $1..n$ 的一个置换群。</p>
+<ul>
+<li><p>不动点：对于 $p\in G$ ，若 $p_k = k$ 则称 $k$ 是 $p$ 下的不动点。</p>
+<p>  $p$ 下的不动点个数记作 $c(p)$。</p>
+</li>
+<li><p>$\text{k}$ 不动置换类</p>
+<p>  对于 $p\in G$，若 $k$ 是 $p$ 下的不动点，则称 $p$ 属于 $\text{k}$ 不动置换类，记作 $p\in Z_k$。$Z_k$ 为 $G$ 的一个子群。</p>
+</li>
+<li><p>等价类：等价类 $E_k$ 为对元素 $k$ 任意施加 $G$ 中的置换所能到达的元素集合。</p>
+<ul>
+<li>定理：当 $x,y$ 同属一个等价类时，有 $|Z_x| = |Z_y|$。证明略去。</li>
+</ul>
+</li>
+<li><p>轨道-稳定子定理：</p>
+<p>  $$|Z_k|\times|E_k|=G$$</p>
+<p>  证明略去。</p>
+</li>
+<li><p>$\text{Burnside 引理}$ ：</p>
+<p>  记 $l$ 为 $E_{1..n}$ 中本质不同的等价类个数，则有： </p>
+<p>  $$l = \large\dfrac 1 {|G|}\sum\limits_{p\in G}c(p)$$</p>
+<p>  即等价类个数 $=$ 所有置换下的不动点总数的平均数。</p>
+</li>
+<li><p>$\text{Polya 定理}$:</p>
+<p>  设有 $n$ 个元素，每个元素有 $m$ 种染色方案。</p>
+<p>  设 $G$ 是 $n$ 个元素的置换群，则染色总方案数为：</p>
+<p>  $$\large\dfrac 1 {|G|}\sum\limits_{p\in G}T(p)$$</p>
+<p>  其中 $T(p)$ 表示在置换 $p$ 下不动的染色方案数。</p>
+</li>
+</ul>
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><p><a href="https://www.luogu.com.cn/problem/P4980">$\text{[模板]Polya 定理}$</a></p>
+<p><a href="https://www.luogu.com.cn/problem/P4916">$\text{[MtOI2018]魔力环}$</a></p>
+<p><a href="https://www.luogu.com.cn/problem/P4727">$\text{[HNOI2009]图的同构计数}$</a></p>
+<p><a href="https://www.luogu.com.cn/problem/P4128">$\text{[SHOI2006] 有色图}$</a></p>
+]]></content>
       <categories>
-        <category>题解</category>
+        <category>学习笔记</category>
       </categories>
-      <tags>
-        <tag>分治</tag>
-        <tag>bitset</tag>
-      </tags>
   </entry>
   <entry>
     <title>CF1109F Sasha and Algorithm of Silence&#39;s Sounds</title>
@@ -441,94 +346,239 @@ vector&lt;<span class="hljs-type">int</span>&gt; G[maxm];
       </tags>
   </entry>
   <entry>
-    <title>群论学习笔记</title>
-    <url>/2022/03/16/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<blockquote>
-<p>参考资料： <a href="https://www.luogu.com.cn/blog/command-block/qun-lun-xiao-ji">command_block’s blog</a></p>
-</blockquote>
-<h1 id="群的概念及基本性质"><a href="#群的概念及基本性质" class="headerlink" title="群的概念及基本性质"></a>群的概念及基本性质</h1><ul>
-<li><p>由集合 $G\neq \emptyset$ 和 $G$ 上的二元运算 $*$ 组成。</p>
-</li>
-<li><p>满足以下性质：</p>
-<ul>
-<li><p>封闭性：$\forall a,b\in G,$ 均有 $(a*b)\in G$。</p>
-</li>
-<li><p>结合律：$(a*b)*c=a*(b*c)$ 。</p>
-</li>
-<li><p>存在单位元：存在 $\epsilon\in G$ 使得 $\forall a\in G$，均有 $a*\epsilon=\epsilon *a=a$ 。</p>
-</li>
-<li><p>存在逆元：$\forall a \in G,$ 均存在 $b\in G$ 使得 $a*b=\epsilon$。</p>
-</li>
-</ul>
-</li>
-<li><p>定理：单位元唯一。证明略去。</p>
-</li>
-<li><p>定理：每个元素的逆元唯一。证明略去。</p>
-</li>
-<li><p>定理：对于任意的有限群 $G={\epsilon,a_1,…,a_n}$，$\forall a\in G$，均存在一个常数 $b$ 使得 $a^b=\epsilon$，且有 $a^{-1}=a^{b-1}$ ，称 $b$ 为 $a$ 的阶。证明略去。</p>
-</li>
-</ul>
-<h1 id="置换与置换群"><a href="#置换与置换群" class="headerlink" title="置换与置换群"></a>置换与置换群</h1><ul>
-<li><p>置换的定义：有限集合到自身的双射称作置换。</p>
-<p>  可以写作</p>
-<p>  $$\large\begin{pmatrix}1&amp;2&amp;3&amp;…&amp;n\\p_1&amp;p_2&amp;p_3&amp;…&amp;p_n\end{pmatrix}$$</p>
-</li>
-<li><p>置换的乘法：相当于将映射叠加。</p>
-<p>  性质：</p>
-<ul>
-<li><p>置换的乘积还是置换。</p>
-</li>
-<li><p>满足交换律。</p>
-</li>
-<li><p>单位元为 $\large\begin{pmatrix}1&amp;2&amp;3&amp;…&amp;n\\1&amp;2&amp;3&amp;…&amp;n\end{pmatrix}$</p>
-</li>
-<li><p>$\begin{pmatrix}1&amp;2&amp;3&amp;…&amp;n\\p_1&amp;p_2&amp;p_3&amp;…&amp;p_n\end{pmatrix}$ 的逆元为 $\begin{pmatrix}p_1&amp;p_2&amp;p_3&amp;…&amp;p_n\\1&amp;2&amp;3&amp;…&amp;n\end{pmatrix}$</p>
-</li>
-</ul>
-<p>  一般不满足交换律。</p>
-</li>
-<li><p>置换群：由上面的性质可知对 $1..n$ 作用的所有置换形成一个群。一般只研究一个子群。</p>
-</li>
-<li><p>置换的循环：把置换看作有向图，连边 $(i,p_i)$，会形成若干个环。</p>
-<p>  置换可以用这些环来表示，并且是唯一的。</p>
-</li>
-</ul>
-<h1 id="text-Burnside-引理-与-text-Polya-定理"><a href="#text-Burnside-引理-与-text-Polya-定理" class="headerlink" title="$\text{Burnside}$ 引理 与 $\text{Polya}$ 定理"></a>$\text{Burnside}$ 引理 与 $\text{Polya}$ 定理</h1><p>设 $G$ 为 $1..n$ 的一个置换群。</p>
-<ul>
-<li><p>不动点：对于 $p\in G$ ，若 $p_k = k$ 则称 $k$ 是 $p$ 下的不动点。</p>
-<p>  $p$ 下的不动点个数记作 $c(p)$。</p>
-</li>
-<li><p>$\text{k}$ 不动置换类</p>
-<p>  对于 $p\in G$，若 $k$ 是 $p$ 下的不动点，则称 $p$ 属于 $\text{k}$ 不动置换类，记作 $p\in Z_k$。$Z_k$ 为 $G$ 的一个子群。</p>
-</li>
-<li><p>等价类：等价类 $E_k$ 为对元素 $k$ 任意施加 $G$ 中的置换所能到达的元素集合。</p>
-<ul>
-<li>定理：当 $x,y$ 同属一个等价类时，有 $|Z_x| = |Z_y|$。证明略去。</li>
-</ul>
-</li>
-<li><p>轨道-稳定子定理：</p>
-<p>  $$|Z_k|\times|E_k|=G$$</p>
-<p>  证明略去。</p>
-</li>
-<li><p>$\text{Burnside 引理}$ ：</p>
-<p>  记 $l$ 为 $E_{1..n}$ 中本质不同的等价类个数，则有： </p>
-<p>  $$l = \large\dfrac 1 {|G|}\sum\limits_{p\in G}c(p)$$</p>
-<p>  即等价类个数 $=$ 所有置换下的不动点总数的平均数。</p>
-</li>
-<li><p>$\text{Polya 定理}$:</p>
-<p>  设有 $n$ 个元素，每个元素有 $m$ 种染色方案。</p>
-<p>  设 $G$ 是 $n$ 个元素的置换群，则染色总方案数为：</p>
-<p>  $$\large\dfrac 1 {|G|}\sum\limits_{p\in G}T(p)$$</p>
-<p>  其中 $T(p)$ 表示在置换 $p$ 下不动的染色方案数。</p>
-</li>
-</ul>
-<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><p><a href="https://www.luogu.com.cn/problem/P4980">$\text{[模板]Polya 定理}$</a></p>
-<p><a href="https://www.luogu.com.cn/problem/P4916">$\text{[MtOI2018]魔力环}$</a></p>
-<p><a href="https://www.luogu.com.cn/problem/P4727">$\text{[HNOI2009]图的同构计数}$</a></p>
-<p><a href="https://www.luogu.com.cn/problem/P4128">$\text{[SHOI2006] 有色图}$</a></p>
-]]></content>
+    <title>CF232E Quick Tortoise</title>
+    <url>/2022/03/15/CF232E-Quick-Tortoise/</url>
+    <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF232E">$\text{link}$</a></p>
+<p>先将询问离线下来分治，设当前分治区间为 $[l,r]$ , $mid = (l + r) &gt;&gt; 1$，考虑处理左上角到右下角的询问，剩下的分到左右两边。</p>
+<p>由于路径必然经过 $y=mid$ 这条直线，考虑记 $g1(i,j,k) = 1/0$ 表示 $(i,j)$ 能否走到 $(k,mid)$， $g2(i,j,k) = 1/0$ 表示 $(k,mid)$ 能否走到 $(i,j)$，</p>
+<p>然后转移用 $bitset$ 优化一下就可以做到 $\mathrm{O(\dfrac {n^2m\log m}{\omega} + \dfrac {qn}{\omega})}$ 。</p>
+<p>实现的时候 $(i,j)$ 的意义是反过来的（（</p>
+<p>$\text{Code:}$</p>
+<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">return</span> f ? -x : x;
+}
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">500</span> + <span class="hljs-number">5</span>;
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxq = <span class="hljs-number">6e5</span> + <span class="hljs-number">5</span>;
+<span class="hljs-type">int</span> n, m, ans[maxq]; <span class="hljs-type">char</span> c[maxn][maxn];
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">_ques</span> {
+    <span class="hljs-type">int</span> xl, yl, xr, yr, id;
+} qr[maxq], q0[maxq], q1[maxq];
+<span class="hljs-type">int</span> ck[maxn];
+bitset&lt;maxn&gt; g1[maxn][maxn], g2[maxn][maxn];
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> L, <span class="hljs-type">int</span> R)</span> </span>{
+    <span class="hljs-keyword">if</span> (L &gt; R) <span class="hljs-keyword">return</span>;
+    <span class="hljs-keyword">if</span> (l == r) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) ck[i] = ck[i - <span class="hljs-number">1</span>] + (c[i][r] == <span class="hljs-string">'#'</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = L; i &lt;= R; i++)
+        <span class="hljs-keyword">if</span> (ck[qr[i].xr] == ck[qr[i].xl - <span class="hljs-number">1</span>]) ans[qr[i].id] = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>, c0 = <span class="hljs-number">0</span>, c1 = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = l; j &lt;= r; j++)
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) g1[j][i].<span class="hljs-built_in">reset</span>(), g2[j][i].<span class="hljs-built_in">reset</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+        <span class="hljs-keyword">if</span> (c[i][mid] == <span class="hljs-string">'.'</span>) {
+            <span class="hljs-keyword">if</span> (i) g2[mid][i] |= g2[mid][i - <span class="hljs-number">1</span>];
+            g2[mid][i].<span class="hljs-built_in">set</span>(i);
+        }
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = mid; j &lt;= r; j++) {
+            <span class="hljs-keyword">if</span> (c[i][j] == <span class="hljs-string">'#'</span>) <span class="hljs-keyword">continue</span>;
+            <span class="hljs-keyword">if</span> (i) g2[j][i] |= g2[j][i - <span class="hljs-number">1</span>];
+            <span class="hljs-keyword">if</span> (j &gt; mid) g2[j][i] |= g2[j - <span class="hljs-number">1</span>][i];
+        }
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = n; i &gt;= <span class="hljs-number">1</span>; i--) {
+        <span class="hljs-keyword">if</span> (c[i][mid] == <span class="hljs-string">'.'</span>) {
+            <span class="hljs-keyword">if</span> (i &lt; n) g1[mid][i] |= g1[mid][i + <span class="hljs-number">1</span>];
+            g1[mid][i].<span class="hljs-built_in">set</span>(i);
+        }
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = mid; j &gt;= l; j--) {
+            <span class="hljs-keyword">if</span> (c[i][j] == <span class="hljs-string">'#'</span>) <span class="hljs-keyword">continue</span>;
+            <span class="hljs-keyword">if</span> (i &lt; n) g1[j][i] |= g1[j][i + <span class="hljs-number">1</span>];
+            <span class="hljs-keyword">if</span> (j &lt; mid) g1[j][i] |= g1[j + <span class="hljs-number">1</span>][i];
+        }
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = L; i &lt;= R; i++)
+    <span class="hljs-keyword">if</span> (qr[i].yr &lt;= mid) q0[++c0] = qr[i];
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (qr[i].yl &gt; mid) q1[++c1] = qr[i];
+    <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// printf("%d %d %d\n", qr[i].id, g1[qr[i].yl][qr[i].xl].count(), g2[qr[i].yr][qr[i].xr].count());</span>
+        <span class="hljs-comment">// for (int j = 1; j &lt;= n; j++) printf("%d ", g1[qr[i].yl][qr[i].xl][j] ? 1 : 0); puts("");</span>
+        <span class="hljs-comment">// for (int j = 1; j &lt;= n; j++) printf("%d ", g2[qr[i].yr][qr[i].xr][j] ? 1 : 0); puts("");</span>
+        <span class="hljs-keyword">if</span> ((g1[qr[i].yl][qr[i].xl] &amp; g2[qr[i].yr][qr[i].xr]).<span class="hljs-built_in">count</span>()) ans[qr[i].id] = <span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= c0; i++) qr[L + i - <span class="hljs-number">1</span>] = q0[i];
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= c1; i++) qr[R - i + <span class="hljs-number">1</span>] = q1[i];
+    <span class="hljs-built_in">solve</span>(l, mid, L, L + c0 - <span class="hljs-number">1</span>);
+    <span class="hljs-built_in">solve</span>(mid + <span class="hljs-number">1</span>, r, R - c1 + <span class="hljs-number">1</span>, R);
+}
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    n = <span class="hljs-built_in">read</span>(); m = <span class="hljs-built_in">read</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, c[i] + <span class="hljs-number">1</span>);
+    <span class="hljs-type">int</span> q = <span class="hljs-built_in">read</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= q; i++) {
+        <span class="hljs-type">int</span> x = <span class="hljs-built_in">read</span>(), y = <span class="hljs-built_in">read</span>();
+        qr[i].xl = x; qr[i].yl = y;
+        x = <span class="hljs-built_in">read</span>(), y = <span class="hljs-built_in">read</span>();
+        qr[i].xr = x; qr[i].yr = y;
+        qr[i].id = i;
+    }
+    <span class="hljs-built_in">solve</span>(<span class="hljs-number">1</span>, m, <span class="hljs-number">1</span>, q);
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= q; i++) <span class="hljs-built_in">puts</span>(ans[i] ? <span class="hljs-string">"Yes"</span> : <span class="hljs-string">"No"</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre></div>]]></content>
       <categories>
-        <category>学习笔记</category>
+        <category>题解</category>
       </categories>
+      <tags>
+        <tag>分治</tag>
+        <tag>bitset</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「雅礼集训 2018 Day7」A</title>
+    <url>/2022/03/15/%E3%80%8C%E9%9B%85%E7%A4%BC%E9%9B%86%E8%AE%AD-2018-Day7%E3%80%8DA/</url>
+    <content><![CDATA[<p><a href="https://loj.ac/p/6507">$\text{link}$</a></p>
+<p>用线段树维护 $\text{And,Or,Min}$ 值，对于操作：</p>
+<ul>
+<li><p>$\text{And x}$，设当前点为 $u$，区间值分别为 $ta(u),to(u),tm(u)$：</p>
+<ul>
+<li><p>若 $x \And to(u) = to(u)$ ,则该操作对当前区间 $[l(u),r(u)]$ 的值无效；</p>
+</li>
+<li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p>
+</li>
+<li><p>否则直接暴力递归下去。</p>
+</li>
+</ul>
+</li>
+<li><p>$\text{Or x}$，类似的有：</p>
+<ul>
+<li><p>若 $ta(u) \And x = x$ ,则该操作对当前区间无效；</p>
+</li>
+<li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p>
+</li>
+<li><p>否则直接暴力递归下去。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>分析一下时间复杂度：每次暴力递归下去都会使得当前区间内所有数的某一位相同，每个区间不同位的总数为 $\mathrm{O(n\log n\log 值域)}$，时间复杂度即为 $\mathrm{O(n\log n\log 值域)}$ 。</p>
+<p>$\text{Code:}$</p>
+<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">return</span> f ? -x : x;
+}
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">5e5</span> + <span class="hljs-number">5</span>;
+<span class="hljs-type">int</span> n, q, a[maxn];
+<span class="hljs-keyword">namespace</span> _Smt {
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {
+        <span class="hljs-type">int</span> a, o, m, tg1, tg2;
+        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">aladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a &amp;= x; o &amp;= x; m &amp;= x; tg1 = ~tg1 ? tg1 &amp; x : x; tg2 &amp;= x;}
+        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">oladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a |= x; o |= x; m |= x; tg2 |= x; tg1 = ~tg1 ? tg1 ^ (tg1 &amp; x) : tg1;}
+    } t[maxn &lt;&lt; <span class="hljs-number">2</span>];
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> ls u &lt;&lt; 1</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rs u &lt;&lt; 1 | 1</span>
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">up</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
+        t[u].a = t[ls].a &amp; t[rs].a;
+        t[u].o = t[ls].o | t[rs].o;
+        t[u].m = <span class="hljs-built_in">min</span>(t[ls].m, t[rs].m);
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
+        <span class="hljs-keyword">if</span> (~t[u].tg1) t[ls].<span class="hljs-built_in">aladd</span>(t[u].tg1), t[rs].<span class="hljs-built_in">aladd</span>(t[u].tg1);
+        <span class="hljs-keyword">if</span> (t[u].tg2) t[ls].<span class="hljs-built_in">oladd</span>(t[u].tg2), t[rs].<span class="hljs-built_in">oladd</span>(t[u].tg2);
+        t[u].tg1 = <span class="hljs-number">-1</span>; t[u].tg2 = <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>{
+        t[u].tg1 = <span class="hljs-number">-1</span>;
+        <span class="hljs-keyword">if</span> (l == r) {
+            t[u].a = t[u].o = t[u].m = a[l];
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">build</span>(ls, l, mid);
+        <span class="hljs-built_in">build</span>(rs, mid + <span class="hljs-number">1</span>, r);
+        <span class="hljs-built_in">up</span>(u);
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf1</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{
+        <span class="hljs-keyword">if</span> ((z &amp; t[u].o) == t[u].o) <span class="hljs-keyword">return</span>;
+        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {
+            <span class="hljs-keyword">if</span> (l == r) {
+                t[u].<span class="hljs-built_in">aladd</span>(z);
+                <span class="hljs-keyword">return</span>;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {
+                t[u].<span class="hljs-built_in">aladd</span>(z);
+                <span class="hljs-keyword">return</span>;
+            }
+        }
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf1</span>(ls, l, mid, x, y, z);
+        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf1</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);
+        <span class="hljs-built_in">up</span>(u);
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{
+        <span class="hljs-keyword">if</span> ((t[u].a &amp; z) == z) <span class="hljs-keyword">return</span>;
+        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {
+            <span class="hljs-keyword">if</span> (l == r) {
+                t[u].<span class="hljs-built_in">oladd</span>(z);
+                <span class="hljs-keyword">return</span>;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {
+                t[u].<span class="hljs-built_in">oladd</span>(z);
+                <span class="hljs-keyword">return</span>;
+            }
+        }
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf2</span>(ls, l, mid, x, y, z);
+        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf2</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);
+        <span class="hljs-built_in">up</span>(u);
+    }
+    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">qry</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) <span class="hljs-keyword">return</span> t[u].m;
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (x &gt; mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y);
+        <span class="hljs-keyword">if</span> (y &lt;= mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(ls, l, mid, x, y);
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">min</span>(<span class="hljs-built_in">qry</span>(ls, l, mid, x, y), <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y));
+    }
+}
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> _Smt;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    n = <span class="hljs-built_in">read</span>(); q = <span class="hljs-built_in">read</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) a[i] = <span class="hljs-built_in">read</span>();
+    <span class="hljs-built_in">build</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n);
+    <span class="hljs-keyword">while</span> (q--) {
+        <span class="hljs-type">int</span> opt, l, r, x;
+        opt = <span class="hljs-built_in">read</span>(); l = <span class="hljs-built_in">read</span>(); r = <span class="hljs-built_in">read</span>();
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">1</span>) {
+            x = <span class="hljs-built_in">read</span>();
+            <span class="hljs-built_in">mdf1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);
+        }
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">2</span>) {
+            x = <span class="hljs-built_in">read</span>();
+            <span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);
+        }
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">3</span>) {
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, <span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r));
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre></div>]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>线段树</tag>
+        <tag>势能分析</tag>
+      </tags>
   </entry>
 </search>
