@@ -54,7 +54,79 @@
 </ul>
 <p>询问可以用四元组 $(l,r,id,1/-1)$ 表示询问 $f([l,r],i)$，询问编号 $id$ 以及增减 $1/-1$。</p>
 <p>$\texttt{Code:}$</p>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp"></code></pre></div>
+<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> pb push_back</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">return</span> f ? -x : x;
+}
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">1e5</span> + <span class="hljs-number">5</span>;
+<span class="hljs-type">int</span> n, m, k, a[maxn], B;
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">_ques</span> {
+    <span class="hljs-type">int</span> l, r, id, pos;
+    <span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span> &lt; (<span class="hljs-type">const</span> _ques &amp;a) <span class="hljs-type">const</span> {
+        <span class="hljs-keyword">return</span> pos ^ a.pos ? l &lt; a.l : pos &amp; <span class="hljs-number">1</span> ? r &gt; a.r : r &lt; a.r;
+    }
+} qr[maxn];
+<span class="hljs-type">long</span> <span class="hljs-type">long</span> sum[maxn], ans[maxn];
+<span class="hljs-type">int</span> f[maxn], g[maxn];
+vector&lt;<span class="hljs-type">int</span>&gt; trs;
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">st</span> {
+    <span class="hljs-type">int</span> l, r, id, dt;
+    <span class="hljs-built_in">st</span> (<span class="hljs-type">int</span> l = <span class="hljs-number">0</span>, <span class="hljs-type">int</span> r = <span class="hljs-number">0</span>, <span class="hljs-type">int</span> id = <span class="hljs-number">0</span>, <span class="hljs-type">int</span> dt = <span class="hljs-number">0</span>) : <span class="hljs-built_in">l</span>(l), <span class="hljs-built_in">r</span>(r), <span class="hljs-built_in">id</span>(id), <span class="hljs-built_in">dt</span>(dt) {}
+};
+vector&lt;st&gt; vec[maxn];
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    n = <span class="hljs-built_in">read</span>(); m = <span class="hljs-built_in">read</span>(); k = <span class="hljs-built_in">read</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) a[i] = <span class="hljs-built_in">read</span>();
+    B = <span class="hljs-built_in">sqrt</span>(n);
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++) {
+        <span class="hljs-type">int</span> l = <span class="hljs-built_in">read</span>(), r = <span class="hljs-built_in">read</span>();
+        qr[i] = (_ques){l, r, i, l / B};
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> S = <span class="hljs-number">0</span>; S &lt; (<span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">14</span>); S++) {
+        <span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">14</span>; i++) cnt += S &gt;&gt; i &amp; <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (cnt == k) trs.<span class="hljs-built_in">pb</span>(S);
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+        f[i] = g[a[i]];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> S : trs) g[a[i] ^ S]++;
+    }
+    <span class="hljs-built_in">memset</span>(g, <span class="hljs-number">0</span>, <span class="hljs-built_in">sizeof</span>(g));
+    <span class="hljs-built_in">sort</span>(qr + <span class="hljs-number">1</span>, qr + m + <span class="hljs-number">1</span>);
+    <span class="hljs-type">int</span> l = qr[<span class="hljs-number">1</span>].l, r = qr[<span class="hljs-number">1</span>].r;
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = l + <span class="hljs-number">1</span>; i &lt;= r; i++) sum[<span class="hljs-number">1</span>] += f[i];
+    <span class="hljs-keyword">if</span> (l &lt; r) vec[l - <span class="hljs-number">1</span>].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(l + <span class="hljs-number">1</span>, r, <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>));
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= m; i++) {
+        <span class="hljs-keyword">if</span> (r &lt; qr[i].r) vec[l - <span class="hljs-number">1</span>].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(r + <span class="hljs-number">1</span>, qr[i].r, i, <span class="hljs-number">-1</span>));
+        <span class="hljs-keyword">if</span> (r &gt; qr[i].r) vec[l - <span class="hljs-number">1</span>].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(qr[i].r + <span class="hljs-number">1</span>, r, i, <span class="hljs-number">1</span>));
+        <span class="hljs-keyword">while</span> (r &lt; qr[i].r) sum[i] += f[++r];
+        <span class="hljs-keyword">while</span> (r &gt; qr[i].r) sum[i] -= f[r--];
+        <span class="hljs-keyword">if</span> (l &gt; qr[i].l) vec[r].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(qr[i].l, l - <span class="hljs-number">1</span>, i, <span class="hljs-number">1</span>));
+        <span class="hljs-keyword">if</span> (l &lt; qr[i].l) vec[r].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(l, qr[i].l - <span class="hljs-number">1</span>, i, <span class="hljs-number">-1</span>));
+        <span class="hljs-keyword">while</span> (l &gt; qr[i].l) sum[i] -= f[--l];
+        <span class="hljs-keyword">while</span> (l &lt; qr[i].l) sum[i] += f[l++];
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> S : trs) g[a[i] ^ S]++;
+        <span class="hljs-keyword">for</span> (st qry : vec[i]) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = qry.l; j &lt;= qry.r; j++) {
+                sum[qry.id] += qry.dt * g[a[j]];
+                <span class="hljs-keyword">if</span> (j &lt;= i &amp;&amp; k == <span class="hljs-number">0</span>) sum[qry.id] -= qry.dt;
+            }
+        }
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++) {
+        sum[i] += sum[i - <span class="hljs-number">1</span>];
+        ans[qr[i].id] = sum[i];
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++) <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%lld\n"</span>, ans[i]);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre></div>
 
 <h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><ul>
 <li><p><a href="https://www.luogu.com.cn/problem/P5047">$\text{[Ynoi2019 模拟赛] Yuno loves sqrt technology II}$</a></p>
