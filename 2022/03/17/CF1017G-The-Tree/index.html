@@ -16,20 +16,22 @@
   <meta name="author" content="klii">
   <meta name="keywords" content="">
   
-    <meta name="description" content="例题$\texttt{Luogu P4887 [模板]莫队二次离线}$ 设莫队指针移动时间复杂度为 $O(k)$ ，则普通莫队的时间复杂度为 $O(m\sqrt n k)$ ，使用莫队二次离线可以变成 $O(m\sqrt n + nk)$ 。 本题直接莫队做是 $O(m\sqrt n\binom{14}{k})$ 的，无法通过。 记 $a_x$ 对区间 $[l,r]$ 的贡献为 $f(x,[l,r">
+    <meta name="description" content="$\text{link}$ 对于询问 $\text{3 x}$ ，若操作 $\text{1 y}$ 使得 $x$ 染上了黑色，那么满足 $y$ 是 $x$ 的祖先并且 $y\longrightarrow$ 路径上操作 $1$ 的个数 $\ge$ 路径上的总点数（包括 $x,y$）。 考虑给每个点附一个权值 $-1$ ，操作 $\text{1 x}$ 则对 $x$ 单点 $+1$，那么查询时只需要判">
 <meta property="og:type" content="article">
-<meta property="og:title" content="莫队二次离线学习笔记">
-<meta property="og:url" content="https://klii0314.github.io/2022/03/17/%E8%8E%AB%E9%98%9F%E4%BA%8C%E6%AC%A1%E7%A6%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="CF1017G The Tree">
+<meta property="og:url" content="https://klii0314.github.io/2022/03/17/CF1017G-The-Tree/index.html">
 <meta property="og:site_name" content="klii&#39;s blog">
-<meta property="og:description" content="例题$\texttt{Luogu P4887 [模板]莫队二次离线}$ 设莫队指针移动时间复杂度为 $O(k)$ ，则普通莫队的时间复杂度为 $O(m\sqrt n k)$ ，使用莫队二次离线可以变成 $O(m\sqrt n + nk)$ 。 本题直接莫队做是 $O(m\sqrt n\binom{14}{k})$ 的，无法通过。 记 $a_x$ 对区间 $[l,r]$ 的贡献为 $f(x,[l,r">
+<meta property="og:description" content="$\text{link}$ 对于询问 $\text{3 x}$ ，若操作 $\text{1 y}$ 使得 $x$ 染上了黑色，那么满足 $y$ 是 $x$ 的祖先并且 $y\longrightarrow$ 路径上操作 $1$ 的个数 $\ge$ 路径上的总点数（包括 $x,y$）。 考虑给每个点附一个权值 $-1$ ，操作 $\text{1 x}$ 则对 $x$ 单点 $+1$，那么查询时只需要判">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-03-17T01:29:18.000Z">
-<meta property="article:modified_time" content="2022-03-17T02:40:10.851Z">
+<meta property="article:published_time" content="2022-03-17T12:24:32.000Z">
+<meta property="article:modified_time" content="2022-03-17T12:35:18.663Z">
 <meta property="article:author" content="klii">
+<meta property="article:tag" content="线段树">
+<meta property="article:tag" content="树链剖分">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>莫队二次离线学习笔记 - klii&#39;s blog</title>
+  <title>CF1017G The Tree - klii&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -190,9 +192,9 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="莫队二次离线学习笔记">
+            <span class="h2" id="subtitle" title="CF1017G The Tree">
               
-                莫队二次离线学习笔记
+                CF1017G The Tree
               
             </span>
 
@@ -202,8 +204,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-03-17 09:29" pubdate>
-        March 17, 2022 am
+      <time datetime="2022-03-17 20:24" pubdate>
+        March 17, 2022 pm
       </time>
     </span>
   
@@ -213,7 +215,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.8k 字
+      2.7k 字
     </span>
   
 
@@ -222,7 +224,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      24 分钟
+      23 分钟
     </span>
   
 
@@ -255,130 +257,125 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">莫队二次离线学习笔记</h1>
+            <h1 style="display: none">CF1017G The Tree</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：March 17, 2022 am
+                  本文最后更新于：March 17, 2022 pm
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4887">$\texttt{Luogu P4887 [模板]莫队二次离线}$</a></p>
-<p>设莫队指针移动时间复杂度为 $O(k)$ ，则普通莫队的时间复杂度为 $O(m\sqrt n k)$ ，使用莫队二次离线可以变成 $O(m\sqrt n + nk)$ 。</p>
-<p>本题直接莫队做是 $O(m\sqrt n\binom{14}{k})$ 的，无法通过。</p>
-<p>记 $a_x$ 对区间 $[l,r]$ 的贡献为 $f(x,[l,r])$，<strong>差分</strong>后贡献记为 $f(x,r)-f(x,l-1)$，即 $f(x,r)$ 表示 $x$ 对前缀 $[1,r]$ 的贡献。考虑莫队指针移动过程中答案的变化：</p>
-<ul>
-<li><p>$[l,r]\longrightarrow [l,qr]:$</p>
-<ul>
-<li><p>$qr &gt; r:$ 答案增加 $\sum\limits_{i=r+1}^{qr}f(i,i-1)-f(i,l-1)$</p>
-</li>
-<li><p>$qr &lt; r:$ 答案减少 $\sum\limits_{i=qr+1}^r f(i,i-1) - f(i,l-1)$</p>
-</li>
-</ul>
-</li>
-<li><p>$[l,r]\longrightarrow [ql,r]:$</p>
-<ul>
-<li><p>$ql &lt; l:$ 答案增加 $\sum\limits_{i=ql}^{l-1} f(i,r)-f(i,i)$</p>
-</li>
-<li><p>$ql &gt; l:$ 答案减少 $\sum\limits_{i=l}^{ql-1} f(i,r)-f(i,i)$</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>$f(i,i)$ 和 $f(i,i-1)$ 都是固定的，可以预处理直接计算；</p>
-<p>$f(i,l-1)$ 和 $f(i,r)$ 则使用扫描线解决，具体地说：</p>
-<ul>
-<li><p>对于每个前缀 $[1,i]$，开一个 $vector$ 存下所有的询问 $f([l,r],i)$，记 $g(x)$ 表示 $a_{[1,i]}$ 中 $\oplus x$ 的二进制表示下恰好有 $k$ 个 $1$ 的个数，则对于询问 $f([l,r],i)$ 的贡献即为 $\sum\limits_{i=l}^r g(a_i)$。</p>
-</li>
-<li><p>处理完 $[1,i]$ 然后处理 $[1,i+1]$ 时，枚举 $a_{i+1}$ 取反 $k$ 位更新 $g$ 即可。</p>
-</li>
-</ul>
-<p>询问可以用四元组 $(l,r,id,1/-1)$ 表示询问 $f([l,r],i)$，询问编号 $id$ 以及增减 $1/-1$。</p>
+              <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/CF1017G">$\text{link}$</a></p>
+<p>对于询问 $\text{3 x}$ ，若操作 $\text{1 y}$ 使得 $x$ 染上了黑色，那么满足 $y$ 是 $x$ 的祖先并且 $y\longrightarrow$ 路径上操作 $1$ 的个数 $\ge$ 路径上的总点数（包括 $x,y$）。</p>
+<p>考虑给每个点附一个权值 $-1$ ，操作 $\text{1 x}$ 则对 $x$ 单点 $+1$，那么查询时只需要判断 $x\longrightarrow rt$ 的路径上的后缀和最大值是否 $\ge 0$ 即可判断颜色，如果没有操作 $2$ 就做完了。</p>
+<p>对于操作 $\text{2 x}$ ，将 $x$ 子树的权值覆盖为 $-1$ 可以使得子树内的点到 $x$ 的后缀和最大值正确，但是可能 $x\longrightarrow rt$ 的后缀和最大值出错，这需要将 $x$ 单点减小 “$rt\longrightarrow x$ 的后缀和最大值 + 1” ，然后就做完了。</p>
+<p>时间复杂度 $\mathrm{O(n\log ^2 n)}$ 。</p>
+<p><del>久违的 1A</del></p>
 <p>$\texttt{Code:}$</p>
 <div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-keyword">define</span> pb push_back</span>
 <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();
-    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();
-    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();
-    <span class="hljs-keyword">return</span> f ? -x : x;
-}
 <span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">1e5</span> + <span class="hljs-number">5</span>;
-<span class="hljs-type">int</span> n, m, k, a[maxn], B;
-<span class="hljs-keyword">struct</span> <span class="hljs-title class_">_ques</span> {
-    <span class="hljs-type">int</span> l, r, id, pos;
-    <span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span> &lt; (<span class="hljs-type">const</span> _ques &amp;a) <span class="hljs-type">const</span> {
-        <span class="hljs-keyword">return</span> pos ^ a.pos ? l &lt; a.l : pos &amp; <span class="hljs-number">1</span> ? r &gt; a.r : r &lt; a.r;
+vector&lt;<span class="hljs-type">int</span>&gt; G[maxn];
+<span class="hljs-type">int</span> n, q, s[maxn], fa[maxn], depth[maxn], son[maxn], top[maxn], tms, dfn[maxn];
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs1</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> fath)</span> </span>{
+    s[u] = <span class="hljs-number">1</span>; fa[u] = fath;
+    depth[u] = depth[fath] + <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> v : G[u]) {
+        <span class="hljs-built_in">dfs1</span>(v, u);
+        s[u] += s[v];
+        <span class="hljs-keyword">if</span> (s[v] &gt; s[son[u]]) son[u] = v;
     }
-} qr[maxn];
-<span class="hljs-type">long</span> <span class="hljs-type">long</span> sum[maxn], ans[maxn];
-<span class="hljs-type">int</span> f[maxn], g[maxn];
-vector&lt;<span class="hljs-type">int</span>&gt; trs;
-<span class="hljs-keyword">struct</span> <span class="hljs-title class_">st</span> {
-    <span class="hljs-type">int</span> l, r, id, dt;
-    <span class="hljs-built_in">st</span> (<span class="hljs-type">int</span> l = <span class="hljs-number">0</span>, <span class="hljs-type">int</span> r = <span class="hljs-number">0</span>, <span class="hljs-type">int</span> id = <span class="hljs-number">0</span>, <span class="hljs-type">int</span> dt = <span class="hljs-number">0</span>) : <span class="hljs-built_in">l</span>(l), <span class="hljs-built_in">r</span>(r), <span class="hljs-built_in">id</span>(id), <span class="hljs-built_in">dt</span>(dt) {}
-};
-vector&lt;st&gt; vec[maxn];
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-    n = <span class="hljs-built_in">read</span>(); m = <span class="hljs-built_in">read</span>(); k = <span class="hljs-built_in">read</span>();
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) a[i] = <span class="hljs-built_in">read</span>();
-    B = <span class="hljs-built_in">sqrt</span>(n);
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++) {
-        <span class="hljs-type">int</span> l = <span class="hljs-built_in">read</span>(), r = <span class="hljs-built_in">read</span>();
-        qr[i] = (_ques){l, r, i, l / B};
+}
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> Top)</span> </span>{
+    top[u] = Top; dfn[u] = ++tms;
+    <span class="hljs-keyword">if</span> (!son[u]) <span class="hljs-keyword">return</span>;
+    <span class="hljs-built_in">dfs2</span>(son[u], Top);
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> v : G[u]) <span class="hljs-keyword">if</span> (v ^ son[u]) <span class="hljs-built_in">dfs2</span>(v, v);
+}
+<span class="hljs-keyword">namespace</span> _Smt {
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> ls u &lt;&lt; 1</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rs u &lt;&lt; 1 | 1</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> lson ls, l, mid</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rson rs, mid + 1, r</span>
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {
+        <span class="hljs-type">int</span> len, s, rx, tag;
+        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">ladd</span><span class="hljs-params">()</span> </span>{tag = <span class="hljs-number">1</span>; s = -len; rx = <span class="hljs-number">-1</span>;}
+    } t[maxn &lt;&lt; <span class="hljs-number">2</span>], ept;
+    <span class="hljs-function">Node <span class="hljs-title">merge</span><span class="hljs-params">(Node c, Node a, Node b)</span> </span>{
+        c.s = a.s + b.s;
+        c.rx = <span class="hljs-built_in">max</span>(b.rx, a.rx + b.s);
+        <span class="hljs-keyword">return</span> c;
     }
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> S = <span class="hljs-number">0</span>; S &lt; (<span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">14</span>); S++) {
-        <span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>;
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">14</span>; i++) cnt += S &gt;&gt; i &amp; <span class="hljs-number">1</span>;
-        <span class="hljs-keyword">if</span> (cnt == k) trs.<span class="hljs-built_in">pb</span>(S);
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>{
+        t[u].len = r - l + <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (l == r) {t[u].s = t[u].rx = <span class="hljs-number">-1</span>; <span class="hljs-keyword">return</span>;}
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">build</span>(lson); <span class="hljs-built_in">build</span>(rson);
+        t[u] = <span class="hljs-built_in">merge</span>(t[u], t[ls], t[rs]);
     }
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
-        f[i] = g[a[i]];
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> S : trs) g[a[i] ^ S]++;
-    }
-    <span class="hljs-built_in">memset</span>(g, <span class="hljs-number">0</span>, <span class="hljs-built_in">sizeof</span>(g));
-    <span class="hljs-built_in">sort</span>(qr + <span class="hljs-number">1</span>, qr + m + <span class="hljs-number">1</span>);
-    <span class="hljs-type">int</span> l = qr[<span class="hljs-number">1</span>].l, r = qr[<span class="hljs-number">1</span>].r;
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = l + <span class="hljs-number">1</span>; i &lt;= r; i++) sum[<span class="hljs-number">1</span>] += f[i];
-    <span class="hljs-keyword">if</span> (l &lt; r) vec[l - <span class="hljs-number">1</span>].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(l + <span class="hljs-number">1</span>, r, <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>));
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= m; i++) {
-        <span class="hljs-keyword">if</span> (r &lt; qr[i].r) vec[l - <span class="hljs-number">1</span>].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(r + <span class="hljs-number">1</span>, qr[i].r, i, <span class="hljs-number">-1</span>));
-        <span class="hljs-keyword">if</span> (r &gt; qr[i].r) vec[l - <span class="hljs-number">1</span>].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(qr[i].r + <span class="hljs-number">1</span>, r, i, <span class="hljs-number">1</span>));
-        <span class="hljs-keyword">while</span> (r &lt; qr[i].r) sum[i] += f[++r];
-        <span class="hljs-keyword">while</span> (r &gt; qr[i].r) sum[i] -= f[r--];
-        <span class="hljs-keyword">if</span> (l &gt; qr[i].l) vec[r].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(qr[i].l, l - <span class="hljs-number">1</span>, i, <span class="hljs-number">1</span>));
-        <span class="hljs-keyword">if</span> (l &lt; qr[i].l) vec[r].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(l, qr[i].l - <span class="hljs-number">1</span>, i, <span class="hljs-number">-1</span>));
-        <span class="hljs-keyword">while</span> (l &gt; qr[i].l) sum[i] -= f[--l];
-        <span class="hljs-keyword">while</span> (l &lt; qr[i].l) sum[i] += f[l++];
-    }
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> S : trs) g[a[i] ^ S]++;
-        <span class="hljs-keyword">for</span> (st qry : vec[i]) {
-            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = qry.l; j &lt;= qry.r; j++) {
-                sum[qry.id] += qry.dt * g[a[j]];
-                <span class="hljs-keyword">if</span> (j &lt;= i &amp;&amp; k == <span class="hljs-number">0</span>) sum[qry.id] -= qry.dt;
-            }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
+        <span class="hljs-keyword">if</span> (t[u].tag) {
+            t[ls].<span class="hljs-built_in">ladd</span>();
+            t[rs].<span class="hljs-built_in">ladd</span>();
+            t[u].tag = <span class="hljs-number">0</span>;
         }
     }
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++) {
-        sum[i] += sum[i - <span class="hljs-number">1</span>];
-        ans[qr[i].id] = sum[i];
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf1</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
+        <span class="hljs-keyword">if</span> (l == r) {t[u].s += y; t[u].rx += y; <span class="hljs-keyword">return</span>;}
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>; <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf1</span>(lson, x, y);
+            <span class="hljs-keyword">else</span> <span class="hljs-built_in">mdf1</span>(rson, x, y);
+        t[u] = <span class="hljs-built_in">merge</span>(t[u], t[ls], t[rs]);
     }
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++) <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%lld\n"</span>, ans[i]);
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {t[u].<span class="hljs-built_in">ladd</span>(); <span class="hljs-keyword">return</span>;}
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>; <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf2</span>(lson, x, y);
+        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf2</span>(rson, x, y);
+        t[u] = <span class="hljs-built_in">merge</span>(t[u], t[ls], t[rs]);
+    }
+    <span class="hljs-function">Node <span class="hljs-title">qry</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) <span class="hljs-keyword">return</span> t[u];
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>; <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (y &lt;= mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(lson, x, y);
+        <span class="hljs-keyword">if</span> (x &gt; mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(rson, x, y);
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">merge</span>(ept, <span class="hljs-built_in">qry</span>(lson, x, y), <span class="hljs-built_in">qry</span>(rson, x, y));
+    }
+    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">ask</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
+        Node res = ept;
+        res.rx = <span class="hljs-number">-1e9</span>;
+        <span class="hljs-keyword">while</span> (top[u] ^ <span class="hljs-number">1</span>) {
+            res = <span class="hljs-built_in">merge</span>(ept, <span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, dfn[top[u]], dfn[u]), res);
+            u = fa[top[u]];
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">merge</span>(ept, <span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, <span class="hljs-number">1</span>, dfn[u]), res).rx;
+    }
+    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> ls</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> rs</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> lson</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> rson</span>
+}
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> _Smt;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;n, &amp;q);
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= n; i++) {
+        <span class="hljs-type">int</span> u; <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;u);
+        G[u].<span class="hljs-built_in">push_back</span>(i);
+    }
+    <span class="hljs-built_in">dfs1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>); <span class="hljs-built_in">dfs2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+    <span class="hljs-built_in">build</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n);
+    <span class="hljs-keyword">while</span> (q--) {
+        <span class="hljs-type">int</span> opt, x; <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;opt, &amp;x);
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">1</span>) <span class="hljs-built_in">mdf1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, dfn[x], <span class="hljs-number">1</span>);
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">2</span>) {
+            <span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, dfn[x], dfn[x] + s[x] - <span class="hljs-number">1</span>);
+            <span class="hljs-built_in">mdf1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, dfn[x], -<span class="hljs-built_in">ask</span>(x) - <span class="hljs-number">1</span>);
+        }
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">3</span>) <span class="hljs-built_in">puts</span>(<span class="hljs-built_in">ask</span>(x) &gt;= <span class="hljs-number">0</span> ? <span class="hljs-string">"black"</span> : <span class="hljs-string">"white"</span>);
+    }
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 }</code></pre></div>
-
-<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><ul>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5047">$\text{[Ynoi2019 模拟赛] Yuno loves sqrt technology II}$</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5501">$\text{[LnOI2019]来者不拒，去者不追}$</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5398">$\text{[Ynoi2018] GOSICK}$</a></p>
-</li>
-</ul>
-
             </div>
             <hr>
             <div>
@@ -387,10 +384,19 @@ vector&lt;st&gt; vec[maxn];
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+                      <a class="hover-with-bg" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
                     
                   </div>
                 
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/">树链剖分</a>
+                    
+                  </div>
                 
               </div>
               
@@ -405,18 +411,12 @@ vector&lt;st&gt; vec[maxn];
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/17/CF1017G-The-Tree/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CF1017G The Tree</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/16/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                        <span class="hidden-mobile">群论学习笔记</span>
+                      <a href="/2022/03/17/%E8%8E%AB%E9%98%9F%E4%BA%8C%E6%AC%A1%E7%A6%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="hidden-mobile">莫队二次离线学习笔记</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
