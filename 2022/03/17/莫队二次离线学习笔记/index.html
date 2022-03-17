@@ -24,7 +24,7 @@
 <meta property="og:description" content="例题$\texttt{Luogu P4887 [模板]莫队二次离线}$ 设莫队指针移动时间复杂度为 $O(k)$ ，则普通莫队的时间复杂度为 $O(m\sqrt n k)$ ，使用莫队二次离线可以变成 $O(m\sqrt n + nk)$ 。 本题直接莫队做是 $O(m\sqrt n\binom{14}{k})$ 的，无法通过。 记 $a_x$ 对区间 $[l,r]$ 的贡献为 $f(x,[l,r">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-17T01:29:18.000Z">
-<meta property="article:modified_time" content="2022-03-17T01:56:21.138Z">
+<meta property="article:modified_time" content="2022-03-17T02:28:55.596Z">
 <meta property="article:author" content="klii">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -273,7 +273,7 @@
 <ul>
 <li><p>$qr &gt; r:$ 答案增加 $\sum\limits_{i=r+1}^{qr}f(i,i-1)-f(i,l-1)$</p>
 </li>
-<li><p>$qr &lt; r:$ 答案减少 $\sum\limits_{i=qr+1}^r f(i,i-1) - f(i,l-1$</p>
+<li><p>$qr &lt; r:$ 答案减少 $\sum\limits_{i=qr+1}^r f(i,i-1) - f(i,l-1)$</p>
 </li>
 </ul>
 </li>

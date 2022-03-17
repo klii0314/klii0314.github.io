@@ -31,7 +31,7 @@
 <ul>
 <li><p>$qr &gt; r:$ 答案增加 $\sum\limits_{i=r+1}^{qr}f(i,i-1)-f(i,l-1)$</p>
 </li>
-<li><p>$qr &lt; r:$ 答案减少 $\sum\limits_{i=qr+1}^r f(i,i-1) - f(i,l-1$</p>
+<li><p>$qr &lt; r:$ 答案减少 $\sum\limits_{i=qr+1}^r f(i,i-1) - f(i,l-1)$</p>
 </li>
 </ul>
 </li>
