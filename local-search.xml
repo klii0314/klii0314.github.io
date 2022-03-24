@@ -220,7 +220,7 @@
   
   
   <entry>
-    <title>404</title>
+    <title></title>
     <link href="/"/>
     <url>/</url>
     
@@ -231,7 +231,7 @@
   
   
   <entry>
-    <title></title>
+    <title>404</title>
     <link href="/"/>
     <url>/</url>
     
@@ -253,7 +253,7 @@
   
   
   <entry>
-    <title>contact</title>
+    <title>categories</title>
     <link href="/"/>
     <url>/</url>
     
@@ -264,7 +264,7 @@
   
   
   <entry>
-    <title>friends</title>
+    <title>contact</title>
     <link href="/"/>
     <url>/</url>
     
@@ -286,7 +286,7 @@
   
   
   <entry>
-    <title>tags</title>
+    <title>friends</title>
     <link href="/"/>
     <url>/</url>
     
@@ -297,7 +297,7 @@
   
   
   <entry>
-    <title>categories</title>
+    <title>tags</title>
     <link href="/"/>
     <url>/</url>
     
