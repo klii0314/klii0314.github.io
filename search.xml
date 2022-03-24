@@ -1,193 +1,801 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>GDOI2022退役记</title>
-      <link href="/2022/04/06/GDOI2022%E9%80%80%E5%BD%B9%E8%AE%B0/"/>
-      <url>/2022/04/06/GDOI2022%E9%80%80%E5%BD%B9%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p>晚上跟随大部队来到考点附近的酒店，和 $AGC$ 分到了一间房，他还是那么的亲切。</p><p>传统艺能出去吃 $M$ 记，吃完回去 $AGC$ 教育了一下我，说考前不能吃东西，否则第二天会宝玲，我没试过，应该是假的。</p><h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><p>开考后看了看 $3$ 题题面，发现都没有想法，自知今天是 $div.1$ ，便开始想暴力。花了大概 $3h$ 将三题的暴力都写了，期望得分 $1+1+1=3$，想了想进队无望了，于是直接开摆。</p><p>最后 $10mins$ 突然发现 $3$ 题都是傻逼题！！1</p><p>我赶紧 $rush$ ，但是显然失败了，如果再给我一分钟我就能赛后一分钟切了。</p><p>出考场，身边的人都在吐槽傻逼题，但是都没调出来，导致暴力分都没。</p><p>我觉得还有救。</p><h1 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h1><p>昨晚摸太晚了，导致今天只睡了 $1h$ 不到，有点小困。</p><p>开题，发现三个傻逼题，怎么今天是普及场！！1</p><p>正序开题，仔细想想 $T1$，发现有点难写，可恶，《摆了摆了。》</p><p>然后发现 $T2,T3$ 都难写，为什么出这种勾巴题？？写了三个暴力就补觉去了，免得被 $d$ “怎么摆烂啊？”。</p><p>出考场发现题目又被喷力，好！！1</p><p>我还是太菜了。</p><h1 id="Day-n"><a href="#Day-n" class="headerlink" title="Day n"></a>Day n</h1><p>$ccf$ 出分了，实际得分 $1+1+1+99+99+99=300,\text{GD rk 114}$ ，不多不少，$\text{AFO}$。</p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>GDOI2022退役记</title>
+    <url>/2022/04/06/GDOI2022%E9%80%80%E5%BD%B9%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p>晚上跟随大部队来到考点附近的酒店，和 $AGC$ 分到了一间房，他还是那么的亲切。</p>
+<p>传统艺能出去吃 $M$ 记，吃完回去 $AGC$ 教育了一下我，说考前不能吃东西，否则第二天会宝玲，我没试过，应该是假的。</p>
+<h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><p>开考后看了看 $3$ 题题面，发现都没有想法，自知今天是 $div.1$ ，便开始想暴力。花了大概 $3h$ 将三题的暴力都写了，期望得分 $1+1+1=3$，想了想进队无望了，于是直接开摆。</p>
+<p>最后 $10mins$ 突然发现 $3$ 题都是傻逼题！！1</p>
+<p>我赶紧 $rush$ ，但是显然失败了，如果再给我一分钟我就能赛后一分钟切了。</p>
+<p>出考场，身边的人都在吐槽傻逼题，但是都没调出来，导致暴力分都没。</p>
+<p>我觉得还有救。</p>
+<h1 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h1><p>昨晚摸太晚了，导致今天只睡了 $1h$ 不到，有点小困。</p>
+<p>开题，发现三个傻逼题，怎么今天是普及场！！1</p>
+<p>正序开题，仔细想想 $T1$，发现有点难写，可恶，《摆了摆了。》</p>
+<p>然后发现 $T2,T3$ 都难写，为什么出这种勾巴题？？写了三个暴力就补觉去了，免得被 $d$ “怎么摆烂啊？”。</p>
+<p>出考场发现题目又被喷力，好！！1</p>
+<p>我还是太菜了。</p>
+<h1 id="Day-n"><a href="#Day-n" class="headerlink" title="Day n"></a>Day n</h1><p>$ccf$ 出分了，实际得分 $1+1+1+99+99+99=300,\text{GD rk 114}$ ，不多不少，$\text{AFO}$。</p>
+]]></content>
       <categories>
-          
-          <category> 游记 </category>
-          
+        <category>游记</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CF1017G The Tree</title>
-      <link href="/2022/03/17/CF1017G-The-Tree/"/>
-      <url>/2022/03/17/CF1017G-The-Tree/</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF1017G">$\text{link}$</a></p><p>对于询问 $\text{3 x}$ ，若操作 $\text{1 y}$ 使得 $x$ 染上了黑色，那么满足 $y$ 是 $x$ 的祖先并且 $y\longrightarrow$ 路径上操作 $1$ 的个数 $\ge$ 路径上的总点数（包括 $x,y$）。</p><p>考虑给每个点附一个权值 $-1$ ，操作 $\text{1 x}$ 则对 $x$ 单点 $+1$，那么查询时只需要判断 $x\longrightarrow rt$ 的路径上的后缀和最大值是否 $\ge 0$ 即可判断颜色，如果没有操作 $2$ 就做完了。</p><p>对于操作 $\text{2 x}$ ，将 $x$ 子树的权值覆盖为 $-1$ 可以使得子树内的点到 $x$ 的后缀和最大值正确，但是可能 $x\longrightarrow rt$ 的后缀和最大值出错，这需要将 $x$ 单点减小 “$rt\longrightarrow x$ 的后缀和最大值 + 1” ，然后就做完了。</p><p>时间复杂度 $\mathrm{O(n\log ^2 n)}$ 。</p><p><del>久违的 1A</del></p><p>$\texttt{Code:}$</p><div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">1e5</span> + <span class="hljs-number">5</span>;vector&lt;<span class="hljs-type">int</span>&gt; G[maxn];<span class="hljs-type">int</span> n, q, s[maxn], fa[maxn], depth[maxn], son[maxn], top[maxn], tms, dfn[maxn];<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs1</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> fath)</span> </span>{    s[u] = <span class="hljs-number">1</span>; fa[u] = fath;    depth[u] = depth[fath] + <span class="hljs-number">1</span>;    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> v : G[u]) {        <span class="hljs-built_in">dfs1</span>(v, u);        s[u] += s[v];        <span class="hljs-keyword">if</span> (s[v] &gt; s[son[u]]) son[u] = v;    }}<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> Top)</span> </span>{    top[u] = Top; dfn[u] = ++tms;    <span class="hljs-keyword">if</span> (!son[u]) <span class="hljs-keyword">return</span>;    <span class="hljs-built_in">dfs2</span>(son[u], Top);    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> v : G[u]) <span class="hljs-keyword">if</span> (v ^ son[u]) <span class="hljs-built_in">dfs2</span>(v, v);}<span class="hljs-keyword">namespace</span> _Smt {    <span class="hljs-meta">#<span class="hljs-keyword">define</span> ls u &lt;&lt; 1</span>    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rs u &lt;&lt; 1 | 1</span>    <span class="hljs-meta">#<span class="hljs-keyword">define</span> lson ls, l, mid</span>    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rson rs, mid + 1, r</span>    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {        <span class="hljs-type">int</span> len, s, rx, tag;        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">ladd</span><span class="hljs-params">()</span> </span>{tag = <span class="hljs-number">1</span>; s = -len; rx = <span class="hljs-number">-1</span>;}    } t[maxn &lt;&lt; <span class="hljs-number">2</span>], ept;    <span class="hljs-function">Node <span class="hljs-title">merge</span><span class="hljs-params">(Node c, Node a, Node b)</span> </span>{        c.s = a.s + b.s;        c.rx = <span class="hljs-built_in">max</span>(b.rx, a.rx + b.s);        <span class="hljs-keyword">return</span> c;    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>{        t[u].len = r - l + <span class="hljs-number">1</span>;        <span class="hljs-keyword">if</span> (l == r) {t[u].s = t[u].rx = <span class="hljs-number">-1</span>; <span class="hljs-keyword">return</span>;}        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;        <span class="hljs-built_in">build</span>(lson); <span class="hljs-built_in">build</span>(rson);        t[u] = <span class="hljs-built_in">merge</span>(t[u], t[ls], t[rs]);    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{        <span class="hljs-keyword">if</span> (t[u].tag) {            t[ls].<span class="hljs-built_in">ladd</span>();            t[rs].<span class="hljs-built_in">ladd</span>();            t[u].tag = <span class="hljs-number">0</span>;        }    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf1</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{        <span class="hljs-keyword">if</span> (l == r) {t[u].s += y; t[u].rx += y; <span class="hljs-keyword">return</span>;}        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>; <span class="hljs-built_in">pd</span>(u);        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf1</span>(lson, x, y);            <span class="hljs-keyword">else</span> <span class="hljs-built_in">mdf1</span>(rson, x, y);        t[u] = <span class="hljs-built_in">merge</span>(t[u], t[ls], t[rs]);    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {t[u].<span class="hljs-built_in">ladd</span>(); <span class="hljs-keyword">return</span>;}        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>; <span class="hljs-built_in">pd</span>(u);        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf2</span>(lson, x, y);        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf2</span>(rson, x, y);        t[u] = <span class="hljs-built_in">merge</span>(t[u], t[ls], t[rs]);    }    <span class="hljs-function">Node <span class="hljs-title">qry</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) <span class="hljs-keyword">return</span> t[u];        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>; <span class="hljs-built_in">pd</span>(u);        <span class="hljs-keyword">if</span> (y &lt;= mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(lson, x, y);        <span class="hljs-keyword">if</span> (x &gt; mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(rson, x, y);        <span class="hljs-keyword">return</span> <span class="hljs-built_in">merge</span>(ept, <span class="hljs-built_in">qry</span>(lson, x, y), <span class="hljs-built_in">qry</span>(rson, x, y));    }    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">ask</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{        Node res = ept;        res.rx = <span class="hljs-number">-1e9</span>;        <span class="hljs-keyword">while</span> (top[u] ^ <span class="hljs-number">1</span>) {            res = <span class="hljs-built_in">merge</span>(ept, <span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, dfn[top[u]], dfn[u]), res);            u = fa[top[u]];        }        <span class="hljs-keyword">return</span> <span class="hljs-built_in">merge</span>(ept, <span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, <span class="hljs-number">1</span>, dfn[u]), res).rx;    }    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> ls</span>    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> rs</span>    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> lson</span>    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> rson</span>}<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> _Smt;<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;n, &amp;q);    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= n; i++) {        <span class="hljs-type">int</span> u; <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;u);        G[u].<span class="hljs-built_in">push_back</span>(i);    }    <span class="hljs-built_in">dfs1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>); <span class="hljs-built_in">dfs2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);    <span class="hljs-built_in">build</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n);    <span class="hljs-keyword">while</span> (q--) {        <span class="hljs-type">int</span> opt, x; <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;opt, &amp;x);        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">1</span>) <span class="hljs-built_in">mdf1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, dfn[x], <span class="hljs-number">1</span>);        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">2</span>) {            <span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, dfn[x], dfn[x] + s[x] - <span class="hljs-number">1</span>);            <span class="hljs-built_in">mdf1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, dfn[x], -<span class="hljs-built_in">ask</span>(x) - <span class="hljs-number">1</span>);        }        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">3</span>) <span class="hljs-built_in">puts</span>(<span class="hljs-built_in">ask</span>(x) &gt;= <span class="hljs-number">0</span> ? <span class="hljs-string">"black"</span> : <span class="hljs-string">"white"</span>);    }    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;}</code></pre></div>]]></content>
-      
-      
+  </entry>
+  <entry>
+    <title>联合省选2022前的记录</title>
+    <url>/2022/03/11/%E8%81%94%E5%90%88%E7%9C%81%E9%80%892022%E5%89%8D%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="8db0349d44fb42e582fd8fff7dce44f3d20f99833e75c855d34510855323686b">cd67862bdd141bb2aa1c78ab2fd399f67a60072de8008dd25d832ed6a25ec958c271597d94c64ba64b861d786834b124f3413b301a1947fc82287715bebaf983742e692ce9848f3d0d1dfab8866ef2606fc28aac7911ddecd98658ecd7421ff77c084239223d3a9f7902c42305103a7e25b8ab892265bf88192ab7a471c22cdee0dfa3b1b5c4c7cca0a7148e905c01811f03e0893d457b913f834c4bf9af4657308375adac2a0e7d2a8842c81cdad5c45859e47ff9902835be56befbe3ba53bfb9c0d5991954fa5a1a29539b43004413df1e5ebbcbf7e7fe9eba30137fb6798a66fcdf4f55b1fd3510b5bfefca8a81ad434a42e043b9b0ef545cafb8ef066728f33b942f0b6c60d8329db36ae4ad4699b271dc46f3c75dc6655411af98995a21146067465c8fae9f54fce26608d7a6f836ffadafd2a8c838569849e56fc83cb589641b3fc21810b9bff2ba385b982b7a41b1763a877e55952494aad806fb5b4f7e98b98c031998758a67ddfcfe1b29fee0b0c5826d0c74f7de0cdb9dbaf960c19aca2a93b37f670864281d075139a33df13b62819039f397f0617cda4b7bfe62596fdfb9aa0e46a35a4639c04eb8ff1c6ff02a5fcd9e7fc29fb3097f2daedc1c92082c1151f3c8f7381930e771e2a46651686b04185a86ec8564bc8357273d46ea322a0045d8627854353bfeb969b0e14a0df08ee1314fd9bdea82d9307b7c2816a3d97544b8ebc0c23dac4390005767552eabec4541f6506ebf58aef1f127c1d822a4e2565097e0f100b32e2b8a7a5007590d73d53ed4ab5bbe69727d91ae7d4aa5c781c05bb9b0ea0a6274351877e0b41b7f3702935c7fea3025d6e11b991986c145143932125d45c857fd79cd9d5cb758ff54a3275798e10dd38b4fd15d10702660f28d34a9b9bc5c42fb9307ce9f918b75dc9e2c9cb649376afd2c7f6b2bdcc5f34e329b48bc843e37a8d27a3c9f82f2686a9b13fb29763b11953610b7a7895728128ce35abb253075ebf590302d9927e469ca1e67645670a9f3b42fbaa087e5b324658fbf997c5e70982d388b18d67db4517c482262bcecafa19e6a692861032951f54fa5db44d241487bbe05a5d54e512fd7bc9de95fcce624eab34d0efc53c5e19dbeb3213518ad8a359f12f35c2868e4afc64e2edaef5f0ade555cf453f304c18938280e7a823fdad37737c014cbbd665c94060312845bbf3631769d1c1e4ebe840e6722170df2ad486bca86f27ad1a6407abce8ee7b71eacc74d1f29dbf154c4caf9d0e4b88c963d119c2f3bce478059632d08688f42b5cacf18ef3c54cbe42fcf927a0ea353dbb938eca855a5599496618f0d100e5603e004b03299ac1b643f6e7e6a09bbc5a5683d1566f298857349b8063bb4837771e1e8b7de38f0335090e8791a42177f13c85ee1d59036f478cbf85f2e5e939cf80f4bdc9b859f06c6de22b5c25ead17349814eb854e22d3b64daf10aaecf4b85cb01edce92c9b5c336edef55ead6592e2b4b34b35700dd57d4e352045ef8d667f7651e3ebd9260349778df80bf08555c75bb85ca249ec764e45de6db63a56e7f264a92e67f7ad27b179831d7bd6dcb4bddc2d72aec41675cc102045670ff945f8bbd40df696a210e1cf7a481dd49085c56fae452d70e1f72c341dc3e4cb124c0534c7afcb8894f6124a68ede512805fc5f51ce293d3da2d5e8ce603023a9f3780ef96b51c7e87b43516939ded784a3b5f52acf8f98a54beeadc82d8ce5589ba3bdd67e16bc6d00d6af80f7645a09931d0e246469da67f8f7b57f88512b780fa5f62fbafbdfe9c5d7f5555b02291d4d1be56ae83a89f6129ff39ab7aa3c9d58a0ed00f81228190a03fd396b397277a44c4c851114433428287cffabbe75f70c9ae699cb10d0286ad0fa5f81d9312405a10fccb9935fa11ba542914a6fcc50ef03e363b7dfde4f10919a5dd34cda844792da2065a0e223783dd599c5c33c6505d68c3f964bc8d083fbf40d9378a5964b00115a97ea202822e2fd0e48605b679b8a58e03b9c363e7e9754491250daa579e5ad7fcdb6d09560043c3723ba30ee171c634c6e41e8523f0f60fa8033ee0412b890224913103dc1404d6585ff9603bb5183ffa6f11640de1736cfd27133408dc51a29dbd1f09a68895f570acd25615ba848d927f3a46105b4787527ee0eccf2d5c38ed3f776671f280624ad0c65124125585f2d2a02e17925d3c023c96be5cbd62a4e00e4a5514fa319ad6f236a9e133744e32429bb32f71b921d3885d1d1a82295fd445cca16502c6c8d5c6bccdc2426ad08ac27d5dc0d2c833c0f823460e1bf6d77adb5545c58ae082e082176955ea2db2734296bad2f659859892dcf3f57e5136ed4a26d2979dc2f1f4d2ea056647042178e63307655469022cfd66ec3e82354f62559886435a5f70c259d1c1cff059e98b003cbf123a6c58f724ac102ec9df836e16919d80fac82d375331d0e55ab95f83b0f9a3085291b5714ad434738d6ecfdd3f3d5bf483e955a366c18812aac1e20a3531350762c9f269f43ae185c7c37a7eab85b60dc00d690ca463dc4bc535dda2fe6a653932e2488f8deb6c0c42509dd3a39be69e4a39796de680d8b1e8ad18ceda603794b9b75c5dfebb8ed9a0e828104f25b4322913848bc36655b2b6dfbf9cd6a9cb1da5990a89534a6da73685cb7faf5b90725608836fe034f1a2ef86e8a4b0c87c97fa4b7d1804a665bd7262942011d0d3a93017df44855f08c57a762e724648151f9944529384f814451e26e3e52e05360de7acf923b78ffaff4450da97b961c824e7de6ff035aa173b2c5ada9a8eabc0c9f8570b3cee1fda8dc67923d4948dbae091e153d2738c1cae3a810e3d8c8eca28f803b315b7687091646bc161463714c4ac40b24c837e39b7a4c716fab11212945c1b3587358a2cc91159d737fbeb83c0229ef12d658195ded65fc617f9961c10307e53707813ddc08c0d73d42ce10f978764f6e3ed8eb9ca256abc0a5c74e83542405f6606dda34edefb6b9d3206cc89e848c3c5d7c7443cb6c9c381116544d53b9a3e43c5665962fab599cfa8a9a1b61fd285a6cc7169c0d92cbf8d390999a01799554e1e9ac1a29c97d81d7f2d2fb3b3b15a24deda6b3f108c244a693e7e25b7ca4dfe99fad351a9a6af4d91755ff2eadb36cccf62591786b0dcb1e97781726d49f1bbc3ee8e8df99ca0074091af6ca76da531d380028b71aacfa28174c0ada938019de17d3d537a850a04af61afc4ace201beff8ec632d50db5fe386435da61d4ddd81adf46671e3d348b0c9f2e19c988a0797bf37d127b51bd8505beac06593889f4d35f28a1b576bcc3ef3d052f8b6cdb1212a5b7842d6b70421340d7fe9bb704125918e6156d43df199b85ffcf39b7fe55cf84e79592e49c49ce1ae3bab116c1d90a249d69e8564ff454472367470b88ade262fac8178331a7c4a9fbf5275ac698b48ae658356cb982fb81ceb40fc14db57907072911c3ef9e54af2f1639955082e3bfb51eb452d686a5c55008367a5130f2cb4072064055810222ac5aaebe8af3a575255f778fd4041d48272e51e6fe393c729862f8d6c78315cb9833986f27e9d7be9a39bad1e6b26b3aae4226382ee836477d19f09e7cc45e0ea77cefc4f12f39e0737467353f29f3e0167189b8b9d2577b25fe9f42091448a160ebb86267b103b8d40f4d134689017ef7387965f9fa06ecba67949b0513b4647f0bd8abfb7230b51df8312a4d6f910a1166507d30e5e776e3180b9eb0f0ccc81745ac729cba9a6da2b79965036ddf4848dd2985ef86101ea2b8229bdd1d0b55b93b6ca4f49d2831ae03dd3f5029ff69b14ca4a21b42973baa2aaf3a20e1a1d09e859058961405301661b886e4c058bf7d9181ca0827263b2d32a8759e0440267393bc7355140772fb7d20c3fab464aebac4117c69e7299120ede1300b97ee627ad8f97e13a1592ed6dfc03221a37a0a6c734f3cacade92fbf692e9ebf328a86cb15289f4c76a9b3b8660a6ddd534f5d6546f1c8db4e27973be1f3d48459eab96f8f1590708d0855d10ac679a5b7bac39fb0cda938c1e9e472dd0701e7cdf0913240345610b1bf154a8ac8908d42a57f9d404725ea500f7f531fbc211a3b671129aabd4b2c1bf31a2c3ad30ccd844b19e052c210a3f7603d5cc42199a43ade227b5c730983a914c1e9dd6a63e9badb0f9e5e09fb64a749ea5456f4ab97a2201037de79aa5844db44ca60ce1df925d042aabf2072b85d9f3a8d588ff68fd919417858071a5b61bab720990545fb097e3230b025e3708ce8203656d4fb661a7b8fc5024fdbe48e6672164886f20d283352612ab2b84b48e57d612dbdca8ba3e4e54d00ab6d265b7a5b7649154309d02d6f9e3a2004d402b5f0e3b37ce36a0c6e9db368b5a77d0876f84791339761e657407e4a0ffba7d36cf9dc7c02414b34c3477d3305886c99361dc012d450f530329882d307f48de6c9d1563d5e58ee26de2b4ca1de7aee0998e0475b7d6b7b4361fbca0c1a651b333b28d84c3db93e74fe5a558f2b0efca443993c18fd7fd0fd0feacfd342afae9421e90424f743bd833260fc3a197f42d556bc4bb9bec1719a0cf5947477801e361fcdacbc7fa6ac708fb5c16cbfed06f808072bcffd6ff707eb13ee6496c8836de4a5626cbcf06f8a684cc57c60fc6a3dbcd96c825ea9b774ab9d60e87305c2f1c5e5f2c4a521f678189420622fd889e87969b48f6a8c5a548356bbf429b6f6eca8f4a50ae4f3d70d0361a0bc3143c55047a3405107334d676763eaa08bbddd4dfe3351ac8f16874f2f9669b9a87ad5f185084dc19b0d530a275e9ee769abe11faca071231b731d682fd9cc6008d0b06d44c51402c6fb2fba837d2813740d98ab4e4191debb21615a9d090e42bf2a633e4d7168a9a487764fe639d5e0d53aff93269d0fc636e1283f43f0a254d6362bc0fd95d97c5be906bf0901de3d79f31d1894a884d1a19b2e898ffb1759a75db15ac7308f5685eb902e47060ccb1278a4b2935865a7572629844da4391c84abf1f7791ceab61bd06676c5e13d7e68806072bd0e5a0ee716c1192f1baaa7a699a14d4652e06f00a517b3ccedeea67f9ce7abf4caef7ed7655bbedfcbbbafa0c935145b6ebc7e17a9013885a969d55e1f0c9709ad8787571d70089267256c2622d1287a9bb834e10132507c5b33c1f68ff49cce448afa943ae2c21fa982a45e3c12f6950da3436b40d2bfe58c94e02ac6db84f4a50c5f30c8a9a533f62ab34023da9740c61d382aae63d26d1baa722480e4b001c0b935aabbbb19271cdade981b47ed6d3b71ff53fa2e656def0da9e40cfc68703c5dbfd4e19da67cbb38f5d09e7817a98f2a9a2b99a7d3674354e02fd37d69a60f70810793bd819ccae3e7ddb605374b5141edc248d221eb78c49d550f3b855522957618234070bafd7df2674b69599bfc565d6bc1de73a6b6a13d0352fb8c862cbfeacefd944ecaa30e29b5da2926289252054cf13e3fed0183875ccc38a27ebadd6ab82fcbefc814051c09b7b47ee67bf9babef89e43a939f95d0bf2bc10b7a7253ea4ea042beabcd4f860f5f93d5803f842a9758ab84aff8db2ac1dcef2d85def31b442effd363f5846d3cc4340759889723e4132f0aba58e7fd2f7308180819e9e7c22d777bd4c6ba20b295a449de842ef9de7d17b839dd9d7d392e3083e5ee3e4069b997dc72faa774dc90a24225e2262bf8a3b9d5a9bc19074ea96c6273da15fd9dae4a8ab8e81d6706734885aac0fb79cb1728013ab9c37edb52c2eed88a8aeb4db2650febe9c8541075c624c1912d26f19d83dc7eb20e19d1c5189d068dd69e5d50a8243b026400ffc263f1ce564eb50a85f0046f66d164422b6c05de3df25365b1802a55445ab5efd5e6bb7dcd1c51a7db1b87ffff2260a5d9c8447a08d894cfcef40e57f8af2ff1f8f9f0f9f508e51b8b3c6a6b1c2cb81e2f4e917e5ab858172da395c079041368780b8b8fa29978700294b3dcf64ed252f91593cb8e2dd54490aef58eff2fb9d0424f2cdb7c4afac7a5f7792769e3880163581f8b56405641448be49d57ed1dd9131bfe224e37949ba16c99e0815c51362a82694e3d2f531f16d77ba7b72457b9e54acc81003dd28e3621870fa29478d8af4507cd2b7c35cfe711135263c31ef3ee117d283666e959dd3c54fa319b8ee1ba99633b0232fbd55f94cdd1b64d882cb2d3e44b6d22803ffd17ac277776f7e51b2b4fa490a84190d282335f646758a2217a36401530a3464991a15405ac84f55c766d4591793caef7d3947e68084c80daddc11e7e80c156180a507868e0fbb713d77bce4c999a13974e692cefc40b24377da4369a8aa0d93d5601effe6e269628e25b9485106ba3145291c4062920ac8dd9375aed3a5e1bda37f61437f144a04e9a398cf271e6a046d9684de8663afbda26e1714986ae07f70301c09606c6c9862a0e1152602e7cafba8ac50410f30dde15285a1e6f166aceabfd6cf455d94d16bfb1b0304cf3d99167f0a8a7e05c257bb6f9ec8bddbc8a3d73fa8edfc90d8d16c1e9404b4a93128e4eb21b41bcfceed876540d218d979a32917d242de7c854c45575e7e2d90c63a0a6324294d59fadebf8481d2a46e9fed07c6ebb252bf77fad2ce42c7b15dabd7a6e96914bd7b12061e8115534966fafc925641b844aa0774149e78f64972b03da569c647347c35efb32dea7fd3eb1d465040aace6e2dce002fc6073da8b72644d775c851f99a0a85c356e748f329e6d5837c2f32324bbde35a2937c6db227539da9dd5b455ca1f1b2f4ac7ccb065b329e621dfb5d6f237edfef712963025a1494f75f1cf206b66b7de8b5781d50863ed735a62b899078a7c06fd8cfd8670328c70306bacac1b8946964d1944e1ab0b62b56c11dfdd064c8afb4f1136d7ad97c6116aab569d3763bbec58ea00a5197d6bf00a8143c1a30dc8c770a1a6a29912b67833749c68e903cbc6aaddf8ccf53232feb4291a0694a062995c3ec7dca0fee2bbfa801e5165242c3f48b2a9633fb503bba0402696f251883191b8aeb0a2c7071155ae4a5aeae56b71888b190e4f1e015514e8c86d8a920f77518cf08ca0609c822a806eb38880ed5d2082ddebb9fcfac4725a90f2d8a9930aa40bb358f0f0ddab5dee4e251337a4f0cd8f4d21e6d91e8dd28963a99a8bcdc84febc205c9487855c255db1f1756da9369c43b18509eb08858c8b53132a3fe0cb45cedfd2bd8200d81b3049da224016a968cb01eaad51d5764c236ded1ddf21c6662ce0dff3453f7bf7052ed9ad97b69c2b8ed3ebf75213f76c5d5ef3a91d3d45020a04d16d4cae3a0f769520f8509f0ab685b0a9514148213ad4f8c0c343b140ff1df99d27c30f9d6ebf136fe710004660c139b2d3ad3f215629ca9cdb36c7d3cd8906e0be441f1bf3578c5216eb6e45fd6648984a8071407cba1de6481f2e9ae29175c2cf2194651916e6649044956de3f1381f74123a54813d7c59b35b70af458834c0e070c9f353f4483595f76e10d0f138fe3668dfcf1a02f207fe355228bda62a3080a59f6ee0d9f54021480b9d835799c4e390982067f1748ee7c86d8bf6f5e7eeb4690f394998da7c2d8c683c2cbe5893c73948db9dcbc4cf9d0ab344e3e9d3a1169e49815a179c38e24da04b2ffb331514c220e3efa9358f499087b8106904500d9485cc39107b0760130b9d0d4ea4b348e9d8e8fc3b73c3ade51d3d5d438dc259010bea664cfbc0f88d7203c94d9370ddf6b753ae6bcd96f6e68046b3e16ed5faed13e41f0246c8b362a9b615b67213d74fc71c09b3f802e809162a65ab3dd5f6e15a235d0c4259c393e5d3428a43f573ea4aa6aba00f9ddc4d08fc3149f9f1903acc6ea849262f4d5d8dbcb02e0dc3dedc6eb4aac284514397d0e2f12bc0eab2c75e62bc6cd7ce8fe6e1bf9c81097102d67579f0920abd45f83726a18c8edbc735346d9b8dbb7d30502300250f6dab91b4bf84df12b2042f868796863f4cc05ec522c5e6251012fb6e2acfe1973a4de32da1043e291031345ab5a8e71cc09fbf4e8dede171d0d6a9db826c26c1e4209e4f94416aed56ddc9c426c7403f2ed8033d6a1fb8956a9fe0408daa4214eca68cb222234ea41a999a7218b3694fa912eebbc61064bda4de8e85934f6c2e4c9ab6ba055059d0e367e348b24d2725df5c71755fd5ebb8a0e8f371b941746385493265c9ba6518ff13b86c515a3bfa1fc57fbc8d7558de9c2033bc8ad914a64975aac1b1fe2ced3b4fabb644572d0d6f48de73d75d5489587e0605943e01ae060a5f2259c00eaea04c501687828d59984cbedbc0145416d7833b5dca1049342cde2509f8fac50989f05707e80c73509378369acd165b69ac5b5aa53580b0339ddc3de55041f1ffc024f9c48e2bc099c36b9223458d98713134099c92527fdfade592cdbb96c5da84ade097f549132afdd9f1074e1b30ed0a202a2e997fd374fca8fe1b821ed3b86077842dc345d62ebb128bef208b1b327721805c97750e80c26a1265fd9b8f0d3a24d398c40f019ff23cdf645de3dbc101bf8e7fc340b9e064ca9b84491f1c88171718ea02f018c733dda5b84793c3da0f95ce2666882b8b2759648eaf387f16a72b72b4165e4d3c0611ca9a84b1369bf374aea857f5a54ed19399797243dab3a66fef459db01d16300ea7bfb9c3f8308a542e2be63e38e157174297c225dc1a91502956e422d18a78f9dd926890fe8550b4b138cb5e1db1da490fcb0c7488a5d09622bcd343dee5579692ed3c75776dd9dae62af43e7e51bcff140b339f96b80c80db013c131bdcd1ee1cdccda2ec24b0e38dc99df9c07a8226291960f90aad37e90f5f6c385b86f5bfee785cfc5e259cd715d684c9dd6f5a1da03070873c9e8c77f12946f79edbb92ca442251a6db6cf0801039cc3ab50c515ff62eb34e2a70edb841fda3970505f26814fd6c581e2edbbca1cf2928dfadb8bd0662d12482378c5189f0d417f1f661b33ef6829e94d0a48289518045b855a78f59c61defff2314dfe8ad111beab5de796465e0ee014406eb17cca90a8959f22198487b2f2ce1558490f480fb5b1e712699191d1334301af59d45a776d7714b8b9911678d5d453e7419ffb6e91a5519dcc1e4610199994ba3f35cd930a4e934428c2ac5a36f29ce4514c8526f85edd9def2c27ea329f1cfe0b4fefd9e4200df3d554cc8f953058619241ee5bd0fd0a24eca9812b34c3489489e75448f70ee1c16d27553baca182a51504bfeecf5a86f937c909555d3d805bfa138730479c5527acefefb5d65f916dfa41c3a5069f76503d664d43bcfa174bff95e42566b74e4233d8f7d75193273fd7014d2a56434fc1e37817ae2c0d7dcb9038d688de76bd23d1d81dd674836bf3e0b752c51039f814f0c6324be42b53e128b2d3e40ccc57dd5dd46de4d4c3c1390a3bc3835ef8269c51cd8f1fda8fa7af6428531e0eb69c697fa2e66a56b54becd7a72d7ce0073018197872f26238ec17c6dd5fc9eeb7abacc141d358304abd321558fc31aba83452d4e3b802ed12eda64b9825c70383f5f71eeefd260df860334181551bbaa6320fa20c0b9f4bad6b581f410f2197708da5cf9f3bfc72bfadf22560df689622b7f84d405394078d1e32316208b64d4908f84ec6200662baf51457ed6c9cf53f2df3cdbda0fdf48e7925397617cd39635ba71149cfaad1b598f981c53e3b732bc7a1f1972d9754a510125b6d2030fa54bf8132972bbb863970c9eb6fc6688f557baf15b4683812a8133f3c8685669b5ea824fa5358840d8021a1c520b45e10f199974578e224f912724bda663f008a72929bb639c3e07d33a380c995257c4397b53348cf5753ea9b17f7018085aea1d2298db2e3bb36e2be78335ba59811d861b863946b9263ce9ac1565e0804451739e016ed9ce02053fa564ff4373ff4f93d1b0ff3fa7576203e2920154906a49afc81d6a303793f98dda147b9b693896cb2d6687921dfabbef2a4d9ea81c706537fd3f1995f4d4dc7c802bad0eccf064faf50c41791a8f22705fdb4752fc4fee897703920aad58ba804f4a6b4bf2c8f660ca09b295909569b22634f66a0a58913536ca21591acacd0404e908627c8288c2dff218f1e1d648cbaf00b54dd3271abb8a40bab6577f8108d365699acf2a7a6be8e24f08cabecf59c167b8ad3ab1ae3f32e043c4ccc63b3962bdb80dea229a607a80b117566863b006305dfce6879016041d07e4e86bf58f2936c199486fbf3039522777cfcd506163c72f5f77c3fc419cbbcc1c639881808b3e9bde9b57ae8753cebf417ee6fd699dab7402fa28a9324eed148118927108c9a1df35e252143fa80639e5c9ffcab82f4d53648faed09fbfbe51ec678fac92ec648509041daa52e60936677dc9fad89e25bc0e6dd70fef795adfbc0aab366bcb33350292039b1e258c670419ac29d5798179e94f136fe04fed5dc92aec7d5b497c76c33925f0052e4d0d0d792c0bf647d2c1328a7fd1a744608460ca39e4d6a454a67a1e5d90b215f2aa0bb8dc77feeaecf2ecf532efce65ca64cf0ccb309bfdec348bc89461439d002795f01feee9db7183acd1653192465abcb847443e8f4c92d49aa0f22546679fc14e8082b99d42efa31e888588de09af6a6468e29cb9b27578fa7402120b42bd6fd4547ccdfe67d4a208c8e2e26ea3374e4095c43840076e20d2775d4d1aa0f534949461d74b5c88566aaa5b962ca14a042b284a35cab55fe7c6f17f03067d6f502f48830a5d917b3947dbab5ec4232e112cb719602d1510e0daef9a5307a44aa7e8f3b2a62df69c26680d78c3e2cc615cd54faa6d7cab9e53dba1c525b333c298f6f4304ec6ccce4845cf09839d60dcd499a706f714dbffe188b83378ab47957092269040b54a11c2cb27ebf6b194cfc34a68cdc53b0920048a3aec47bfb4004b52681969528521d04c20956f2a0f858cd4771f2888ddd1b1a50518848cf4ded4f9570bfedfa88224e8c1af61743da641a30d8f0b2af8559f83ac95e89a4b412371b37281010d11b8f34abf4a074f8b2f20b156959fd6cf6c85bd699f9997dac6fa8d206abe7a5729a328cca0f926490a24fd14e74af5dc54d43bf8fc2f339bbda48835a4a47b8aa835e2808f74cf53b836d107876222eb68d52c31d0f4698c5f19339b02338b1962e6aa08b60bca8464bcf0db2ef09832b24da49ae8b537c3d6de8ffa6a806b72b4b142e7e610ed5aa583affb554b5f1ab11fdffc9271f01fb9a76dfb45d1f926f4ce8836efb9865810ba98b8539d3e19f144415cccf1615b2618f9bb4eb5ba9fbbb2d6b5dd8a4c11d4ec20df2193ec407e89039984c373a7a1f782802ac0e70b0771f4a31bba3cf85e65d8cfde46e234305d21231dfa1c804b75ddb993b2a2d379e2e25ba66ce9b5a2902d470b638b2a1c1af6a514b60cddd5fa693c0587fcf645bc1525b1248098c53a5b6c87c715839845f905994c2eb07f7b512c4df88e4ee3fa6f9fe6331902caec97cd978d550f98c2e6084e68bd7d3619824d249d44d79c40517ad9e262618c5681e4bef0735437a32f950a5d2ec4baf6fb8280a71cd4ea48df75855ee115c079ac3503426cae926ca325987a81b40514e7ba81dd596244526bb210ae3aad293870a801da17298f76200224580230febe0ecdbaeb2810f75b57d23054278a579fb2cb3aef695544650f56bc2aabf7e825b716df9f8a24f82bfe6ffbdfebd21ac0c28ceb92e1356a4274fd6fc2db5acb9788383fb86acb32950350ebb0d97898adb68294096a6bda989c4b0e9b8b6c23fe35a0b4d51ed5b154e1dd2b9b86a6c09fd019e23504eb12af773359e96b9c3882724f115eb577b19ce918cd3edffee0cbb176c252e8e9a8156cc06e89d99d64262627d0a2786f4d4b518be2c5dafc5f9e30e4bfe7429f7e75c1723aa7507ce878c504241ba81ad3cc0a50d3a5f753ac66f2ca83867862e6756e9a6b218274874e5a3d4bb4dd3acc13378fe3f1db0219da631d1665e39a1c2b116a9804b84f872780be7a9c9f38868b130818934aed892ea384549c88c949041e716737391c16d6ea89dd769c4359ad18e8f16ba3ccef1b2886eab2074a9410f617917b5f8410f752dd3bbcda45734ce2c768114c0c9a68512217f3dc34c94d6654b2b19746904e05cf938ad07a29dc63256f0674e34aebd3454b8071febb1b08893db626f0635e185a0afa3cc1438f81321004c65c01b61f2215e01cfae337b2743bccc3c8d6c82714e8b177b0a8a5e7aca0c187921d17b35a1ccf0de86ba8547aa1ee6d1431d296c5f79289dac1c12c69b9e8094450dc93a58a6d8d499875547ee4806899a62eba89e15ed77e7a56030527f7eebb495a1951858d926056c5dfd07e76e7b5169e4cca0836338994f0af55527ccccebad6ed670c8b6e7c20fd2d7fb2df51caf3aaa6ab16b1d7ab2c790639c2b1f242ff3260ec5edaebcff805880106cf37485ac274203410ec90e3dda29b772e5bae47df86140278826a04f0a2e2382c23ec8aa309d564de21673bc42fe606ff269679697f7cf46d725ee56784544ad9a4cc13add486b092c76be71e4bb2fdcde22b32636cafe8bba6d0c6da905d524e616c185ae27d1c0c740a424d636609eec2f5d8de730016453ea307bb53a0e6091d4d52ca9c065a8f7faf0e32fd4108ab7e7efee36294a3985a8da9cacb4268f778d156396e6171b2f30a67ff746d3699def3a2f46afcf4402b9f329832f883acddd36e3c0cf90cee7a672a342c26114577935d17f1db0b698abc0f320df2f15a2d2c11e0ecc9a0b32a5103e9d6e904de846b49c042994ea673915b9937f30cfce56d9f1500671983b3b2706ac8b4c9d5c8a4a7b72bca79435a8123db8f9a8161ee3f6708d2cac2c05fc9649e4ddf1c569b9eba4d6f2883cabcfa32fd7c3f99f3179568422c7f41edbb08246a1cb283bc9a6cb064a72f381c4fe6965c4c0edfbbf9f0b94ed8012edae6db0b2a10676affc7b39c162395d4a049a5824ad61eed3118d642bee012ea6df71ff968a70ffcb9b4a80abc5e7483f2c4a4249d937b414243e1cf33a471376e05187855597c701d71bd6c51b0d5e1c71f9061ec7bff9d482ec46a29e3eb8362cea578358c060c74d02575cd06ea5a99680c4547c692e735e623a78c3ca1a972c2ed264a38a45f07b237181bc809b2a4f44fdf5231df0c128d1afc88cc6a3260e7fdd80cd58325dac453786a1afc8e199d55fd6bcb7a2d04b267d2db5393ba2f645f328d757e160be567bc96983064ff1001cdf30144a00960ad3f12e49f3f23351025bfc24b00758427593830c70c4d6f7598f9d43fe9822f612e5eb58ecf6f5bf190b879b28c3ec156029e43ca2b2f85bec1b29f4a8f8bad92b0415534520ad1138ededb315ef00c1d99fab106aab1dae855453f29de981cc1ab82e22c4e2e619f5016cc23831844d1c12e322996c777f6c1b513ba213d5e0e7936764bc202d4d61f4c59271be924206d20dd870bce70851a61ceba980364a0b571af926d41f796f03ac2e3f3da023505789d91471c3c5f943169454e450f0cd54a5e99fe0dd8765054f839a7e3674a53c841a064db0ebc64e0867521469ffac5b295319f5b4499bfa559716e4a3f163b85791718986f7bc46f3a693dd803f74cf6b081cf620041bdcd0715a1737eb75e92ed74e672ceed4d69e7739957d8bd70df35a571a9ee4f604d5107e921e8400d60cb1efa82ff4a23865555bb766b76330637d53bc5fcee7c6af8b040d2942edffe99c4933564ffe56f6f1a0fd1054faf9e6850f3a6439e8db90c031e9d96c94a6e3baa6cd505d7eee8953ef4fa1b9fb328b7d3e7f6d8033ce3bddc17a4f303aec0a6363e8a564ff9193682c9f17e55814dac10f7f977b99125e4b0bb66f6e573ca76586085dbec7124cc48b97fc06c78e3eb96028d0defae1c72280792dce243264b5e995033c219a888f345d627054cf396bce1184eec6baec5d216f638a1190ec27d9442330f286246bcf1cf002f5c9cc908d47a40d2b26d55bf9c20abf6277292f2263a5f1f6438b266a56c436ef554b67bb8307f07247b213514081f839424f2c6c3d161f73f04c5672596adf2c7fc78bb819f8a2c6e3669ac21962db3c79a473697c7847b628af00b61a97827747b91ccd286d006c146ac914d53ff85e88e50f2b57c419ad6381c31f5068502fd09fb49a2020f7063db2a530428207e8b08110f36211592002f6916d7debe8cf9271f877e069f2831829fccb8444834b1b29399d5a4ffa31876b1d4bec213b3815e68d907e5648f4576b4d54c0fdfabefdf590586951fb489a6804bf6b58dd2571e4273d190f0ce6cc989bad9b13326adecce0e4e9f7a9d379f3467e8d6c919dcab054608f2674ff0de0408c42577733061ed437dbfa89f248d79ece4b964ccb70e875659b64580c45a0dee1fa9e4457a982fc64e58426426145048e2a13af2ff56425fbd8a5fb309618bf5494b559ff14f504e5880b4660a60dd3c769bb7d897fcb8b7ce96dd81cb7f35534f22f3aa12681b40de1ba09e0d3c8e229acfb097a7fd7ec52060a86de64f6989dba5abebb74bb6715e20a0825271ad0820be22897f9e9b3ee7d15f950fa8faf6fd2c3dae7c19ba015ef78e4662494bddc726aaaf3fa2056e9d3e9575b2f5e421182db36f75d23aac245ea4c667a277c8c29d0300c88c24420dcb867709526cd9766119781ce5fd29cc241dfa64a99a55e72257861446de2af2bca8efd710b173bcc10281cd66444385006ab80b92fb70049a0bc996a951fa154d1e26409d6c7bb5f3cda0dd0c41d33f10a5b087a0d68813138cd4f31798faea7523e2e7aee5fcb8f75e4583edb17353c97400b7af40f5c933f6c817a6b3d89909058f6405d089a778a5fbb0473bd9c0e87b3e5c89a808ff8a38394f0a564d9937b47b88a75288477f4542b687cd1a482209f3a6bd68d8acd6c8bdba27bd32c046f3f763a8d684a2ad79314fb11f76cf88449c9d3cd73c2920a183e97e91e3ac17d11a15cfb5985a2881b41a3d185c66a254ef36af4c8f0e03028c93083b8e8305dff2da72e90c4662b0e3e11e2252286e15a769be3130e8532be88f9e3cd81e67db433a3dd0e313ee6e9a27364434ec72f794924389edb4a331f33db6d12e68ff6f3b12491ee13819aac857f2f3556068d2ede0c3fe9071478599ae7090ddbca477a896302fd7ca46560500f717601e0ebf54fcc09d3a07969408460f7151467bb0d8f31ce02b2b0f3750800e2fde25328ae36518c74c66f195ef635efd59a63fe688badee9cdebf60bfcde0b2cbbd664f10e9a1a7a42b0ee84cfc664060d95ecaf1</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-          
-          <category> 题解 </category>
-          
+        <category>记录</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 树链剖分 </tag>
-            
-            <tag> 线段树 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>莫队二次离线学习笔记</title>
-      <link href="/2022/03/17/%E8%8E%AB%E9%98%9F%E4%BA%8C%E6%AC%A1%E7%A6%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-      <url>/2022/03/17/%E8%8E%AB%E9%98%9F%E4%BA%8C%E6%AC%A1%E7%A6%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><p><a href="https://www.luogu.com.cn/problem/P4887">$\texttt{Luogu P4887 [模板]莫队二次离线}$</a></p><p>设莫队指针移动时间复杂度为 $O(k)$ ，则普通莫队的时间复杂度为 $O(m\sqrt n k)$ ，使用莫队二次离线可以变成 $O(m\sqrt n + nk)$ 。</p><p>本题直接莫队做是 $O(m\sqrt n\binom{14}{k})$ 的，无法通过。</p><p>记 $a_x$ 对区间 $[l,r]$ 的贡献为 $f(x,[l,r])$，<strong>差分</strong>后贡献记为 $f(x,r)-f(x,l-1)$，即 $f(x,r)$ 表示 $x$ 对前缀 $[1,r]$ 的贡献。考虑莫队指针移动过程中答案的变化：</p><ul><li><p>$[l,r]\longrightarrow [l,qr]:$</p><ul><li><p>$qr &gt; r:$ 答案增加 $\sum\limits_{i=r+1}^{qr}f(i,i-1)-f(i,l-1)$</p></li><li><p>$qr &lt; r:$ 答案减少 $\sum\limits_{i=qr+1}^r f(i,i-1) - f(i,l-1)$</p></li></ul></li><li><p>$[l,r]\longrightarrow [ql,r]:$</p><ul><li><p>$ql &lt; l:$ 答案增加 $\sum\limits_{i=ql}^{l-1} f(i,r)-f(i,i)$</p></li><li><p>$ql &gt; l:$ 答案减少 $\sum\limits_{i=l}^{ql-1} f(i,r)-f(i,i)$</p></li></ul></li></ul><p>$f(i,i)$ 和 $f(i,i-1)$ 都是固定的，可以预处理直接计算；</p><p>$f(i,l-1)$ 和 $f(i,r)$ 则使用扫描线解决，具体地说：</p><ul><li><p>对于每个前缀 $[1,i]$，开一个 $vector$ 存下所有的询问 $f([l,r],i)$，记 $g(x)$ 表示 $a_{[1,i]}$ 中 $\oplus x$ 的二进制表示下恰好有 $k$ 个 $1$ 的个数，则对于询问 $f([l,r],i)$ 的贡献即为 $\sum\limits_{i=l}^r g(a_i)$。</p></li><li><p>处理完 $[1,i]$ 然后处理 $[1,i+1]$ 时，枚举 $a_{i+1}$ 取反 $k$ 位更新 $g$ 即可。</p></li></ul><p>询问可以用四元组 $(l,r,id,1/-1)$ 表示询问 $f([l,r],i)$，询问编号 $id$ 以及增减 $1/-1$。</p><p>$\texttt{Code:}$</p><div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><span class="hljs-meta">#<span class="hljs-keyword">define</span> pb push_back</span><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();    <span class="hljs-keyword">return</span> f ? -x : x;}<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">1e5</span> + <span class="hljs-number">5</span>;<span class="hljs-type">int</span> n, m, k, a[maxn], B;<span class="hljs-keyword">struct</span> <span class="hljs-title class_">_ques</span> {    <span class="hljs-type">int</span> l, r, id, pos;    <span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span> &lt; (<span class="hljs-type">const</span> _ques &amp;a) <span class="hljs-type">const</span> {        <span class="hljs-keyword">return</span> pos ^ a.pos ? l &lt; a.l : pos &amp; <span class="hljs-number">1</span> ? r &gt; a.r : r &lt; a.r;    }} qr[maxn];<span class="hljs-type">long</span> <span class="hljs-type">long</span> sum[maxn], ans[maxn];<span class="hljs-type">int</span> f[maxn], g[maxn];vector&lt;<span class="hljs-type">int</span>&gt; trs;<span class="hljs-keyword">struct</span> <span class="hljs-title class_">st</span> {    <span class="hljs-type">int</span> l, r, id, dt;    <span class="hljs-built_in">st</span> (<span class="hljs-type">int</span> l = <span class="hljs-number">0</span>, <span class="hljs-type">int</span> r = <span class="hljs-number">0</span>, <span class="hljs-type">int</span> id = <span class="hljs-number">0</span>, <span class="hljs-type">int</span> dt = <span class="hljs-number">0</span>) : <span class="hljs-built_in">l</span>(l), <span class="hljs-built_in">r</span>(r), <span class="hljs-built_in">id</span>(id), <span class="hljs-built_in">dt</span>(dt) {}};vector&lt;st&gt; vec[maxn];<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{    n = <span class="hljs-built_in">read</span>(); m = <span class="hljs-built_in">read</span>(); k = <span class="hljs-built_in">read</span>();    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) a[i] = <span class="hljs-built_in">read</span>();    B = <span class="hljs-built_in">sqrt</span>(n);    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++) {        <span class="hljs-type">int</span> l = <span class="hljs-built_in">read</span>(), r = <span class="hljs-built_in">read</span>();        qr[i] = (_ques){l, r, i, l / B};    }    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> S = <span class="hljs-number">0</span>; S &lt; (<span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">14</span>); S++) {        <span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>;        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">14</span>; i++) cnt += S &gt;&gt; i &amp; <span class="hljs-number">1</span>;        <span class="hljs-keyword">if</span> (cnt == k) trs.<span class="hljs-built_in">pb</span>(S);    }    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {        f[i] = g[a[i]];        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> S : trs) g[a[i] ^ S]++;    }    <span class="hljs-built_in">memset</span>(g, <span class="hljs-number">0</span>, <span class="hljs-built_in">sizeof</span>(g));    <span class="hljs-built_in">sort</span>(qr + <span class="hljs-number">1</span>, qr + m + <span class="hljs-number">1</span>);    <span class="hljs-type">int</span> l = qr[<span class="hljs-number">1</span>].l, r = qr[<span class="hljs-number">1</span>].r;    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = l + <span class="hljs-number">1</span>; i &lt;= r; i++) sum[<span class="hljs-number">1</span>] += f[i];    <span class="hljs-keyword">if</span> (l &lt; r) vec[l - <span class="hljs-number">1</span>].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(l + <span class="hljs-number">1</span>, r, <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>));    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= m; i++) {        <span class="hljs-keyword">if</span> (r &lt; qr[i].r) vec[l - <span class="hljs-number">1</span>].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(r + <span class="hljs-number">1</span>, qr[i].r, i, <span class="hljs-number">-1</span>));        <span class="hljs-keyword">if</span> (r &gt; qr[i].r) vec[l - <span class="hljs-number">1</span>].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(qr[i].r + <span class="hljs-number">1</span>, r, i, <span class="hljs-number">1</span>));        <span class="hljs-keyword">while</span> (r &lt; qr[i].r) sum[i] += f[++r];        <span class="hljs-keyword">while</span> (r &gt; qr[i].r) sum[i] -= f[r--];        <span class="hljs-keyword">if</span> (l &gt; qr[i].l) vec[r].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(qr[i].l, l - <span class="hljs-number">1</span>, i, <span class="hljs-number">1</span>));        <span class="hljs-keyword">if</span> (l &lt; qr[i].l) vec[r].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(l, qr[i].l - <span class="hljs-number">1</span>, i, <span class="hljs-number">-1</span>));        <span class="hljs-keyword">while</span> (l &gt; qr[i].l) sum[i] -= f[--l];        <span class="hljs-keyword">while</span> (l &lt; qr[i].l) sum[i] += f[l++];    }    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> S : trs) g[a[i] ^ S]++;        <span class="hljs-keyword">for</span> (st qry : vec[i]) {            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = qry.l; j &lt;= qry.r; j++) {                sum[qry.id] += qry.dt * g[a[j]];                <span class="hljs-keyword">if</span> (j &lt;= i &amp;&amp; k == <span class="hljs-number">0</span>) sum[qry.id] -= qry.dt;            }        }    }    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++) {        sum[i] += sum[i - <span class="hljs-number">1</span>];        ans[qr[i].id] = sum[i];    }    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++) <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%lld\n"</span>, ans[i]);    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;}</code></pre></div><h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><ul><li><p><a href="https://www.luogu.com.cn/problem/P7906">$\text{[Ynoi2005] rpxleqxq}$</a></p></li><li><p><a href="https://www.luogu.com.cn/problem/P5047">$\text{[Ynoi2019 模拟赛] Yuno loves sqrt technology II}$</a></p></li><li><p><a href="https://www.luogu.com.cn/problem/P5501">$\text{[LnOI2019]来者不拒，去者不追}$</a></p></li><li><p><a href="https://www.luogu.com.cn/problem/P5398">$\text{[Ynoi2018] GOSICK}$</a></p></li></ul>]]></content>
-      
-      
+  </entry>
+  <entry>
+    <title>CF1017G The Tree</title>
+    <url>/2022/03/17/CF1017G-The-Tree/</url>
+    <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF1017G">$\text{link}$</a></p>
+<p>对于询问 $\text{3 x}$ ，若操作 $\text{1 y}$ 使得 $x$ 染上了黑色，那么满足 $y$ 是 $x$ 的祖先并且 $y\longrightarrow$ 路径上操作 $1$ 的个数 $\ge$ 路径上的总点数（包括 $x,y$）。</p>
+<p>考虑给每个点附一个权值 $-1$ ，操作 $\text{1 x}$ 则对 $x$ 单点 $+1$，那么查询时只需要判断 $x\longrightarrow rt$ 的路径上的后缀和最大值是否 $\ge 0$ 即可判断颜色，如果没有操作 $2$ 就做完了。</p>
+<p>对于操作 $\text{2 x}$ ，将 $x$ 子树的权值覆盖为 $-1$ 可以使得子树内的点到 $x$ 的后缀和最大值正确，但是可能 $x\longrightarrow rt$ 的后缀和最大值出错，这需要将 $x$ 单点减小 “$rt\longrightarrow x$ 的后缀和最大值 + 1” ，然后就做完了。</p>
+<p>时间复杂度 $\mathrm{O(n\log ^2 n)}$ 。</p>
+<p><del>久违的 1A</del></p>
+<p>$\texttt{Code:}$</p>
+<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">1e5</span> + <span class="hljs-number">5</span>;
+vector&lt;<span class="hljs-type">int</span>&gt; G[maxn];
+<span class="hljs-type">int</span> n, q, s[maxn], fa[maxn], depth[maxn], son[maxn], top[maxn], tms, dfn[maxn];
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs1</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> fath)</span> </span>{
+    s[u] = <span class="hljs-number">1</span>; fa[u] = fath;
+    depth[u] = depth[fath] + <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> v : G[u]) {
+        <span class="hljs-built_in">dfs1</span>(v, u);
+        s[u] += s[v];
+        <span class="hljs-keyword">if</span> (s[v] &gt; s[son[u]]) son[u] = v;
+    }
+}
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> Top)</span> </span>{
+    top[u] = Top; dfn[u] = ++tms;
+    <span class="hljs-keyword">if</span> (!son[u]) <span class="hljs-keyword">return</span>;
+    <span class="hljs-built_in">dfs2</span>(son[u], Top);
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> v : G[u]) <span class="hljs-keyword">if</span> (v ^ son[u]) <span class="hljs-built_in">dfs2</span>(v, v);
+}
+<span class="hljs-keyword">namespace</span> _Smt {
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> ls u &lt;&lt; 1</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rs u &lt;&lt; 1 | 1</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> lson ls, l, mid</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rson rs, mid + 1, r</span>
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {
+        <span class="hljs-type">int</span> len, s, rx, tag;
+        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">ladd</span><span class="hljs-params">()</span> </span>{tag = <span class="hljs-number">1</span>; s = -len; rx = <span class="hljs-number">-1</span>;}
+    } t[maxn &lt;&lt; <span class="hljs-number">2</span>], ept;
+    <span class="hljs-function">Node <span class="hljs-title">merge</span><span class="hljs-params">(Node c, Node a, Node b)</span> </span>{
+        c.s = a.s + b.s;
+        c.rx = <span class="hljs-built_in">max</span>(b.rx, a.rx + b.s);
+        <span class="hljs-keyword">return</span> c;
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>{
+        t[u].len = r - l + <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (l == r) {t[u].s = t[u].rx = <span class="hljs-number">-1</span>; <span class="hljs-keyword">return</span>;}
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">build</span>(lson); <span class="hljs-built_in">build</span>(rson);
+        t[u] = <span class="hljs-built_in">merge</span>(t[u], t[ls], t[rs]);
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
+        <span class="hljs-keyword">if</span> (t[u].tag) {
+            t[ls].<span class="hljs-built_in">ladd</span>();
+            t[rs].<span class="hljs-built_in">ladd</span>();
+            t[u].tag = <span class="hljs-number">0</span>;
+        }
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf1</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
+        <span class="hljs-keyword">if</span> (l == r) {t[u].s += y; t[u].rx += y; <span class="hljs-keyword">return</span>;}
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>; <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf1</span>(lson, x, y);
+            <span class="hljs-keyword">else</span> <span class="hljs-built_in">mdf1</span>(rson, x, y);
+        t[u] = <span class="hljs-built_in">merge</span>(t[u], t[ls], t[rs]);
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {t[u].<span class="hljs-built_in">ladd</span>(); <span class="hljs-keyword">return</span>;}
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>; <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf2</span>(lson, x, y);
+        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf2</span>(rson, x, y);
+        t[u] = <span class="hljs-built_in">merge</span>(t[u], t[ls], t[rs]);
+    }
+    <span class="hljs-function">Node <span class="hljs-title">qry</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) <span class="hljs-keyword">return</span> t[u];
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>; <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (y &lt;= mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(lson, x, y);
+        <span class="hljs-keyword">if</span> (x &gt; mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(rson, x, y);
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">merge</span>(ept, <span class="hljs-built_in">qry</span>(lson, x, y), <span class="hljs-built_in">qry</span>(rson, x, y));
+    }
+    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">ask</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
+        Node res = ept;
+        res.rx = <span class="hljs-number">-1e9</span>;
+        <span class="hljs-keyword">while</span> (top[u] ^ <span class="hljs-number">1</span>) {
+            res = <span class="hljs-built_in">merge</span>(ept, <span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, dfn[top[u]], dfn[u]), res);
+            u = fa[top[u]];
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">merge</span>(ept, <span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, <span class="hljs-number">1</span>, dfn[u]), res).rx;
+    }
+    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> ls</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> rs</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> lson</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> rson</span>
+}
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> _Smt;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;n, &amp;q);
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= n; i++) {
+        <span class="hljs-type">int</span> u; <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;u);
+        G[u].<span class="hljs-built_in">push_back</span>(i);
+    }
+    <span class="hljs-built_in">dfs1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>); <span class="hljs-built_in">dfs2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+    <span class="hljs-built_in">build</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n);
+    <span class="hljs-keyword">while</span> (q--) {
+        <span class="hljs-type">int</span> opt, x; <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;opt, &amp;x);
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">1</span>) <span class="hljs-built_in">mdf1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, dfn[x], <span class="hljs-number">1</span>);
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">2</span>) {
+            <span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, dfn[x], dfn[x] + s[x] - <span class="hljs-number">1</span>);
+            <span class="hljs-built_in">mdf1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, dfn[x], -<span class="hljs-built_in">ask</span>(x) - <span class="hljs-number">1</span>);
+        }
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">3</span>) <span class="hljs-built_in">puts</span>(<span class="hljs-built_in">ask</span>(x) &gt;= <span class="hljs-number">0</span> ? <span class="hljs-string">"black"</span> : <span class="hljs-string">"white"</span>);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre></div>]]></content>
       <categories>
-          
-          <category> 学习笔记 </category>
-          
+        <category>题解</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>群论学习笔记</title>
-      <link href="/2022/03/16/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-      <url>/2022/03/16/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>参考资料： <a href="https://www.luogu.com.cn/blog/command-block/qun-lun-xiao-ji">command_block’s blog</a></p></blockquote><h1 id="群的概念及基本性质"><a href="#群的概念及基本性质" class="headerlink" title="群的概念及基本性质"></a>群的概念及基本性质</h1><ul><li><p>由集合 $G\neq \emptyset$ 和 $G$ 上的二元运算 $*$ 组成。</p></li><li><p>满足以下性质：</p><ul><li><p>封闭性：$\forall a,b\in G,$ 均有 $(a*b)\in G$。</p></li><li><p>结合律：$(a*b)*c=a*(b*c)$ 。</p></li><li><p>存在单位元：存在 $\epsilon\in G$ 使得 $\forall a\in G$，均有 $a*\epsilon=\epsilon *a=a$ 。</p></li><li><p>存在逆元：$\forall a \in G,$ 均存在 $b\in G$ 使得 $a*b=\epsilon$。</p></li></ul></li><li><p>定理：单位元唯一。证明略去。</p></li><li><p>定理：每个元素的逆元唯一。证明略去。</p></li><li><p>定理：对于任意的有限群 $G={\epsilon,a_1,…,a_n}$，$\forall a\in G$，均存在一个常数 $b$ 使得 $a^b=\epsilon$，且有 $a^{-1}=a^{b-1}$ ，称 $b$ 为 $a$ 的阶。证明略去。</p></li></ul><h1 id="置换与置换群"><a href="#置换与置换群" class="headerlink" title="置换与置换群"></a>置换与置换群</h1><ul><li><p>置换的定义：有限集合到自身的双射称作置换。</p><p>  可以写作</p><p>  $$\large\begin{pmatrix}1&amp;2&amp;3&amp;…&amp;n\\p_1&amp;p_2&amp;p_3&amp;…&amp;p_n\end{pmatrix}$$</p></li><li><p>置换的乘法：相当于将映射叠加。</p><p>  性质：</p><ul><li><p>置换的乘积还是置换。</p></li><li><p>满足交换律。</p></li><li><p>单位元为 $\large\begin{pmatrix}1&amp;2&amp;3&amp;…&amp;n\\1&amp;2&amp;3&amp;…&amp;n\end{pmatrix}$</p></li><li><p>$\begin{pmatrix}1&amp;2&amp;3&amp;…&amp;n\\p_1&amp;p_2&amp;p_3&amp;…&amp;p_n\end{pmatrix}$ 的逆元为 $\begin{pmatrix}p_1&amp;p_2&amp;p_3&amp;…&amp;p_n\\1&amp;2&amp;3&amp;…&amp;n\end{pmatrix}$</p></li></ul><p>  一般不满足交换律。</p></li><li><p>置换群：由上面的性质可知对 $1..n$ 作用的所有置换形成一个群。一般只研究一个子群。</p></li><li><p>置换的循环：把置换看作有向图，连边 $(i,p_i)$，会形成若干个环。</p><p>  置换可以用这些环来表示，并且是唯一的。</p></li></ul><h1 id="text-Burnside-引理-与-text-Polya-定理"><a href="#text-Burnside-引理-与-text-Polya-定理" class="headerlink" title="$\text{Burnside}$ 引理 与 $\text{Polya}$ 定理"></a>$\text{Burnside}$ 引理 与 $\text{Polya}$ 定理</h1><p>设 $G$ 为 $1..n$ 的一个置换群。</p><ul><li><p>不动点：对于 $p\in G$ ，若 $p_k = k$ 则称 $k$ 是 $p$ 下的不动点。</p><p>  $p$ 下的不动点个数记作 $c(p)$。</p></li><li><p>$\text{k}$ 不动置换类</p><p>  对于 $p\in G$，若 $k$ 是 $p$ 下的不动点，则称 $p$ 属于 $\text{k}$ 不动置换类，记作 $p\in Z_k$。$Z_k$ 为 $G$ 的一个子群。</p></li><li><p>等价类：等价类 $E_k$ 为对元素 $k$ 任意施加 $G$ 中的置换所能到达的元素集合。</p><ul><li>定理：当 $x,y$ 同属一个等价类时，有 $|Z_x| = |Z_y|$。证明略去。</li></ul></li><li><p>轨道-稳定子定理：</p><p>  $$|Z_k|\times|E_k|=G$$</p><p>  证明略去。</p></li><li><p>$\text{Burnside 引理}$ ：</p><p>  记 $l$ 为 $E_{1..n}$ 中本质不同的等价类个数，则有： </p><p>  $$l = \large\dfrac 1 {|G|}\sum\limits_{p\in G}c(p)$$</p><p>  即等价类个数 $=$ 所有置换下的不动点总数的平均数。</p></li><li><p>$\text{Polya 定理}$:</p><p>  设有 $n$ 个元素，每个元素有 $m$ 种染色方案。</p><p>  设 $G$ 是 $n$ 个元素的置换群，则染色总方案数为：</p><p>  $$\large\dfrac 1 {|G|}\sum\limits_{p\in G}T(p)$$</p><p>  其中 $T(p)$ 表示在置换 $p$ 下不动的染色方案数。</p></li></ul><h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><p><a href="https://www.luogu.com.cn/problem/P4980">$\text{[模板]Polya 定理}$</a></p><p><a href="https://www.luogu.com.cn/problem/P4916">$\text{[MtOI2018]魔力环}$</a></p><p><a href="https://www.luogu.com.cn/problem/P4727">$\text{[HNOI2009]图的同构计数}$</a></p><p><a href="https://www.luogu.com.cn/problem/P4128">$\text{[SHOI2006] 有色图}$</a></p>]]></content>
-      
-      
+      <tags>
+        <tag>树链剖分</tag>
+        <tag>线段树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>莫队二次离线学习笔记</title>
+    <url>/2022/03/17/%E8%8E%AB%E9%98%9F%E4%BA%8C%E6%AC%A1%E7%A6%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><p><a href="https://www.luogu.com.cn/problem/P4887">$\texttt{Luogu P4887 [模板]莫队二次离线}$</a></p>
+<p>设莫队指针移动时间复杂度为 $O(k)$ ，则普通莫队的时间复杂度为 $O(m\sqrt n k)$ ，使用莫队二次离线可以变成 $O(m\sqrt n + nk)$ 。</p>
+<p>本题直接莫队做是 $O(m\sqrt n\binom{14}{k})$ 的，无法通过。</p>
+<p>记 $a_x$ 对区间 $[l,r]$ 的贡献为 $f(x,[l,r])$，<strong>差分</strong>后贡献记为 $f(x,r)-f(x,l-1)$，即 $f(x,r)$ 表示 $x$ 对前缀 $[1,r]$ 的贡献。考虑莫队指针移动过程中答案的变化：</p>
+<ul>
+<li><p>$[l,r]\longrightarrow [l,qr]:$</p>
+<ul>
+<li><p>$qr &gt; r:$ 答案增加 $\sum\limits_{i=r+1}^{qr}f(i,i-1)-f(i,l-1)$</p>
+</li>
+<li><p>$qr &lt; r:$ 答案减少 $\sum\limits_{i=qr+1}^r f(i,i-1) - f(i,l-1)$</p>
+</li>
+</ul>
+</li>
+<li><p>$[l,r]\longrightarrow [ql,r]:$</p>
+<ul>
+<li><p>$ql &lt; l:$ 答案增加 $\sum\limits_{i=ql}^{l-1} f(i,r)-f(i,i)$</p>
+</li>
+<li><p>$ql &gt; l:$ 答案减少 $\sum\limits_{i=l}^{ql-1} f(i,r)-f(i,i)$</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>$f(i,i)$ 和 $f(i,i-1)$ 都是固定的，可以预处理直接计算；</p>
+<p>$f(i,l-1)$ 和 $f(i,r)$ 则使用扫描线解决，具体地说：</p>
+<ul>
+<li><p>对于每个前缀 $[1,i]$，开一个 $vector$ 存下所有的询问 $f([l,r],i)$，记 $g(x)$ 表示 $a_{[1,i]}$ 中 $\oplus x$ 的二进制表示下恰好有 $k$ 个 $1$ 的个数，则对于询问 $f([l,r],i)$ 的贡献即为 $\sum\limits_{i=l}^r g(a_i)$。</p>
+</li>
+<li><p>处理完 $[1,i]$ 然后处理 $[1,i+1]$ 时，枚举 $a_{i+1}$ 取反 $k$ 位更新 $g$ 即可。</p>
+</li>
+</ul>
+<p>询问可以用四元组 $(l,r,id,1/-1)$ 表示询问 $f([l,r],i)$，询问编号 $id$ 以及增减 $1/-1$。</p>
+<p>$\texttt{Code:}$</p>
+<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> pb push_back</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">return</span> f ? -x : x;
+}
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">1e5</span> + <span class="hljs-number">5</span>;
+<span class="hljs-type">int</span> n, m, k, a[maxn], B;
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">_ques</span> {
+    <span class="hljs-type">int</span> l, r, id, pos;
+    <span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span> &lt; (<span class="hljs-type">const</span> _ques &amp;a) <span class="hljs-type">const</span> {
+        <span class="hljs-keyword">return</span> pos ^ a.pos ? l &lt; a.l : pos &amp; <span class="hljs-number">1</span> ? r &gt; a.r : r &lt; a.r;
+    }
+} qr[maxn];
+<span class="hljs-type">long</span> <span class="hljs-type">long</span> sum[maxn], ans[maxn];
+<span class="hljs-type">int</span> f[maxn], g[maxn];
+vector&lt;<span class="hljs-type">int</span>&gt; trs;
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">st</span> {
+    <span class="hljs-type">int</span> l, r, id, dt;
+    <span class="hljs-built_in">st</span> (<span class="hljs-type">int</span> l = <span class="hljs-number">0</span>, <span class="hljs-type">int</span> r = <span class="hljs-number">0</span>, <span class="hljs-type">int</span> id = <span class="hljs-number">0</span>, <span class="hljs-type">int</span> dt = <span class="hljs-number">0</span>) : <span class="hljs-built_in">l</span>(l), <span class="hljs-built_in">r</span>(r), <span class="hljs-built_in">id</span>(id), <span class="hljs-built_in">dt</span>(dt) {}
+};
+vector&lt;st&gt; vec[maxn];
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    n = <span class="hljs-built_in">read</span>(); m = <span class="hljs-built_in">read</span>(); k = <span class="hljs-built_in">read</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) a[i] = <span class="hljs-built_in">read</span>();
+    B = <span class="hljs-built_in">sqrt</span>(n);
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++) {
+        <span class="hljs-type">int</span> l = <span class="hljs-built_in">read</span>(), r = <span class="hljs-built_in">read</span>();
+        qr[i] = (_ques){l, r, i, l / B};
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> S = <span class="hljs-number">0</span>; S &lt; (<span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">14</span>); S++) {
+        <span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">14</span>; i++) cnt += S &gt;&gt; i &amp; <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (cnt == k) trs.<span class="hljs-built_in">pb</span>(S);
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+        f[i] = g[a[i]];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> S : trs) g[a[i] ^ S]++;
+    }
+    <span class="hljs-built_in">memset</span>(g, <span class="hljs-number">0</span>, <span class="hljs-built_in">sizeof</span>(g));
+    <span class="hljs-built_in">sort</span>(qr + <span class="hljs-number">1</span>, qr + m + <span class="hljs-number">1</span>);
+    <span class="hljs-type">int</span> l = qr[<span class="hljs-number">1</span>].l, r = qr[<span class="hljs-number">1</span>].r;
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = l + <span class="hljs-number">1</span>; i &lt;= r; i++) sum[<span class="hljs-number">1</span>] += f[i];
+    <span class="hljs-keyword">if</span> (l &lt; r) vec[l - <span class="hljs-number">1</span>].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(l + <span class="hljs-number">1</span>, r, <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>));
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= m; i++) {
+        <span class="hljs-keyword">if</span> (r &lt; qr[i].r) vec[l - <span class="hljs-number">1</span>].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(r + <span class="hljs-number">1</span>, qr[i].r, i, <span class="hljs-number">-1</span>));
+        <span class="hljs-keyword">if</span> (r &gt; qr[i].r) vec[l - <span class="hljs-number">1</span>].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(qr[i].r + <span class="hljs-number">1</span>, r, i, <span class="hljs-number">1</span>));
+        <span class="hljs-keyword">while</span> (r &lt; qr[i].r) sum[i] += f[++r];
+        <span class="hljs-keyword">while</span> (r &gt; qr[i].r) sum[i] -= f[r--];
+        <span class="hljs-keyword">if</span> (l &gt; qr[i].l) vec[r].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(qr[i].l, l - <span class="hljs-number">1</span>, i, <span class="hljs-number">1</span>));
+        <span class="hljs-keyword">if</span> (l &lt; qr[i].l) vec[r].<span class="hljs-built_in">pb</span>(<span class="hljs-built_in">st</span>(l, qr[i].l - <span class="hljs-number">1</span>, i, <span class="hljs-number">-1</span>));
+        <span class="hljs-keyword">while</span> (l &gt; qr[i].l) sum[i] -= f[--l];
+        <span class="hljs-keyword">while</span> (l &lt; qr[i].l) sum[i] += f[l++];
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> S : trs) g[a[i] ^ S]++;
+        <span class="hljs-keyword">for</span> (st qry : vec[i]) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = qry.l; j &lt;= qry.r; j++) {
+                sum[qry.id] += qry.dt * g[a[j]];
+                <span class="hljs-keyword">if</span> (j &lt;= i &amp;&amp; k == <span class="hljs-number">0</span>) sum[qry.id] -= qry.dt;
+            }
+        }
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++) {
+        sum[i] += sum[i - <span class="hljs-number">1</span>];
+        ans[qr[i].id] = sum[i];
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++) <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%lld\n"</span>, ans[i]);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre></div>
+
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><ul>
+<li><p><a href="https://www.luogu.com.cn/problem/P7906">$\text{[Ynoi2005] rpxleqxq}$</a></p>
+</li>
+<li><p><a href="https://www.luogu.com.cn/problem/P5047">$\text{[Ynoi2019 模拟赛] Yuno loves sqrt technology II}$</a></p>
+</li>
+<li><p><a href="https://www.luogu.com.cn/problem/P5501">$\text{[LnOI2019]来者不拒，去者不追}$</a></p>
+</li>
+<li><p><a href="https://www.luogu.com.cn/problem/P5398">$\text{[Ynoi2018] GOSICK}$</a></p>
+</li>
+</ul>
+]]></content>
       <categories>
-          
-          <category> 学习笔记 </category>
-          
+        <category>学习笔记</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CF1109F Sasha and Algorithm of Silence&#39;s Sounds</title>
-      <link href="/2022/03/16/CF1109F-Sasha-and-Algorithm-of-Silence-s-Sounds/"/>
-      <url>/2022/03/16/CF1109F-Sasha-and-Algorithm-of-Silence-s-Sounds/</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF1109F">$\text{link}$</a></p><p>首先考虑计算每个左端点对应的合法右端点的个数，可以发现随着 $l$ 的增大，使得 $[l,r]$ 不存在环的最大的 $r$ 是单调递增的，然后我就不会了。。。</p><p>看了题解才想起来可以利用树“点数-边数=1”的性质计算，于是拿棵线段树顺便维护一下“点数-边数”的最小值以及最小值的个数就好了，因为 $[l,l]$ 显然满足 “点数-边数=1” 。</p><p>时间复杂度 $\mathrm{O(nm\log(nm))}$ 。</p><p>这种性质还是要想的起来啊。</p><p>线段树四倍空间 /fn/fn/fn</p><p>$\text{Code:}$</p><div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><span class="hljs-meta">#<span class="hljs-keyword">define</span> pb push_back</span><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">1e3</span> + <span class="hljs-number">5</span>;<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxm = <span class="hljs-number">2e5</span> + <span class="hljs-number">5</span>;<span class="hljs-type">int</span> n, m, nm, a[maxn][maxn];vector&lt;<span class="hljs-type">int</span>&gt; G[maxm];<span class="hljs-type">long</span> <span class="hljs-type">long</span> ans;<span class="hljs-keyword">namespace</span> LCT {    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {        <span class="hljs-type">int</span> ch[<span class="hljs-number">2</span>], fa, tag;        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">clr</span><span class="hljs-params">()</span> </span>{ch[<span class="hljs-number">0</span>] = ch[<span class="hljs-number">1</span>] = fa = tag = <span class="hljs-number">0</span>;}        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">ladd</span><span class="hljs-params">()</span> </span>{tag ^= <span class="hljs-number">1</span>; <span class="hljs-built_in">swap</span>(ch[<span class="hljs-number">0</span>], ch[<span class="hljs-number">1</span>]);}    } t[maxm];    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">nrt</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{<span class="hljs-keyword">return</span> t[t[x].fa].ch[<span class="hljs-number">0</span>] == x || t[t[x].fa].ch[<span class="hljs-number">1</span>] == x;}    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">rotate</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{        <span class="hljs-type">int</span> y = t[x].fa, z = t[y].fa;        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">nrt</span>(y)) t[z].ch[t[z].ch[<span class="hljs-number">1</span>] == y] = x;        t[t[y].fa = x].fa = z;        <span class="hljs-type">int</span> gx = t[y].ch[<span class="hljs-number">1</span>] == x;        t[y].ch[gx] = t[x].ch[gx ^ <span class="hljs-number">1</span>];        t[t[x].ch[gx ^ <span class="hljs-number">1</span>]].fa = y;        t[x].ch[gx ^ <span class="hljs-number">1</span>] = y;    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{        <span class="hljs-keyword">if</span> (t[x].tag) {            t[t[x].ch[<span class="hljs-number">0</span>]].<span class="hljs-built_in">ladd</span>();            t[t[x].ch[<span class="hljs-number">1</span>]].<span class="hljs-built_in">ladd</span>();            t[x].tag = <span class="hljs-number">0</span>;        }    }    <span class="hljs-type">int</span> stk[maxm], top;    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">splay</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{        <span class="hljs-type">int</span> u = x;        <span class="hljs-keyword">for</span> (; <span class="hljs-built_in">nrt</span>(u); u = t[u].fa) stk[++top] = u;        <span class="hljs-built_in">pd</span>(u); <span class="hljs-keyword">while</span> (top) <span class="hljs-built_in">pd</span>(stk[top--]);        <span class="hljs-keyword">while</span> (<span class="hljs-built_in">nrt</span>(x)) {            <span class="hljs-type">int</span> y = t[x].fa, z = t[y].fa;            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">nrt</span>(y) &amp;&amp; ((t[z].ch[<span class="hljs-number">0</span>] == y) == (t[y].ch[<span class="hljs-number">0</span>] == x))) <span class="hljs-built_in">rotate</span>(y);            <span class="hljs-built_in">rotate</span>(x);        }    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">access</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> y = <span class="hljs-number">0</span>; x; y = x, x = t[x].fa) <span class="hljs-built_in">splay</span>(x), t[x].ch[<span class="hljs-number">1</span>] = y;}    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mrt</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{<span class="hljs-built_in">access</span>(x); <span class="hljs-built_in">splay</span>(x); t[x].<span class="hljs-built_in">ladd</span>();}    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">split</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{<span class="hljs-built_in">mrt</span>(x); <span class="hljs-built_in">access</span>(y); <span class="hljs-built_in">splay</span>(y);}    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">cut</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{<span class="hljs-built_in">split</span>(x, y); t[x].fa = t[y].ch[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;}    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">frt</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{        <span class="hljs-built_in">access</span>(x); <span class="hljs-built_in">splay</span>(x);        <span class="hljs-keyword">while</span> (t[x].ch[<span class="hljs-number">0</span>]) <span class="hljs-built_in">pd</span>(x), x = t[x].ch[<span class="hljs-number">0</span>];        <span class="hljs-built_in">splay</span>(x); <span class="hljs-keyword">return</span> x;    }    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">link</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{        <span class="hljs-built_in">mrt</span>(x);        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">frt</span>(y) == x) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;        t[x].fa = y; <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;    }}<span class="hljs-keyword">namespace</span> _Smt {    <span class="hljs-meta">#<span class="hljs-keyword">define</span> ls u &lt;&lt; 1</span>    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rs u &lt;&lt; 1 | 1</span>    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {        <span class="hljs-type">int</span> mn, sz, tag;        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">ladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{mn += x; tag += x;}    } t[maxm &lt;&lt; <span class="hljs-number">2</span>];    <span class="hljs-function">Node <span class="hljs-title">merge</span><span class="hljs-params">(Node c, Node a, Node b)</span> </span>{        <span class="hljs-keyword">if</span> (a.mn &lt; b.mn) c.mn = a.mn, c.sz = a.sz;        <span class="hljs-keyword">if</span> (a.mn &gt; b.mn) c.mn = b.mn, c.sz = b.sz;        <span class="hljs-keyword">if</span> (a.mn == b.mn) c.mn = a.mn, c.sz = a.sz + b.sz;        <span class="hljs-keyword">return</span> c;    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{        <span class="hljs-keyword">if</span> (t[u].tag) {            t[ls].<span class="hljs-built_in">ladd</span>(t[u].tag);            t[rs].<span class="hljs-built_in">ladd</span>(t[u].tag);            t[u].tag = <span class="hljs-number">0</span>;        }    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{        <span class="hljs-keyword">if</span> (l == r) {t[u] = (Node){y, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>}; <span class="hljs-keyword">return</span>;}        <span class="hljs-built_in">pd</span>(u);        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf</span>(ls, l, mid, x, y);            <span class="hljs-keyword">else</span> <span class="hljs-built_in">mdf</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y);        t[u] = <span class="hljs-built_in">merge</span>(t[u], t[ls], t[rs]);    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {t[u].<span class="hljs-built_in">ladd</span>(z); <span class="hljs-keyword">return</span>;}        <span class="hljs-built_in">pd</span>(u);        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf2</span>(ls, l, mid, x, y, z);        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf2</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);        t[u] = <span class="hljs-built_in">merge</span>(t[u], t[ls], t[rs]);    }    <span class="hljs-function">Node <span class="hljs-title">qry</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) <span class="hljs-keyword">return</span> t[u];        <span class="hljs-built_in">pd</span>(u);        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;        <span class="hljs-keyword">if</span> (x &gt; mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y);        <span class="hljs-keyword">if</span> (y &lt;= mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(ls, l, mid, x, y);        <span class="hljs-keyword">return</span> <span class="hljs-built_in">merge</span>((Node){<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>}, <span class="hljs-built_in">qry</span>(ls, l, mid, x, y), <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y));    }    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> ls</span>    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> rs</span>}<span class="hljs-type">int</span> lx;<span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">lk</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> x)</span> </span>{    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; G[x].<span class="hljs-built_in">size</span>(); i++) {        <span class="hljs-type">int</span> v = G[x][i];        <span class="hljs-keyword">if</span> (v &lt; l || v &gt; x) <span class="hljs-keyword">continue</span>;        <span class="hljs-keyword">if</span> (!LCT::<span class="hljs-built_in">link</span>(x, v)) {            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; i; j++) {                <span class="hljs-keyword">if</span> (G[x][j] &lt; l || G[x][j] &gt; x) <span class="hljs-keyword">continue</span>;                LCT::<span class="hljs-built_in">cut</span>(x, G[x][j]);            }            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;        }        lx++;    }    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;}<span class="hljs-type">int</span> dt;<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">ct</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> r)</span> </span>{    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> v : G[x]) {        <span class="hljs-keyword">if</span> (v &gt; r || v &lt; x) <span class="hljs-keyword">continue</span>;        LCT::<span class="hljs-built_in">cut</span>(x, v);        <span class="hljs-comment">// printf("? %d %d %d\n", x, v, r);</span>        _Smt::<span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, nm, v, r, <span class="hljs-number">1</span>);    }}<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>{    <span class="hljs-type">int</span> r = <span class="hljs-number">2</span>;    _Smt::<span class="hljs-built_in">mdf</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, nm, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>);    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> l = <span class="hljs-number">1</span>; l &lt; nm; l++) {        <span class="hljs-comment">// printf("! %d %d %d %d\n", l, r - 1, qry(1, 1, nm, l, r - 1).mn, qry(1, 1, nm, l, r - 1).sz);</span>        <span class="hljs-keyword">while</span> (r &lt;= nm) {            lx = <span class="hljs-number">0</span>;            <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">lk</span>(l, r)) <span class="hljs-keyword">break</span>;            <span class="hljs-comment">// printf("%d %d %d\n", r, qry2(1, 1, nm, r - 1), lx);</span>            _Smt::<span class="hljs-built_in">mdf</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, nm, r, _Smt::<span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, nm, r - <span class="hljs-number">1</span>, r - <span class="hljs-number">1</span>).mn + <span class="hljs-number">1</span> - lx);            r++;        }        ans += _Smt::<span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, nm, l, r - <span class="hljs-number">1</span>).sz;        <span class="hljs-comment">// printf("%d %d %d %d\n", l, r - 1, _Smt::qry(1, 1, nm, l, r - 1).mn, _Smt::qry(1, 1, nm, l, r - 1).sz);</span>        <span class="hljs-comment">// for (int i = l; i &lt; r; i++) printf("    %d %d\n", i, _Smt::qry(1, 1, nm, i, i).mn);</span>        <span class="hljs-built_in">ct</span>(l, r - <span class="hljs-number">1</span>); _Smt::<span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, nm, l + <span class="hljs-number">1</span>, r - <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>);        <span class="hljs-comment">// puts("?");</span>        <span class="hljs-comment">// for (int i = l + 1; i &lt; r; i++) printf("    %d %d\n", i, _Smt::qry(1, 1, nm, i, i).mn);</span>        <span class="hljs-comment">// printf("! %d %d %d %d\n", l, r - 1, qry(1, 1, nm, l, r - 1).mn, qry(1, 1, nm, l, r - 1).sz);</span>    }    ans++;}<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;n, &amp;m); nm = n * m;    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= m; j++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;a[i][j]);    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= m; j++) {        <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">1</span>) G[a[i][j]].<span class="hljs-built_in">pb</span>(a[i - <span class="hljs-number">1</span>][j]);        <span class="hljs-keyword">if</span> (j &gt; <span class="hljs-number">1</span>) G[a[i][j]].<span class="hljs-built_in">pb</span>(a[i][j - <span class="hljs-number">1</span>]);        <span class="hljs-keyword">if</span> (i &lt; n) G[a[i][j]].<span class="hljs-built_in">pb</span>(a[i + <span class="hljs-number">1</span>][j]);        <span class="hljs-keyword">if</span> (j &lt; m) G[a[i][j]].<span class="hljs-built_in">pb</span>(a[i][j + <span class="hljs-number">1</span>]);    }    <span class="hljs-built_in">solve</span>();    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%lld"</span>, ans);    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;}</code></pre></div>]]></content>
-      
-      
+  </entry>
+  <entry>
+    <title>群论学习笔记</title>
+    <url>/2022/03/16/%E7%BE%A4%E8%AE%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<blockquote>
+<p>参考资料： <a href="https://www.luogu.com.cn/blog/command-block/qun-lun-xiao-ji">command_block’s blog</a></p>
+</blockquote>
+<h1 id="群的概念及基本性质"><a href="#群的概念及基本性质" class="headerlink" title="群的概念及基本性质"></a>群的概念及基本性质</h1><ul>
+<li><p>由集合 $G\neq \emptyset$ 和 $G$ 上的二元运算 $*$ 组成。</p>
+</li>
+<li><p>满足以下性质：</p>
+<ul>
+<li><p>封闭性：$\forall a,b\in G,$ 均有 $(a*b)\in G$。</p>
+</li>
+<li><p>结合律：$(a*b)*c=a*(b*c)$ 。</p>
+</li>
+<li><p>存在单位元：存在 $\epsilon\in G$ 使得 $\forall a\in G$，均有 $a*\epsilon=\epsilon *a=a$ 。</p>
+</li>
+<li><p>存在逆元：$\forall a \in G,$ 均存在 $b\in G$ 使得 $a*b=\epsilon$。</p>
+</li>
+</ul>
+</li>
+<li><p>定理：单位元唯一。证明略去。</p>
+</li>
+<li><p>定理：每个元素的逆元唯一。证明略去。</p>
+</li>
+<li><p>定理：对于任意的有限群 $G={\epsilon,a_1,…,a_n}$，$\forall a\in G$，均存在一个常数 $b$ 使得 $a^b=\epsilon$，且有 $a^{-1}=a^{b-1}$ ，称 $b$ 为 $a$ 的阶。证明略去。</p>
+</li>
+</ul>
+<h1 id="置换与置换群"><a href="#置换与置换群" class="headerlink" title="置换与置换群"></a>置换与置换群</h1><ul>
+<li><p>置换的定义：有限集合到自身的双射称作置换。</p>
+<p>  可以写作</p>
+<p>  $$\large\begin{pmatrix}1&amp;2&amp;3&amp;…&amp;n\\p_1&amp;p_2&amp;p_3&amp;…&amp;p_n\end{pmatrix}$$</p>
+</li>
+<li><p>置换的乘法：相当于将映射叠加。</p>
+<p>  性质：</p>
+<ul>
+<li><p>置换的乘积还是置换。</p>
+</li>
+<li><p>满足交换律。</p>
+</li>
+<li><p>单位元为 $\large\begin{pmatrix}1&amp;2&amp;3&amp;…&amp;n\\1&amp;2&amp;3&amp;…&amp;n\end{pmatrix}$</p>
+</li>
+<li><p>$\begin{pmatrix}1&amp;2&amp;3&amp;…&amp;n\\p_1&amp;p_2&amp;p_3&amp;…&amp;p_n\end{pmatrix}$ 的逆元为 $\begin{pmatrix}p_1&amp;p_2&amp;p_3&amp;…&amp;p_n\\1&amp;2&amp;3&amp;…&amp;n\end{pmatrix}$</p>
+</li>
+</ul>
+<p>  一般不满足交换律。</p>
+</li>
+<li><p>置换群：由上面的性质可知对 $1..n$ 作用的所有置换形成一个群。一般只研究一个子群。</p>
+</li>
+<li><p>置换的循环：把置换看作有向图，连边 $(i,p_i)$，会形成若干个环。</p>
+<p>  置换可以用这些环来表示，并且是唯一的。</p>
+</li>
+</ul>
+<h1 id="text-Burnside-引理-与-text-Polya-定理"><a href="#text-Burnside-引理-与-text-Polya-定理" class="headerlink" title="$\text{Burnside}$ 引理 与 $\text{Polya}$ 定理"></a>$\text{Burnside}$ 引理 与 $\text{Polya}$ 定理</h1><p>设 $G$ 为 $1..n$ 的一个置换群。</p>
+<ul>
+<li><p>不动点：对于 $p\in G$ ，若 $p_k = k$ 则称 $k$ 是 $p$ 下的不动点。</p>
+<p>  $p$ 下的不动点个数记作 $c(p)$。</p>
+</li>
+<li><p>$\text{k}$ 不动置换类</p>
+<p>  对于 $p\in G$，若 $k$ 是 $p$ 下的不动点，则称 $p$ 属于 $\text{k}$ 不动置换类，记作 $p\in Z_k$。$Z_k$ 为 $G$ 的一个子群。</p>
+</li>
+<li><p>等价类：等价类 $E_k$ 为对元素 $k$ 任意施加 $G$ 中的置换所能到达的元素集合。</p>
+<ul>
+<li>定理：当 $x,y$ 同属一个等价类时，有 $|Z_x| = |Z_y|$。证明略去。</li>
+</ul>
+</li>
+<li><p>轨道-稳定子定理：</p>
+<p>  $$|Z_k|\times|E_k|=G$$</p>
+<p>  证明略去。</p>
+</li>
+<li><p>$\text{Burnside 引理}$ ：</p>
+<p>  记 $l$ 为 $E_{1..n}$ 中本质不同的等价类个数，则有： </p>
+<p>  $$l = \large\dfrac 1 {|G|}\sum\limits_{p\in G}c(p)$$</p>
+<p>  即等价类个数 $=$ 所有置换下的不动点总数的平均数。</p>
+</li>
+<li><p>$\text{Polya 定理}$:</p>
+<p>  设有 $n$ 个元素，每个元素有 $m$ 种染色方案。</p>
+<p>  设 $G$ 是 $n$ 个元素的置换群，则染色总方案数为：</p>
+<p>  $$\large\dfrac 1 {|G|}\sum\limits_{p\in G}T(p)$$</p>
+<p>  其中 $T(p)$ 表示在置换 $p$ 下不动的染色方案数。</p>
+</li>
+</ul>
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><p><a href="https://www.luogu.com.cn/problem/P4980">$\text{[模板]Polya 定理}$</a></p>
+<p><a href="https://www.luogu.com.cn/problem/P4916">$\text{[MtOI2018]魔力环}$</a></p>
+<p><a href="https://www.luogu.com.cn/problem/P4727">$\text{[HNOI2009]图的同构计数}$</a></p>
+<p><a href="https://www.luogu.com.cn/problem/P4128">$\text{[SHOI2006] 有色图}$</a></p>
+]]></content>
       <categories>
-          
-          <category> 题解 </category>
-          
+        <category>学习笔记</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 线段树 </tag>
-            
-            <tag> LCT </tag>
-            
-            <tag> Two Pointers </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CF232E Quick Tortoise</title>
-      <link href="/2022/03/15/CF232E-Quick-Tortoise/"/>
-      <url>/2022/03/15/CF232E-Quick-Tortoise/</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF232E">$\text{link}$</a></p><p>先将询问离线下来分治，设当前分治区间为 $[l,r]$ , $mid = (l + r) &gt;&gt; 1$，考虑处理左上角到右下角的询问，剩下的分到左右两边。</p><p>由于路径必然经过 $y=mid$ 这条直线，考虑记 $g1(i,j,k) = 1/0$ 表示 $(i,j)$ 能否走到 $(k,mid)$， $g2(i,j,k) = 1/0$ 表示 $(k,mid)$ 能否走到 $(i,j)$，</p><p>然后转移用 $bitset$ 优化一下就可以做到 $\mathrm{O(\dfrac {n^2m\log m}{\omega} + \dfrac {qn}{\omega})}$ 。</p><p>实现的时候 $(i,j)$ 的意义是反过来的（（</p><p>$\text{Code:}$</p><div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();    <span class="hljs-keyword">return</span> f ? -x : x;}<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">500</span> + <span class="hljs-number">5</span>;<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxq = <span class="hljs-number">6e5</span> + <span class="hljs-number">5</span>;<span class="hljs-type">int</span> n, m, ans[maxq]; <span class="hljs-type">char</span> c[maxn][maxn];<span class="hljs-keyword">struct</span> <span class="hljs-title class_">_ques</span> {    <span class="hljs-type">int</span> xl, yl, xr, yr, id;} qr[maxq], q0[maxq], q1[maxq];<span class="hljs-type">int</span> ck[maxn];bitset&lt;maxn&gt; g1[maxn][maxn], g2[maxn][maxn];<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> L, <span class="hljs-type">int</span> R)</span> </span>{    <span class="hljs-keyword">if</span> (L &gt; R) <span class="hljs-keyword">return</span>;    <span class="hljs-keyword">if</span> (l == r) {        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) ck[i] = ck[i - <span class="hljs-number">1</span>] + (c[i][r] == <span class="hljs-string">'#'</span>);        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = L; i &lt;= R; i++)        <span class="hljs-keyword">if</span> (ck[qr[i].xr] == ck[qr[i].xl - <span class="hljs-number">1</span>]) ans[qr[i].id] = <span class="hljs-number">1</span>;        <span class="hljs-keyword">return</span>;    }    <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>, c0 = <span class="hljs-number">0</span>, c1 = <span class="hljs-number">0</span>;    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = l; j &lt;= r; j++)    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) g1[j][i].<span class="hljs-built_in">reset</span>(), g2[j][i].<span class="hljs-built_in">reset</span>();    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {        <span class="hljs-keyword">if</span> (c[i][mid] == <span class="hljs-string">'.'</span>) {            <span class="hljs-keyword">if</span> (i) g2[mid][i] |= g2[mid][i - <span class="hljs-number">1</span>];            g2[mid][i].<span class="hljs-built_in">set</span>(i);        }        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = mid; j &lt;= r; j++) {            <span class="hljs-keyword">if</span> (c[i][j] == <span class="hljs-string">'#'</span>) <span class="hljs-keyword">continue</span>;            <span class="hljs-keyword">if</span> (i) g2[j][i] |= g2[j][i - <span class="hljs-number">1</span>];            <span class="hljs-keyword">if</span> (j &gt; mid) g2[j][i] |= g2[j - <span class="hljs-number">1</span>][i];        }    }    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = n; i &gt;= <span class="hljs-number">1</span>; i--) {        <span class="hljs-keyword">if</span> (c[i][mid] == <span class="hljs-string">'.'</span>) {            <span class="hljs-keyword">if</span> (i &lt; n) g1[mid][i] |= g1[mid][i + <span class="hljs-number">1</span>];            g1[mid][i].<span class="hljs-built_in">set</span>(i);        }        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = mid; j &gt;= l; j--) {            <span class="hljs-keyword">if</span> (c[i][j] == <span class="hljs-string">'#'</span>) <span class="hljs-keyword">continue</span>;            <span class="hljs-keyword">if</span> (i &lt; n) g1[j][i] |= g1[j][i + <span class="hljs-number">1</span>];            <span class="hljs-keyword">if</span> (j &lt; mid) g1[j][i] |= g1[j + <span class="hljs-number">1</span>][i];        }    }    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = L; i &lt;= R; i++)    <span class="hljs-keyword">if</span> (qr[i].yr &lt;= mid) q0[++c0] = qr[i];    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (qr[i].yl &gt; mid) q1[++c1] = qr[i];    <span class="hljs-keyword">else</span> {        <span class="hljs-comment">// printf("%d %d %d\n", qr[i].id, g1[qr[i].yl][qr[i].xl].count(), g2[qr[i].yr][qr[i].xr].count());</span>        <span class="hljs-comment">// for (int j = 1; j &lt;= n; j++) printf("%d ", g1[qr[i].yl][qr[i].xl][j] ? 1 : 0); puts("");</span>        <span class="hljs-comment">// for (int j = 1; j &lt;= n; j++) printf("%d ", g2[qr[i].yr][qr[i].xr][j] ? 1 : 0); puts("");</span>        <span class="hljs-keyword">if</span> ((g1[qr[i].yl][qr[i].xl] &amp; g2[qr[i].yr][qr[i].xr]).<span class="hljs-built_in">count</span>()) ans[qr[i].id] = <span class="hljs-number">1</span>;    }    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= c0; i++) qr[L + i - <span class="hljs-number">1</span>] = q0[i];    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= c1; i++) qr[R - i + <span class="hljs-number">1</span>] = q1[i];    <span class="hljs-built_in">solve</span>(l, mid, L, L + c0 - <span class="hljs-number">1</span>);    <span class="hljs-built_in">solve</span>(mid + <span class="hljs-number">1</span>, r, R - c1 + <span class="hljs-number">1</span>, R);}<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{    n = <span class="hljs-built_in">read</span>(); m = <span class="hljs-built_in">read</span>();    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, c[i] + <span class="hljs-number">1</span>);    <span class="hljs-type">int</span> q = <span class="hljs-built_in">read</span>();    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= q; i++) {        <span class="hljs-type">int</span> x = <span class="hljs-built_in">read</span>(), y = <span class="hljs-built_in">read</span>();        qr[i].xl = x; qr[i].yl = y;        x = <span class="hljs-built_in">read</span>(), y = <span class="hljs-built_in">read</span>();        qr[i].xr = x; qr[i].yr = y;        qr[i].id = i;    }    <span class="hljs-built_in">solve</span>(<span class="hljs-number">1</span>, m, <span class="hljs-number">1</span>, q);    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= q; i++) <span class="hljs-built_in">puts</span>(ans[i] ? <span class="hljs-string">"Yes"</span> : <span class="hljs-string">"No"</span>);    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;}</code></pre></div>]]></content>
-      
-      
+  </entry>
+  <entry>
+    <title>CF1109F Sasha and Algorithm of Silence&#39;s Sounds</title>
+    <url>/2022/03/16/CF1109F-Sasha-and-Algorithm-of-Silence-s-Sounds/</url>
+    <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF1109F">$\text{link}$</a></p>
+<p>首先考虑计算每个左端点对应的合法右端点的个数，可以发现随着 $l$ 的增大，使得 $[l,r]$ 不存在环的最大的 $r$ 是单调递增的，然后我就不会了。。。</p>
+<p>看了题解才想起来可以利用树“点数-边数=1”的性质计算，于是拿棵线段树顺便维护一下“点数-边数”的最小值以及最小值的个数就好了，因为 $[l,l]$ 显然满足 “点数-边数=1” 。</p>
+<p>时间复杂度 $\mathrm{O(nm\log(nm))}$ 。</p>
+<p>这种性质还是要想的起来啊。</p>
+<p>线段树四倍空间 /fn/fn/fn</p>
+<p>$\text{Code:}$</p>
+<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> pb push_back</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">1e3</span> + <span class="hljs-number">5</span>;
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxm = <span class="hljs-number">2e5</span> + <span class="hljs-number">5</span>;
+<span class="hljs-type">int</span> n, m, nm, a[maxn][maxn];
+vector&lt;<span class="hljs-type">int</span>&gt; G[maxm];
+<span class="hljs-type">long</span> <span class="hljs-type">long</span> ans;
+<span class="hljs-keyword">namespace</span> LCT {
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {
+        <span class="hljs-type">int</span> ch[<span class="hljs-number">2</span>], fa, tag;
+        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">clr</span><span class="hljs-params">()</span> </span>{ch[<span class="hljs-number">0</span>] = ch[<span class="hljs-number">1</span>] = fa = tag = <span class="hljs-number">0</span>;}
+        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">ladd</span><span class="hljs-params">()</span> </span>{tag ^= <span class="hljs-number">1</span>; <span class="hljs-built_in">swap</span>(ch[<span class="hljs-number">0</span>], ch[<span class="hljs-number">1</span>]);}
+    } t[maxm];
+    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">nrt</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{<span class="hljs-keyword">return</span> t[t[x].fa].ch[<span class="hljs-number">0</span>] == x || t[t[x].fa].ch[<span class="hljs-number">1</span>] == x;}
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">rotate</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{
+        <span class="hljs-type">int</span> y = t[x].fa, z = t[y].fa;
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">nrt</span>(y)) t[z].ch[t[z].ch[<span class="hljs-number">1</span>] == y] = x;
+        t[t[y].fa = x].fa = z;
+        <span class="hljs-type">int</span> gx = t[y].ch[<span class="hljs-number">1</span>] == x;
+        t[y].ch[gx] = t[x].ch[gx ^ <span class="hljs-number">1</span>];
+        t[t[x].ch[gx ^ <span class="hljs-number">1</span>]].fa = y;
+        t[x].ch[gx ^ <span class="hljs-number">1</span>] = y;
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{
+        <span class="hljs-keyword">if</span> (t[x].tag) {
+            t[t[x].ch[<span class="hljs-number">0</span>]].<span class="hljs-built_in">ladd</span>();
+            t[t[x].ch[<span class="hljs-number">1</span>]].<span class="hljs-built_in">ladd</span>();
+            t[x].tag = <span class="hljs-number">0</span>;
+        }
+    }
+    <span class="hljs-type">int</span> stk[maxm], top;
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">splay</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{
+        <span class="hljs-type">int</span> u = x;
+        <span class="hljs-keyword">for</span> (; <span class="hljs-built_in">nrt</span>(u); u = t[u].fa) stk[++top] = u;
+        <span class="hljs-built_in">pd</span>(u); <span class="hljs-keyword">while</span> (top) <span class="hljs-built_in">pd</span>(stk[top--]);
+        <span class="hljs-keyword">while</span> (<span class="hljs-built_in">nrt</span>(x)) {
+            <span class="hljs-type">int</span> y = t[x].fa, z = t[y].fa;
+            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">nrt</span>(y) &amp;&amp; ((t[z].ch[<span class="hljs-number">0</span>] == y) == (t[y].ch[<span class="hljs-number">0</span>] == x))) <span class="hljs-built_in">rotate</span>(y);
+            <span class="hljs-built_in">rotate</span>(x);
+        }
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">access</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> y = <span class="hljs-number">0</span>; x; y = x, x = t[x].fa) <span class="hljs-built_in">splay</span>(x), t[x].ch[<span class="hljs-number">1</span>] = y;}
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mrt</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{<span class="hljs-built_in">access</span>(x); <span class="hljs-built_in">splay</span>(x); t[x].<span class="hljs-built_in">ladd</span>();}
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">split</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{<span class="hljs-built_in">mrt</span>(x); <span class="hljs-built_in">access</span>(y); <span class="hljs-built_in">splay</span>(y);}
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">cut</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{<span class="hljs-built_in">split</span>(x, y); t[x].fa = t[y].ch[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;}
+    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">frt</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{
+        <span class="hljs-built_in">access</span>(x); <span class="hljs-built_in">splay</span>(x);
+        <span class="hljs-keyword">while</span> (t[x].ch[<span class="hljs-number">0</span>]) <span class="hljs-built_in">pd</span>(x), x = t[x].ch[<span class="hljs-number">0</span>];
+        <span class="hljs-built_in">splay</span>(x); <span class="hljs-keyword">return</span> x;
+    }
+    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">link</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
+        <span class="hljs-built_in">mrt</span>(x);
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">frt</span>(y) == x) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        t[x].fa = y; <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    }
+}
+<span class="hljs-keyword">namespace</span> _Smt {
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> ls u &lt;&lt; 1</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rs u &lt;&lt; 1 | 1</span>
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {
+        <span class="hljs-type">int</span> mn, sz, tag;
+        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">ladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{mn += x; tag += x;}
+    } t[maxm &lt;&lt; <span class="hljs-number">2</span>];
+    <span class="hljs-function">Node <span class="hljs-title">merge</span><span class="hljs-params">(Node c, Node a, Node b)</span> </span>{
+        <span class="hljs-keyword">if</span> (a.mn &lt; b.mn) c.mn = a.mn, c.sz = a.sz;
+        <span class="hljs-keyword">if</span> (a.mn &gt; b.mn) c.mn = b.mn, c.sz = b.sz;
+        <span class="hljs-keyword">if</span> (a.mn == b.mn) c.mn = a.mn, c.sz = a.sz + b.sz;
+        <span class="hljs-keyword">return</span> c;
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
+        <span class="hljs-keyword">if</span> (t[u].tag) {
+            t[ls].<span class="hljs-built_in">ladd</span>(t[u].tag);
+            t[rs].<span class="hljs-built_in">ladd</span>(t[u].tag);
+            t[u].tag = <span class="hljs-number">0</span>;
+        }
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
+        <span class="hljs-keyword">if</span> (l == r) {t[u] = (Node){y, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>}; <span class="hljs-keyword">return</span>;}
+        <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf</span>(ls, l, mid, x, y);
+            <span class="hljs-keyword">else</span> <span class="hljs-built_in">mdf</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y);
+        t[u] = <span class="hljs-built_in">merge</span>(t[u], t[ls], t[rs]);
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {t[u].<span class="hljs-built_in">ladd</span>(z); <span class="hljs-keyword">return</span>;}
+        <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf2</span>(ls, l, mid, x, y, z);
+        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf2</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);
+        t[u] = <span class="hljs-built_in">merge</span>(t[u], t[ls], t[rs]);
+    }
+    <span class="hljs-function">Node <span class="hljs-title">qry</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) <span class="hljs-keyword">return</span> t[u];
+        <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (x &gt; mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y);
+        <span class="hljs-keyword">if</span> (y &lt;= mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(ls, l, mid, x, y);
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">merge</span>((Node){<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>}, <span class="hljs-built_in">qry</span>(ls, l, mid, x, y), <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y));
+    }
+    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> ls</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">undef</span> rs</span>
+}
+<span class="hljs-type">int</span> lx;
+<span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">lk</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> x)</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; G[x].<span class="hljs-built_in">size</span>(); i++) {
+        <span class="hljs-type">int</span> v = G[x][i];
+        <span class="hljs-keyword">if</span> (v &lt; l || v &gt; x) <span class="hljs-keyword">continue</span>;
+        <span class="hljs-keyword">if</span> (!LCT::<span class="hljs-built_in">link</span>(x, v)) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; i; j++) {
+                <span class="hljs-keyword">if</span> (G[x][j] &lt; l || G[x][j] &gt; x) <span class="hljs-keyword">continue</span>;
+                LCT::<span class="hljs-built_in">cut</span>(x, G[x][j]);
+            }
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        lx++;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+}
+<span class="hljs-type">int</span> dt;
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">ct</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> r)</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> v : G[x]) {
+        <span class="hljs-keyword">if</span> (v &gt; r || v &lt; x) <span class="hljs-keyword">continue</span>;
+        LCT::<span class="hljs-built_in">cut</span>(x, v);
+        <span class="hljs-comment">// printf("? %d %d %d\n", x, v, r);</span>
+        _Smt::<span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, nm, v, r, <span class="hljs-number">1</span>);
+    }
+}
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-type">int</span> r = <span class="hljs-number">2</span>;
+    _Smt::<span class="hljs-built_in">mdf</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, nm, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> l = <span class="hljs-number">1</span>; l &lt; nm; l++) {
+        <span class="hljs-comment">// printf("! %d %d %d %d\n", l, r - 1, qry(1, 1, nm, l, r - 1).mn, qry(1, 1, nm, l, r - 1).sz);</span>
+        <span class="hljs-keyword">while</span> (r &lt;= nm) {
+            lx = <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">lk</span>(l, r)) <span class="hljs-keyword">break</span>;
+            <span class="hljs-comment">// printf("%d %d %d\n", r, qry2(1, 1, nm, r - 1), lx);</span>
+            _Smt::<span class="hljs-built_in">mdf</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, nm, r, _Smt::<span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, nm, r - <span class="hljs-number">1</span>, r - <span class="hljs-number">1</span>).mn + <span class="hljs-number">1</span> - lx);
+            r++;
+        }
+        ans += _Smt::<span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, nm, l, r - <span class="hljs-number">1</span>).sz;
+        <span class="hljs-comment">// printf("%d %d %d %d\n", l, r - 1, _Smt::qry(1, 1, nm, l, r - 1).mn, _Smt::qry(1, 1, nm, l, r - 1).sz);</span>
+        <span class="hljs-comment">// for (int i = l; i &lt; r; i++) printf("    %d %d\n", i, _Smt::qry(1, 1, nm, i, i).mn);</span>
+        <span class="hljs-built_in">ct</span>(l, r - <span class="hljs-number">1</span>); _Smt::<span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, nm, l + <span class="hljs-number">1</span>, r - <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>);
+        <span class="hljs-comment">// puts("?");</span>
+        <span class="hljs-comment">// for (int i = l + 1; i &lt; r; i++) printf("    %d %d\n", i, _Smt::qry(1, 1, nm, i, i).mn);</span>
+        <span class="hljs-comment">// printf("! %d %d %d %d\n", l, r - 1, qry(1, 1, nm, l, r - 1).mn, qry(1, 1, nm, l, r - 1).sz);</span>
+    }
+    ans++;
+}
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;n, &amp;m); nm = n * m;
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= m; j++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;a[i][j]);
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= m; j++) {
+        <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">1</span>) G[a[i][j]].<span class="hljs-built_in">pb</span>(a[i - <span class="hljs-number">1</span>][j]);
+        <span class="hljs-keyword">if</span> (j &gt; <span class="hljs-number">1</span>) G[a[i][j]].<span class="hljs-built_in">pb</span>(a[i][j - <span class="hljs-number">1</span>]);
+        <span class="hljs-keyword">if</span> (i &lt; n) G[a[i][j]].<span class="hljs-built_in">pb</span>(a[i + <span class="hljs-number">1</span>][j]);
+        <span class="hljs-keyword">if</span> (j &lt; m) G[a[i][j]].<span class="hljs-built_in">pb</span>(a[i][j + <span class="hljs-number">1</span>]);
+    }
+    <span class="hljs-built_in">solve</span>();
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%lld"</span>, ans);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre></div>]]></content>
       <categories>
-          
-          <category> 题解 </category>
-          
+        <category>题解</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 分治 </tag>
-            
-            <tag> bitset </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>「雅礼集训 2018 Day7」A</title>
-      <link href="/2022/03/15/%E3%80%8C%E9%9B%85%E7%A4%BC%E9%9B%86%E8%AE%AD-2018-Day7%E3%80%8DA/"/>
-      <url>/2022/03/15/%E3%80%8C%E9%9B%85%E7%A4%BC%E9%9B%86%E8%AE%AD-2018-Day7%E3%80%8DA/</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://loj.ac/p/6507">$\text{link}$</a></p><p>用线段树维护 $\text{And,Or,Min}$ 值，对于操作：</p><ul><li><p>$\text{And x}$，设当前点为 $u$，区间值分别为 $ta(u),to(u),tm(u)$：</p><ul><li><p>若 $x \And to(u) = to(u)$ ,则该操作对当前区间 $[l(u),r(u)]$ 的值无效；</p></li><li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p></li><li><p>否则直接暴力递归下去。</p></li></ul></li><li><p>$\text{Or x}$，类似的有：</p><ul><li><p>若 $ta(u) \And x = x$ ,则该操作对当前区间无效；</p></li><li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p></li><li><p>否则直接暴力递归下去。</p></li></ul></li></ul><p>分析一下时间复杂度：每次暴力递归下去都会使得当前区间内所有数的某一位相同，每个区间不同位的总数为 $\mathrm{O(n\log n\log 值域)}$，时间复杂度即为 $\mathrm{O(n\log n\log 值域)}$ 。</p><p>$\text{Code:}$</p><div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();    <span class="hljs-keyword">return</span> f ? -x : x;}<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">5e5</span> + <span class="hljs-number">5</span>;<span class="hljs-type">int</span> n, q, a[maxn];<span class="hljs-keyword">namespace</span> _Smt {    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {        <span class="hljs-type">int</span> a, o, m, tg1, tg2;        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">aladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a &amp;= x; o &amp;= x; m &amp;= x; tg1 = ~tg1 ? tg1 &amp; x : x; tg2 &amp;= x;}        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">oladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a |= x; o |= x; m |= x; tg2 |= x; tg1 = ~tg1 ? tg1 ^ (tg1 &amp; x) : tg1;}    } t[maxn &lt;&lt; <span class="hljs-number">2</span>];    <span class="hljs-meta">#<span class="hljs-keyword">define</span> ls u &lt;&lt; 1</span>    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rs u &lt;&lt; 1 | 1</span>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">up</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{        t[u].a = t[ls].a &amp; t[rs].a;        t[u].o = t[ls].o | t[rs].o;        t[u].m = <span class="hljs-built_in">min</span>(t[ls].m, t[rs].m);    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{        <span class="hljs-keyword">if</span> (~t[u].tg1) t[ls].<span class="hljs-built_in">aladd</span>(t[u].tg1), t[rs].<span class="hljs-built_in">aladd</span>(t[u].tg1);        <span class="hljs-keyword">if</span> (t[u].tg2) t[ls].<span class="hljs-built_in">oladd</span>(t[u].tg2), t[rs].<span class="hljs-built_in">oladd</span>(t[u].tg2);        t[u].tg1 = <span class="hljs-number">-1</span>; t[u].tg2 = <span class="hljs-number">0</span>;    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>{        t[u].tg1 = <span class="hljs-number">-1</span>;        <span class="hljs-keyword">if</span> (l == r) {            t[u].a = t[u].o = t[u].m = a[l];            <span class="hljs-keyword">return</span>;        }        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;        <span class="hljs-built_in">build</span>(ls, l, mid);        <span class="hljs-built_in">build</span>(rs, mid + <span class="hljs-number">1</span>, r);        <span class="hljs-built_in">up</span>(u);    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf1</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{        <span class="hljs-keyword">if</span> ((z &amp; t[u].o) == t[u].o) <span class="hljs-keyword">return</span>;        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {            <span class="hljs-keyword">if</span> (l == r) {                t[u].<span class="hljs-built_in">aladd</span>(z);                <span class="hljs-keyword">return</span>;            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {                t[u].<span class="hljs-built_in">aladd</span>(z);                <span class="hljs-keyword">return</span>;            }        }        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf1</span>(ls, l, mid, x, y, z);        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf1</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);        <span class="hljs-built_in">up</span>(u);    }    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{        <span class="hljs-keyword">if</span> ((t[u].a &amp; z) == z) <span class="hljs-keyword">return</span>;        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {            <span class="hljs-keyword">if</span> (l == r) {                t[u].<span class="hljs-built_in">oladd</span>(z);                <span class="hljs-keyword">return</span>;            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {                t[u].<span class="hljs-built_in">oladd</span>(z);                <span class="hljs-keyword">return</span>;            }        }        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf2</span>(ls, l, mid, x, y, z);        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf2</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);        <span class="hljs-built_in">up</span>(u);    }    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">qry</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) <span class="hljs-keyword">return</span> t[u].m;        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;        <span class="hljs-built_in">pd</span>(u);        <span class="hljs-keyword">if</span> (x &gt; mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y);        <span class="hljs-keyword">if</span> (y &lt;= mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(ls, l, mid, x, y);        <span class="hljs-keyword">return</span> <span class="hljs-built_in">min</span>(<span class="hljs-built_in">qry</span>(ls, l, mid, x, y), <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y));    }}<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> _Smt;<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{    n = <span class="hljs-built_in">read</span>(); q = <span class="hljs-built_in">read</span>();    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) a[i] = <span class="hljs-built_in">read</span>();    <span class="hljs-built_in">build</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n);    <span class="hljs-keyword">while</span> (q--) {        <span class="hljs-type">int</span> opt, l, r, x;        opt = <span class="hljs-built_in">read</span>(); l = <span class="hljs-built_in">read</span>(); r = <span class="hljs-built_in">read</span>();        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">1</span>) {            x = <span class="hljs-built_in">read</span>();            <span class="hljs-built_in">mdf1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);        }        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">2</span>) {            x = <span class="hljs-built_in">read</span>();            <span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);        }        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">3</span>) {            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, <span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r));        }    }    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;}</code></pre></div>]]></content>
-      
-      
+      <tags>
+        <tag>线段树</tag>
+        <tag>LCT</tag>
+        <tag>Two Pointers</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CF232E Quick Tortoise</title>
+    <url>/2022/03/15/CF232E-Quick-Tortoise/</url>
+    <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF232E">$\text{link}$</a></p>
+<p>先将询问离线下来分治，设当前分治区间为 $[l,r]$ , $mid = (l + r) &gt;&gt; 1$，考虑处理左上角到右下角的询问，剩下的分到左右两边。</p>
+<p>由于路径必然经过 $y=mid$ 这条直线，考虑记 $g1(i,j,k) = 1/0$ 表示 $(i,j)$ 能否走到 $(k,mid)$， $g2(i,j,k) = 1/0$ 表示 $(k,mid)$ 能否走到 $(i,j)$，</p>
+<p>然后转移用 $bitset$ 优化一下就可以做到 $\mathrm{O(\dfrac {n^2m\log m}{\omega} + \dfrac {qn}{\omega})}$ 。</p>
+<p>实现的时候 $(i,j)$ 的意义是反过来的（（</p>
+<p>$\text{Code:}$</p>
+<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">return</span> f ? -x : x;
+}
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">500</span> + <span class="hljs-number">5</span>;
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxq = <span class="hljs-number">6e5</span> + <span class="hljs-number">5</span>;
+<span class="hljs-type">int</span> n, m, ans[maxq]; <span class="hljs-type">char</span> c[maxn][maxn];
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">_ques</span> {
+    <span class="hljs-type">int</span> xl, yl, xr, yr, id;
+} qr[maxq], q0[maxq], q1[maxq];
+<span class="hljs-type">int</span> ck[maxn];
+bitset&lt;maxn&gt; g1[maxn][maxn], g2[maxn][maxn];
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> L, <span class="hljs-type">int</span> R)</span> </span>{
+    <span class="hljs-keyword">if</span> (L &gt; R) <span class="hljs-keyword">return</span>;
+    <span class="hljs-keyword">if</span> (l == r) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) ck[i] = ck[i - <span class="hljs-number">1</span>] + (c[i][r] == <span class="hljs-string">'#'</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = L; i &lt;= R; i++)
+        <span class="hljs-keyword">if</span> (ck[qr[i].xr] == ck[qr[i].xl - <span class="hljs-number">1</span>]) ans[qr[i].id] = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>, c0 = <span class="hljs-number">0</span>, c1 = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = l; j &lt;= r; j++)
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) g1[j][i].<span class="hljs-built_in">reset</span>(), g2[j][i].<span class="hljs-built_in">reset</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+        <span class="hljs-keyword">if</span> (c[i][mid] == <span class="hljs-string">'.'</span>) {
+            <span class="hljs-keyword">if</span> (i) g2[mid][i] |= g2[mid][i - <span class="hljs-number">1</span>];
+            g2[mid][i].<span class="hljs-built_in">set</span>(i);
+        }
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = mid; j &lt;= r; j++) {
+            <span class="hljs-keyword">if</span> (c[i][j] == <span class="hljs-string">'#'</span>) <span class="hljs-keyword">continue</span>;
+            <span class="hljs-keyword">if</span> (i) g2[j][i] |= g2[j][i - <span class="hljs-number">1</span>];
+            <span class="hljs-keyword">if</span> (j &gt; mid) g2[j][i] |= g2[j - <span class="hljs-number">1</span>][i];
+        }
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = n; i &gt;= <span class="hljs-number">1</span>; i--) {
+        <span class="hljs-keyword">if</span> (c[i][mid] == <span class="hljs-string">'.'</span>) {
+            <span class="hljs-keyword">if</span> (i &lt; n) g1[mid][i] |= g1[mid][i + <span class="hljs-number">1</span>];
+            g1[mid][i].<span class="hljs-built_in">set</span>(i);
+        }
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = mid; j &gt;= l; j--) {
+            <span class="hljs-keyword">if</span> (c[i][j] == <span class="hljs-string">'#'</span>) <span class="hljs-keyword">continue</span>;
+            <span class="hljs-keyword">if</span> (i &lt; n) g1[j][i] |= g1[j][i + <span class="hljs-number">1</span>];
+            <span class="hljs-keyword">if</span> (j &lt; mid) g1[j][i] |= g1[j + <span class="hljs-number">1</span>][i];
+        }
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = L; i &lt;= R; i++)
+    <span class="hljs-keyword">if</span> (qr[i].yr &lt;= mid) q0[++c0] = qr[i];
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (qr[i].yl &gt; mid) q1[++c1] = qr[i];
+    <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// printf("%d %d %d\n", qr[i].id, g1[qr[i].yl][qr[i].xl].count(), g2[qr[i].yr][qr[i].xr].count());</span>
+        <span class="hljs-comment">// for (int j = 1; j &lt;= n; j++) printf("%d ", g1[qr[i].yl][qr[i].xl][j] ? 1 : 0); puts("");</span>
+        <span class="hljs-comment">// for (int j = 1; j &lt;= n; j++) printf("%d ", g2[qr[i].yr][qr[i].xr][j] ? 1 : 0); puts("");</span>
+        <span class="hljs-keyword">if</span> ((g1[qr[i].yl][qr[i].xl] &amp; g2[qr[i].yr][qr[i].xr]).<span class="hljs-built_in">count</span>()) ans[qr[i].id] = <span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= c0; i++) qr[L + i - <span class="hljs-number">1</span>] = q0[i];
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= c1; i++) qr[R - i + <span class="hljs-number">1</span>] = q1[i];
+    <span class="hljs-built_in">solve</span>(l, mid, L, L + c0 - <span class="hljs-number">1</span>);
+    <span class="hljs-built_in">solve</span>(mid + <span class="hljs-number">1</span>, r, R - c1 + <span class="hljs-number">1</span>, R);
+}
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    n = <span class="hljs-built_in">read</span>(); m = <span class="hljs-built_in">read</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, c[i] + <span class="hljs-number">1</span>);
+    <span class="hljs-type">int</span> q = <span class="hljs-built_in">read</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= q; i++) {
+        <span class="hljs-type">int</span> x = <span class="hljs-built_in">read</span>(), y = <span class="hljs-built_in">read</span>();
+        qr[i].xl = x; qr[i].yl = y;
+        x = <span class="hljs-built_in">read</span>(), y = <span class="hljs-built_in">read</span>();
+        qr[i].xr = x; qr[i].yr = y;
+        qr[i].id = i;
+    }
+    <span class="hljs-built_in">solve</span>(<span class="hljs-number">1</span>, m, <span class="hljs-number">1</span>, q);
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= q; i++) <span class="hljs-built_in">puts</span>(ans[i] ? <span class="hljs-string">"Yes"</span> : <span class="hljs-string">"No"</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre></div>]]></content>
       <categories>
-          
-          <category> 题解 </category>
-          
+        <category>题解</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 线段树 </tag>
-            
-            <tag> 势能分析 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>联合省选2022前的记录</title>
-      <link href="/2022/03/11/%E8%81%94%E5%90%88%E7%9C%81%E9%80%892022%E5%89%8D%E7%9A%84%E8%AE%B0%E5%BD%95/"/>
-      <url>/2022/03/11/%E8%81%94%E5%90%88%E7%9C%81%E9%80%892022%E5%89%8D%E7%9A%84%E8%AE%B0%E5%BD%95/</url>
-      
-        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="1fadd96051c865b1d660bb51a2400648d5bf3737b856745df083782e5224c9a6">cd67862bdd141bb2aa1c78ab2fd399f67a60072de8008dd25d832ed6a25ec958c271597d94c64ba64b861d786834b124f3413b301a1947fc82287715bebaf983742e692ce9848f3d0d1dfab8866ef2606fc28aac7911ddecd98658ecd7421ff77c084239223d3a9f7902c42305103a7e25b8ab892265bf88192ab7a471c22cdee0dfa3b1b5c4c7cca0a7148e905c01811f03e0893d457b913f834c4bf9af4657308375adac2a0e7d2a8842c81cdad5c45859e47ff9902835be56befbe3ba53bfb9c0d5991954fa5a1a29539b43004413df1e5ebbcbf7e7fe9eba30137fb6798a66fcdf4f55b1fd3510b5bfefca8a81ad434a42e043b9b0ef545cafb8ef066728f33b942f0b6c60d8329db36ae4ad4699b271dc46f3c75dc6655411af98995a21146067465c8fae9f54fce26608d7a6f836ffadafd2a8c838569849e56fc83cb589641b3fc21810b9bff2ba385b982b7a41b1763a877e55952494aad806fb5b4f7e98b98c031998758a67ddfcfe1b29fee0b0c5826d0c74f7de0cdb9dbaf960c19aca2a93b37f670864281d075139a33df13b62819039f397f0617cda4b7bfe62596fdfb9aa0e46a35a4639c04eb8ff1c6ff02a5fcd9e7fc29fb3097f2daedc1c92082c1151f3c8f7381930e771e2a46651686b04185a86ec8564bc8357273d46ea322a0045d8627854353bfeb969b0e14a0df08ee1314fd9bdea82d9307b7c2816a3d97544b8ebc0c23dac4390005767552eabec4541f6506ebf58aef1f127c1d822a4e2565097e0f100b32e2b8a7a5007590d73d53ed4ab5bbe69727d91ae7d4aa5c781c05bb9b0ea0a6274351877e0b41b7f3702935c7fea3025d6e11b991986c145143932125d45c857fd79cd9d5cb758ff54a3275798e10dd38b4fd15d10702660f28d34a9b9bc5c42fb9307ce9f918b75dc9e2c9cb649376afd2c7f6b2bdcc5f34e329b48bc843e37a8d27a3c9f82f2686a9b13fb29763b11953610b7a7895728128ce35abb253075ebf590302d9927e469ca1e67645670a9f3b42fbaa087e5b324658fbf997c5e70982d388b18d67db4517c482262bcecafa19e6a692861032951f54fa5db44d241487bbe05a5d54e512fd7bc9de95fcce624eab34d0efc53c5e19dbeb3213518ad8a359f12f35c2868e4afc64e2edaef5f0ade555cf453f304c18938280e7a823fdad37737c014cbbd665c94060312845bbf3631769d1c1e4ebe840e6722170df2ad486bca86f27ad1a6407abce8ee7b71eacc74d1f29dbf154c4caf9d0e4b88c963d119c2f3bce478059632d08688f42b5cacf18ef3c54cbe42fcf927a0ea353dbb938eca855a5599496618f0d100e5603e004b03299ac1b643f6e7e6a09bbc5a5683d1566f298857349b8063bb4837771e1e8b7de38f0335090e8791a42177f13c85ee1d59036f478cbf85f2e5e939cf80f4bdc9b859f06c6de22b5c25ead17349814eb854e22d3b64daf10aaecf4b85cb01edce92c9b5c336edef55ead6592e2b4b34b35700dd57d4e352045ef8d667f7651e3ebd9260349778df80bf08555c75bb85ca249ec764e45de6db63a56e7f264a92e67f7ad27b179831d7bd6dcb4bddc2d72aec41675cc102045670ff945f8bbd40df696a210e1cf7a481dd49085c56fae452d70e1f72c341dc3e4cb124c0534c7afcb8894f6124a68ede512805fc5f51ce293d3da2d5e8ce603023a9f3780ef96b51c7e87b43516939ded784a3b5f52acf8f98a54beeadc82d8ce5589ba3bdd67e16bc6d00d6af80f7645a09931d0e246469da67f8f7b57f88512b780fa5f62fbafbdfe9c5d7f5555b02291d4d1be56ae83a89f6129ff39ab7aa3c9d58a0ed00f81228190a03fd396b397277a44c4c851114433428287cffabbe75f70c9ae699cb10d0286ad0fa5f81d9312405a10fccb9935fa11ba542914a6fcc50ef03e363b7dfde4f10919a5dd34cda844792da2065a0e223783dd599c5c33c6505d68c3f964bc8d083fbf40d9378a5964b00115a97ea202822e2fd0e48605b679b8a58e03b9c363e7e9754491250daa579e5ad7fcdb6d09560043c3723ba30ee171c634c6e41e8523f0f60fa8033ee0412b890224913103dc1404d6585ff9603bb5183ffa6f11640de1736cfd27133408dc51a29dbd1f09a68895f570acd25615ba848d927f3a46105b4787527ee0eccf2d5c38ed3f776671f280624ad0c65124125585f2d2a02e17925d3c023c96be5cbd62a4e00e4a5514fa319ad6f236a9e133744e32429bb32f71b921d3885d1d1a82295fd445cca16502c6c8d5c6bccdc2426ad08ac27d5dc0d2c833c0f823460e1bf6d77adb5545c58ae082e082176955ea2db2734296bad2f659859892dcf3f57e5136ed4a26d2979dc2f1f4d2ea056647042178e63307655469022cfd66ec3e82354f62559886435a5f70c259d1c1cff059e98b003cbf123a6c58f724ac102ec9df836e16919d80fac82d375331d0e55ab95f83b0f9a3085291b5714ad434738d6ecfdd3f3d5bf483e955a366c18812aac1e20a3531350762c9f269f43ae185c7c37a7eab85b60dc00d690ca463dc4bc535dda2fe6a653932e2488f8deb6c0c42509dd3a39be69e4a39796de680d8b1e8ad18ceda603794b9b75c5dfebb8ed9a0e828104f25b4322913848bc36655b2b6dfbf9cd6a9cb1da5990a89534a6da73685cb7faf5b90725608836fe034f1a2ef86e8a4b0c87c97fa4b7d1804a665bd7262942011d0d3a93017df44855f08c57a762e724648151f9944529384f814451e26e3e52e05360de7acf923b78ffaff4450da97b961c824e7de6ff035aa173b2c5ada9a8eabc0c9f8570b3cee1fda8dc67923d4948dbae091e153d2738c1cae3a810e3d8c8eca28f803b315b7687091646bc161463714c4ac40b24c837e39b7a4c716fab11212945c1b3587358a2cc91159d737fbeb83c0229ef12d658195ded65fc617f9961c10307e53707813ddc08c0d73d42ce10f978764f6e3ed8eb9ca256abc0a5c74e83542405f6606dda34edefb6b9d3206cc89e848c3c5d7c7443cb6c9c381116544d53b9a3e43c5665962fab599cfa8a9a1b61fd285a6cc7169c0d92cbf8d390999a01799554e1e9ac1a29c97d81d7f2d2fb3b3b15a24deda6b3f108c244a693e7e25b7ca4dfe99fad351a9a6af4d91755ff2eadb36cccf62591786b0dcb1e97781726d49f1bbc3ee8e8df99ca0074091af6ca76da531d380028b71aacfa28174c0ada938019de17d3d537a850a04af61afc4ace201beff8ec632d50db5fe386435da61d4ddd81adf46671e3d348b0c9f2e19c988a0797bf37d127b51bd8505beac06593889f4d35f28a1b576bcc3ef3d052f8b6cdb1212a5b7842d6b70421340d7fe9bb704125918e6156d43df199b85ffcf39b7fe55cf84e79592e49c49ce1ae3bab116c1d90a249d69e8564ff454472367470b88ade262fac8178331a7c4a9fbf5275ac698b48ae658356cb982fb81ceb40fc14db57907072911c3ef9e54af2f1639955082e3bfb51eb452d686a5c55008367a5130f2cb4072064055810222ac5aaebe8af3a575255f778fd4041d48272e51e6fe393c729862f8d6c78315cb9833986f27e9d7be9a39bad1e6b26b3aae4226382ee836477d19f09e7cc45e0ea77cefc4f12f39e0737467353f29f3e0167189b8b9d2577b25fe9f42091448a160ebb86267b103b8d40f4d134689017ef7387965f9fa06ecba67949b0513b4647f0bd8abfb7230b51df8312a4d6f910a1166507d30e5e776e3180b9eb0f0ccc81745ac729cba9a6da2b79965036ddf4848dd2985ef86101ea2b8229bdd1d0b55b93b6ca4f49d2831ae03dd3f5029ff69b14ca4a21b42973baa2aaf3a20e1a1d09e859058961405301661b886e4c058bf7d9181ca0827263b2d32a8759e0440267393bc7355140772fb7d20c3fab464aebac4117c69e7299120ede1300b97ee627ad8f97e13a1592ed6dfc03221a37a0a6c734f3cacade92fbf692e9ebf328a86cb15289f4c76a9b3b8660a6ddd534f5d6546f1c8db4e27973be1f3d48459eab96f8f1590708d0855d10ac679a5b7bac39fb0cda938c1e9e472dd0701e7cdf0913240345610b1bf154a8ac8908d42a57f9d404725ea500f7f531fbc211a3b671129aabd4b2c1bf31a2c3ad30ccd844b19e052c210a3f7603d5cc42199a43ade227b5c730983a914c1e9dd6a63e9badb0f9e5e09fb64a749ea5456f4ab97a2201037de79aa5844db44ca60ce1df925d042aabf2072b85d9f3a8d588ff68fd919417858071a5b61bab720990545fb097e3230b025e3708ce8203656d4fb661a7b8fc5024fdbe48e6672164886f20d283352612ab2b84b48e57d612dbdca8ba3e4e54d00ab6d265b7a5b7649154309d02d6f9e3a2004d402b5f0e3b37ce36a0c6e9db368b5a77d0876f84791339761e657407e4a0ffba7d36cf9dc7c02414b34c3477d3305886c99361dc012d450f530329882d307f48de6c9d1563d5e58ee26de2b4ca1de7aee0998e0475b7d6b7b4361fbca0c1a651b333b28d84c3db93e74fe5a558f2b0efca443993c18fd7fd0fd0feacfd342afae9421e90424f743bd833260fc3a197f42d556bc4bb9bec1719a0cf5947477801e361fcdacbc7fa6ac708fb5c16cbfed06f808072bcffd6ff707eb13ee6496c8836de4a5626cbcf06f8a684cc57c60fc6a3dbcd96c825ea9b774ab9d60e87305c2f1c5e5f2c4a521f678189420622fd889e87969b48f6a8c5a548356bbf429b6f6eca8f4a50ae4f3d70d0361a0bc3143c55047a3405107334d676763eaa08bbddd4dfe3351ac8f16874f2f9669b9a87ad5f185084dc19b0d530a275e9ee769abe11faca071231b731d682fd9cc6008d0b06d44c51402c6fb2fba837d2813740d98ab4e4191debb21615a9d090e42bf2a633e4d7168a9a487764fe639d5e0d53aff93269d0fc636e1283f43f0a254d6362bc0fd95d97c5be906bf0901de3d79f31d1894a884d1a19b2e898ffb1759a75db15ac7308f5685eb902e47060ccb1278a4b2935865a7572629844da4391c84abf1f7791ceab61bd06676c5e13d7e68806072bd0e5a0ee716c1192f1baaa7a699a14d4652e06f00a517b3ccedeea67f9ce7abf4caef7ed7655bbedfcbbbafa0c935145b6ebc7e17a9013885a969d55e1f0c9709ad8787571d70089267256c2622d1287a9bb834e10132507c5b33c1f68ff49cce448afa943ae2c21fa982a45e3c12f6950da3436b40d2bfe58c94e02ac6db84f4a50c5f30c8a9a533f62ab34023da9740c61d382aae63d26d1baa722480e4b001c0b935aabbbb19271cdade981b47ed6d3b71ff53fa2e656def0da9e40cfc68703c5dbfd4e19da67cbb38f5d09e7817a98f2a9a2b99a7d3674354e02fd37d69a60f70810793bd819ccae3e7ddb605374b5141edc248d221eb78c49d550f3b855522957618234070bafd7df2674b69599bfc565d6bc1de73a6b6a13d0352fb8c862cbfeacefd944ecaa30e29b5da2926289252054cf13e3fed0183875ccc38a27ebadd6ab82fcbefc814051c09b7b47ee67bf9babef89e43a939f95d0bf2bc10b7a7253ea4ea042beabcd4f860f5f93d5803f842a9758ab84aff8db2ac1dcef2d85def31b442effd363f5846d3cc4340759889723e4132f0aba58e7fd2f7308180819e9e7c22d777bd4c6ba20b295a449de842ef9de7d17b839dd9d7d392e3083e5ee3e4069b997dc72faa774dc90a24225e2262bf8a3b9d5a9bc19074ea96c6273da15fd9dae4a8ab8e81d6706734885aac0fb79cb1728013ab9c37edb52c2eed88a8aeb4db2650febe9c8541075c624c1912d26f19d83dc7eb20e19d1c5189d068dd69e5d50a8243b026400ffc263f1ce564eb50a85f0046f66d164422b6c05de3df25365b1802a55445ab5efd5e6bb7dcd1c51a7db1b87ffff2260a5d9c8447a08d894cfcef40e57f8af2ff1f8f9f0f9f508e51b8b3c6a6b1c2cb81e2f4e917e5ab858172da395c079041368780b8b8fa29978700294b3dcf64ed252f91593cb8e2dd54490aef58eff2fb9d0424f2cdb7c4afac7a5f7792769e3880163581f8b56405641448be49d57ed1dd9131bfe224e37949ba16c99e0815c51362a82694e3d2f531f16d77ba7b72457b9e54acc81003dd28e3621870fa29478d8af4507cd2b7c35cfe711135263c31ef3ee117d283666e959dd3c54fa319b8ee1ba99633b0232fbd55f94cdd1b64d882cb2d3e44b6d22803ffd17ac277776f7e51b2b4fa490a84190d282335f646758a2217a36401530a3464991a15405ac84f55c766d4591793caef7d3947e68084c80daddc11e7e80c156180a507868e0fbb713d77bce4c999a13974e692cefc40b24377da4369a8aa0d93d5601effe6e269628e25b9485106ba3145291c4062920ac8dd9375aed3a5e1bda37f61437f144a04e9a398cf271e6a046d9684de8663afbda26e1714986ae07f70301c09606c6c9862a0e1152602e7cafba8ac50410f30dde15285a1e6f166aceabfd6cf455d94d16bfb1b0304cf3d99167f0a8a7e05c257bb6f9ec8bddbc8a3d73fa8edfc90d8d16c1e9404b4a93128e4eb21b41bcfceed876540d218d979a32917d242de7c854c45575e7e2d90c63a0a6324294d59fadebf8481d2a46e9fed07c6ebb252bf77fad2ce42c7b15dabd7a6e96914bd7b12061e8115534966fafc925641b844aa0774149e78f64972b03da569c647347c35efb32dea7fd3eb1d465040aace6e2dce002fc6073da8b72644d775c851f99a0a85c356e748f329e6d5837c2f32324bbde35a2937c6db227539da9dd5b455ca1f1b2f4ac7ccb065b329e621dfb5d6f237edfef712963025a1494f75f1cf206b66b7de8b5781d50863ed735a62b899078a7c06fd8cfd8670328c70306bacac1b8946964d1944e1ab0b62b56c11dfdd064c8afb4f1136d7ad97c6116aab569d3763bbec58ea00a5197d6bf00a8143c1a30dc8c770a1a6a29912b67833749c68e903cbc6aaddf8ccf53232feb4291a0694a062995c3ec7dca0fee2bbfa801e5165242c3f48b2a9633fb503bba0402696f251883191b8aeb0a2c7071155ae4a5aeae56b71888b190e4f1e015514e8c86d8a920f77518cf08ca0609c822a806eb38880ed5d2082ddebb9fcfac4725a90f2d8a9930aa40bb358f0f0ddab5dee4e251337a4f0cd8f4d21e6d91e8dd28963a99a8bcdc84febc205c9487855c255db1f1756da9369c43b18509eb08858c8b53132a3fe0cb45cedfd2bd8200d81b3049da224016a968cb01eaad51d5764c236ded1ddf21c6662ce0dff3453f7bf7052ed9ad97b69c2b8ed3ebf75213f76c5d5ef3a91d3d45020a04d16d4cae3a0f769520f8509f0ab685b0a9514148213ad4f8c0c343b140ff1df99d27c30f9d6ebf136fe710004660c139b2d3ad3f215629ca9cdb36c7d3cd8906e0be441f1bf3578c5216eb6e45fd6648984a8071407cba1de6481f2e9ae29175c2cf2194651916e6649044956de3f1381f74123a54813d7c59b35b70af458834c0e070c9f353f4483595f76e10d0f138fe3668dfcf1a02f207fe355228bda62a3080a59f6ee0d9f54021480b9d835799c4e390982067f1748ee7c86d8bf6f5e7eeb4690f394998da7c2d8c683c2cbe5893c73948db9dcbc4cf9d0ab344e3e9d3a1169e49815a179c38e24da04b2ffb331514c220e3efa9358f499087b8106904500d9485cc39107b0760130b9d0d4ea4b348e9d8e8fc3b73c3ade51d3d5d438dc259010bea664cfbc0f88d7203c94d9370ddf6b753ae6bcd96f6e68046b3e16ed5faed13e41f0246c8b362a9b615b67213d74fc71c09b3f802e809162a65ab3dd5f6e15a235d0c4259c393e5d3428a43f573ea4aa6aba00f9ddc4d08fc3149f9f1903acc6ea849262f4d5d8dbcb02e0dc3dedc6eb4aac284514397d0e2f12bc0eab2c75e62bc6cd7ce8fe6e1bf9c81097102d67579f0920abd45f83726a18c8edbc735346d9b8dbb7d30502300250f6dab91b4bf84df12b2042f868796863f4cc05ec522c5e6251012fb6e2acfe1973a4de32da1043e291031345ab5a8e71cc09fbf4e8dede171d0d6a9db826c26c1e4209e4f94416aed56ddc9c426c7403f2ed8033d6a1fb8956a9fe0408daa4214eca68cb222234ea41a999a7218b3694fa912eebbc61064bda4de8e85934f6c2e4c9ab6ba055059d0e367e348b24d2725df5c71755fd5ebb8a0e8f371b941746385493265c9ba6518ff13b86c515a3bfa1fc57fbc8d7558de9c2033bc8ad914a64975aac1b1fe2ced3bc850921fd4e17750f73b5fbc5ed0fecb38d8bc1dad7086f2b2a93f92474aa095029b42137923cc1fe20f23557ab27c0dc41d1d286d97c32c8b55e40f140d72e07ad502500adbaae934190ba9236dc0f1b18bec31b3f78e92f66e816d95d692dc80f6dfa950c072300069ab6d1ed2afd70b5ba4414571f95dec6560471a38b8000ea890681395ce69dc16ee02d4c3d3b5ad99a0601ee0d29d142e1e5fd63c65061590fba3c6e41c207f42e0493930ce27a7ba80667ccaf4164651e9ab08ac99840b1825ecbf3874dd7e8b15eb8e7928bea8f08f2c6c7eb4fdb60e119f5e315500bcc8bc76bcd336a9a7e73c2f99b3e09da967815fb02ca26904cbe72e7a50ad78f9b110e681d80098798012fd84c23ec071c6042710f3dc8d52c5dcf9852e9a82179f8694b3ef8b5f87d6bba5e1d5b9babcdf9796f5eb7e0558d69db8285bb39419d3da9682439757e9593a6d024b4ab525c88b7ddf2e30e418bba421eb4cfae80a2652614a37b094f5ce462cab15d067e4d1dc8757bb0f67c148944f33f4300ef6e021b9074b03cf81a8c12964e05eb197e6e52957bfd6cdf9c551e664adee3091a42fd827f342c6b7e30535f509e12ea894b2d11ab6063f7ae9ee394b64d93138cd9d45ab762b6f700fbbe29409e875b20e64b390b056909b750b1b09191c92605c69a378b4d9c33a9411e33c2d20c84f09481769f0fa3bf6cdc45ae1fda1511966b4c381c90b73bc220ff434a63ef6d36bcb186add869eb0565f752185530cdaa91fb9418c614e4be1c06f7eb87c9b20edbdbdb9c9cda7e6488138bc61dbb4bab017827490b68333a57bc1bb22f721e672d4c52b62d850719169707124a3abc9ab129772041d959e980858dfaff80e3515381dbc9994831658c69d2152ac3bd729e8ed9b3bb2e2b69c1b5290420265d517c5e55cb50136ba5be17dace821a1d63295314f04af0438335328982c3b8cf31cd315d9e1aea718ffdd498ee9e06dad9e0c72b80520cd8f986a5166e108b492e2bde9ad7ab04fcbce421dc38cc767f40ffa03a79fb107808630574644bb6a145485d5c47472b0ae80bbf03b7ac0dc94bf34821bed0c10d71b9d21e91c2212e0d574031eb590e1f14c280a0c79e9b90b52b9cd86aad301bd121b862ed9137065da40c8b2de11d477947445c1defbb5b7dddc00506290cfb1735d9668141fb0e38cd78699f162adffb69e3c8033498d7e28ee6f05b00be2cd4ae95ea5ab39648039afd2118b49796c9b0ffc0214d759a1abf45b87e1c97dc4d98fee36e12b4d956f5f11c2df306573504e3a598160798f3aee5c8df23ddd8ff6548d09d8c2a8633e90d6811a09f50a827b87405bfec01d109ff9e0084e44d1cf4aeaa46e70e82aa94be2662a04af65458e126d21cd65806a63ecd1d2bfcc25caaeb9b1c30f73db2398eec6cf70cd0748dad539f3f085f78bc9c6fe56eaafa0219080100d4d9c9e7ce389e168a9c0480ced4f83fbf3f41a8c1447abca386d0020243aaef2ffc75d3d230bec7892b452556910e5f4f888bcaf447c9141567d3afe3d6043e198fcafb6d5d7579645ab8ed7644fc7683aff1d47c243e04ee6dad89a2b5707d389713d3dd4e128c69a80c5bfa175f0b67fecaf6e57084949298d7eb8ad2baff06854f8f6c74b005f43ba3c22990445bd8f9e85366f2de3adb664553c7bd774c6e0ba647760f273c5a9904f2b754958aedda359990351622df748bd4ad9cdd1ebf9a5875764fbf9ce5d8da4c882a62fbd7107c75352df897ed955439e20f58ddd3365c371053e8e4d0b6040bd166e28f00d9d873106ce5b03d22e3c557c60611099be4266b15c7e64de1f6531670b8a370b002a5e44f6c60d2d4e8dc83a362bec644eac312255dd75f0fbd3e1758117aa69b71f03f3f82256a4fc5b214606d256955946b20f2fda6eff85b46ab42b638f0d631790405cee4b87d4deb7caa1ca2e66cbe3d03132562faaff326b91b11e0553b3287bc2416da103f05ad62968b9214ceee571c6bc7b7fe12fb68ce12b0943831bd18d79c7f237852ff869b073239e4e25006d6f625899e4a0aa21be5a94293423c00c7380c8d1becc7c829f66453e622c042920806973ca1eee39ef21fd0f57c4a000c4b4ef8a3369e403ce0fb0da41413e9c10947fdfb195304ddd78bf1135262a25a564e185e8bcf7da720c617bc804376d113efb56a42aa1d4742dce5fc19fd256a773ecac3b0441bf23c444fa5e99954cad47b43d685cd226328a3623f3090b07063098c8658e71b82d4ba99ae66d41b69f1cb63d1be633a9cc3d4d2aa96a7c8a8a5550f2c99c6f77d736700d80f812fc5717f762c5c210f75b29b9d7619a56d6a39f7e132b4a69529d8a6f255ababd1cab9f0beb660c5dcb63902d37cb96f96007043e2d67a7e3a359ed8cf5da3c021d8cdeb961b755451f88fc9a07852cd3a226cd58e642a03902b3c111241395a9213f9657c28abeaf5eca0f2dfa12db42783ec28e364f1f99b6ab5edabac23d3b8726441ad19792c0a48c91ed5cd34dffc0398e57d6fe50688c9e65dd9efb62f5f0fdb6daddd9274d3368493c1e5d1dc5d50d7cebaee8a3481d718685c1070ad02bf5c83191db24d89b5548d17fc0668c7e45c1bf061c7af879e9232f65260fc37b90df3e709af5553274e595b2e1c6f3a39013d893935d3528403974448a10540b2f8741ec16e52523979ed04d564bfd7cc6fd7eade3eb7990c92c297a18044e6178a05e54f68e80b87204df0cbb6eec1c6b8d7c2fe6e6d738795f4976a1ab52619b3e232332f6b1104bb43501f269deb2bf62a2cfdde1d371b72fb04894cc42cad31b363b397c3f8f561cc39184eb1364ae24a7be171a0484624a6a8a6842e917f4ebf73e20163eed3b54179ae6147254c6c2778e02b450c9b6d6ae6eb7968f6cd291fabaa6e51565d0895e86fe2783ffdea58a591b3c3509b6ebde019521f47a6d05da79cd051de4a611f34138040b8eb00f3d33d16ab1311e73855f6786a52de0bdb1c52250f1d094246e0b15bd11e9d7b0cbaf9a66d549f1f27e920012e7392462774c04e9191b384553b4b82245901eaf1dd4c6e96a33e49ca312e5b752032a06f98f2acec8b30b776f3c7eb2ded8cda89092175dbb0edf55205b388625d776171ac61b68cc42190812001dd06a8919ede89728e0d35e92aa34273253c9cc1e72b545c4db54a3416ae9193f00c3cc8d2c963a030e2d7961a73edc8eee72d556dcefac85fd338b765d591d90446e6e53d0f91d164c13af377b0c4b8711d57e2e367ef0c9348f665590356e955c53c186e3b3a643db7964ea13041399c832fa47e61f98a6999b8e723707421579e5c5fa0b2678604e122eeead08c2cb6e5e4d69b4839e7a47328b2bf333049352e7e0114dd8aacdec8606995784720b05bd5a7cfe747331321b54f23c522269cb91cf4bbfad4eb646a8339f9ea63cd17ffad8ef3b5ce7310825c73e4ff259f117e2a891b73798f56df7306583b037fba6e539c07bdd128ff1433bcbceaa2d4568f241676d6b869ac67ca88a82a86369ece98bdb1bc5834e651a107d38f6bdcd13c2fd56cff105a4fa0a4e71b3ed9d98b17c236f2e5c2851a465a165fe82d78d7bf7e7b3fdb2368941bb7ad67bfd47cccea481023597701c8cf50c3154573f09733d75b4a7fb34da44f768a501ea3fdaefe227c47720e475b36653c13c8aaf80c6513c1ab0fad83be93b42db16724ab026bd353576cc91e5fff84fffc26020aa52fe4689fd4b9c0f367788e1fcb1a052eb475b5bdd4a319d7e657984bac16e2453752f44738ee607db4685719e8c8c6c4747f7c0e654c236d0010dca73dbfa0254c542d799ad594fac93f26319cf6b58d5c68b11df897275c134f2a2be3418cda9b622ca9c9fa30a2849ff37fc969b014447a4789133b2af4ee06e1bd5027e39503eccafb06fcf1a31877635dd88d0cda08edc04700b9ebe6735af9e1cccaa01694450a8bc8bf13a8e51335e88b60264760dcfe55b8c8479e9a5f95efb4242cf0cd8e4fa0d336e6483419c2d086dacc2c815356a0c05599db7590a311fa26d01a20230061e54e643c975c4652f8f0903aa6c87cb47d3fc63569c36742b15531e0a84047cfa3b4b1e9234fbe699372b37014a84af8187fba3bd27d03480b4f198162bf91652377474ffe42264d11c46128d1a96306aea57b9ac6e87abb76b64be7bb9055895daa11bd39eb9058df74341c823f3e97acbf13e311132c72553ab78db7152e5389ecb24f977304087807e17c31636d33788797bf1c1d3d404f6407439a00a069078b9dca2402f2ac2beb2c96094bdb8168313d6e92bf78d372413e8bff9eee1c0d1de4d5e8b23d864811facd51c222f31a0b14a1907fdfb7e6a6269f4e81d3b7fbc91163dc40bc210e341a2d26dce9b48d450f7f17309e1eaa2f80713c9b1635e09c37e47a50b6e8f04994cd7f91ccd49473954563524ee7607800f4b639fbf5f0e5bde484c8788a11f6bcecf2df7fd6e15c5ecc00e5217f671af35f0057fa9d4cea2c7a7a9bef6a171916d2e4c4c2a80154d9bf072d0b30d9062c43adf37845ddc98e3b68243481608c62b92649873d74fa90bf9d0bfe55f4d64fbed351ba3c05f8d66bc7266e72d4526e6cd9cd4496d5dd2850909018b8184ba4981521f629dc1872c28f7c28c1b92f02347219420b494e758d7718f08e982c58e7114ec962f9bdb6b1824ac2f3d88b89f21b48a333adebbeb61c43c14dfb5b063d7d2e09131c912e6c97f8e4f030bc186efccfbdcc148a2a2f646ce9df831e9a3daa7e76a297ad0fe3a08ac439b73087c0cfdae3f316c48c65330f48d83be5741c363ea2370280281b91d7c99021bd9abdd17630e8d3526cbc72541a0e91e55e92c6c7046611a754a150765c9a54b4475bd037428a46870d0f76f3e8dc5af22ed5397721473831a7d08d44c2bdeb4670c276aa8aa20f83edb2e8e485b0a4f7ca58f9197dc6fe01e6fd71d2f16b44b38f0d12e2d588febad440b18fbbb1cda760a9e3c79c260f54288c32e0b35e3324c8bb9ef109ea088085e4d3748e541f6719a5de89edc77952a45e67bf4db4c1af7831d760db34fa7495a454471187dcea57e4895d845037be38b5d7a59b29ed335803d7b738844bfba3d960910197f4ae8bc6c7737a67da5eeb566d7427a239692c8cdd51b1ab4d570337d79ee86bb770592a52879ca1d2b97e24325d7b78851a4570f8781d457d957736f4fc8cdf919b00feb7d2b03f481e1246c8d4f93ae415469e7eab594ef3c10a8e6ee94ff80cdb4a4b99c02412ad9ca96bccd54e25ab6061c2f41017d67d1a264759194153811e2ff95dfa84d5e4c24912fb1b751e0dc6a245e811452db4f462b0d2d79589ae3fd12444012af7481153d803ef4f194268c87c1335815d37216dbd1f6431c0b1b39e773a8f37beaaadf470cb4526409cf6417cc6d938d71d6a0bae7ba8d3d511cf762662ac76a5a4939df4aee656f1eae229469ecc8bbb9e3707eed28d03d78ce52ff2fa4124969ed7321fcac5128935948efc7a071f36da772803d97ea8fe568d856a8d18246fc5effff70d2d2a0db9ccacfda3ac8a1a0c879bf5912b175a5bc300d3e96b7c770e8f7549288a2c01ce866ee2ec760554ac6ab1341c95ceb65f1491957f03cbeef2cc90b880a5ba02393febe4ec95239ce6b52af0fce0191e76f8733b05322a5659837c105637d67cda80e00e8e39554ee62eacfda99ac4c2dcd9fb200e45d9e46ae3f96729c23998052db5b4c8363175e8d1cf2206f45a9435e2c9619549b39977f3b9f2d40980dba5b2bf8e53a74cd72fef2fdf80c18e94bdebd5b48ce204e332b9c026552d4b31f943d6ee48d1167212aa6e7e296ce1684fe4cb0b05408a625ff920cdee1752904c6bf1fe0072f61ff9851be84542b20a5461603684fac14ed671388ead202aaeb790183719e4799680522bdd0c6ae4ef5f5b33d4e</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      
-      
+      <tags>
+        <tag>分治</tag>
+        <tag>bitset</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「雅礼集训 2018 Day7」A</title>
+    <url>/2022/03/15/%E3%80%8C%E9%9B%85%E7%A4%BC%E9%9B%86%E8%AE%AD-2018-Day7%E3%80%8DA/</url>
+    <content><![CDATA[<p><a href="https://loj.ac/p/6507">$\text{link}$</a></p>
+<p>用线段树维护 $\text{And,Or,Min}$ 值，对于操作：</p>
+<ul>
+<li><p>$\text{And x}$，设当前点为 $u$，区间值分别为 $ta(u),to(u),tm(u)$：</p>
+<ul>
+<li><p>若 $x \And to(u) = to(u)$ ,则该操作对当前区间 $[l(u),r(u)]$ 的值无效；</p>
+</li>
+<li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p>
+</li>
+<li><p>否则直接暴力递归下去。</p>
+</li>
+</ul>
+</li>
+<li><p>$\text{Or x}$，类似的有：</p>
+<ul>
+<li><p>若 $ta(u) \And x = x$ ,则该操作对当前区间无效；</p>
+</li>
+<li><p>若 $to(u) \And x = ta(u) \And x$ ,则该操作对当前区间的每个数影响都是一样的，可以打懒标记维护；</p>
+</li>
+<li><p>否则直接暴力递归下去。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>分析一下时间复杂度：每次暴力递归下去都会使得当前区间内所有数的某一位相同，每个区间不同位的总数为 $\mathrm{O(n\log n\log 值域)}$，时间复杂度即为 $\mathrm{O(n\log n\log 值域)}$ 。</p>
+<p>$\text{Code:}$</p>
+<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>, f = <span class="hljs-number">0</span>; <span class="hljs-type">char</span> c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">isdigit</span>(c)) f |= c == <span class="hljs-string">'-'</span>, c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">isdigit</span>(c)) x = x * <span class="hljs-number">10</span> + (c ^ <span class="hljs-number">48</span>), c = <span class="hljs-built_in">getchar</span>();
+    <span class="hljs-keyword">return</span> f ? -x : x;
+}
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">5e5</span> + <span class="hljs-number">5</span>;
+<span class="hljs-type">int</span> n, q, a[maxn];
+<span class="hljs-keyword">namespace</span> _Smt {
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> {
+        <span class="hljs-type">int</span> a, o, m, tg1, tg2;
+        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">aladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a &amp;= x; o &amp;= x; m &amp;= x; tg1 = ~tg1 ? tg1 &amp; x : x; tg2 &amp;= x;}
+        <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">oladd</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> </span>{a |= x; o |= x; m |= x; tg2 |= x; tg1 = ~tg1 ? tg1 ^ (tg1 &amp; x) : tg1;}
+    } t[maxn &lt;&lt; <span class="hljs-number">2</span>];
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> ls u &lt;&lt; 1</span>
+    <span class="hljs-meta">#<span class="hljs-keyword">define</span> rs u &lt;&lt; 1 | 1</span>
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">up</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
+        t[u].a = t[ls].a &amp; t[rs].a;
+        t[u].o = t[ls].o | t[rs].o;
+        t[u].m = <span class="hljs-built_in">min</span>(t[ls].m, t[rs].m);
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pd</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span> </span>{
+        <span class="hljs-keyword">if</span> (~t[u].tg1) t[ls].<span class="hljs-built_in">aladd</span>(t[u].tg1), t[rs].<span class="hljs-built_in">aladd</span>(t[u].tg1);
+        <span class="hljs-keyword">if</span> (t[u].tg2) t[ls].<span class="hljs-built_in">oladd</span>(t[u].tg2), t[rs].<span class="hljs-built_in">oladd</span>(t[u].tg2);
+        t[u].tg1 = <span class="hljs-number">-1</span>; t[u].tg2 = <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>{
+        t[u].tg1 = <span class="hljs-number">-1</span>;
+        <span class="hljs-keyword">if</span> (l == r) {
+            t[u].a = t[u].o = t[u].m = a[l];
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">build</span>(ls, l, mid);
+        <span class="hljs-built_in">build</span>(rs, mid + <span class="hljs-number">1</span>, r);
+        <span class="hljs-built_in">up</span>(u);
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf1</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{
+        <span class="hljs-keyword">if</span> ((z &amp; t[u].o) == t[u].o) <span class="hljs-keyword">return</span>;
+        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {
+            <span class="hljs-keyword">if</span> (l == r) {
+                t[u].<span class="hljs-built_in">aladd</span>(z);
+                <span class="hljs-keyword">return</span>;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {
+                t[u].<span class="hljs-built_in">aladd</span>(z);
+                <span class="hljs-keyword">return</span>;
+            }
+        }
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf1</span>(ls, l, mid, x, y, z);
+        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf1</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);
+        <span class="hljs-built_in">up</span>(u);
+    }
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">mdf2</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> </span>{
+        <span class="hljs-keyword">if</span> ((t[u].a &amp; z) == z) <span class="hljs-keyword">return</span>;
+        <span class="hljs-keyword">if</span> (l ^ r) <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) {
+            <span class="hljs-keyword">if</span> (l == r) {
+                t[u].<span class="hljs-built_in">oladd</span>(z);
+                <span class="hljs-keyword">return</span>;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((t[u].o &amp; z) == (t[u].a &amp; z)) {
+                t[u].<span class="hljs-built_in">oladd</span>(z);
+                <span class="hljs-keyword">return</span>;
+            }
+        }
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">mdf2</span>(ls, l, mid, x, y, z);
+        <span class="hljs-keyword">if</span> (y &gt; mid) <span class="hljs-built_in">mdf2</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y, z);
+        <span class="hljs-built_in">up</span>(u);
+    }
+    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">qry</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span> </span>{
+        <span class="hljs-keyword">if</span> (x &lt;= l &amp;&amp; r &lt;= y) <span class="hljs-keyword">return</span> t[u].m;
+        <span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">pd</span>(u);
+        <span class="hljs-keyword">if</span> (x &gt; mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y);
+        <span class="hljs-keyword">if</span> (y &lt;= mid) <span class="hljs-keyword">return</span> <span class="hljs-built_in">qry</span>(ls, l, mid, x, y);
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">min</span>(<span class="hljs-built_in">qry</span>(ls, l, mid, x, y), <span class="hljs-built_in">qry</span>(rs, mid + <span class="hljs-number">1</span>, r, x, y));
+    }
+}
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> _Smt;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    n = <span class="hljs-built_in">read</span>(); q = <span class="hljs-built_in">read</span>();
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) a[i] = <span class="hljs-built_in">read</span>();
+    <span class="hljs-built_in">build</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n);
+    <span class="hljs-keyword">while</span> (q--) {
+        <span class="hljs-type">int</span> opt, l, r, x;
+        opt = <span class="hljs-built_in">read</span>(); l = <span class="hljs-built_in">read</span>(); r = <span class="hljs-built_in">read</span>();
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">1</span>) {
+            x = <span class="hljs-built_in">read</span>();
+            <span class="hljs-built_in">mdf1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);
+        }
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">2</span>) {
+            x = <span class="hljs-built_in">read</span>();
+            <span class="hljs-built_in">mdf2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r, x);
+        }
+        <span class="hljs-keyword">if</span> (opt == <span class="hljs-number">3</span>) {
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, <span class="hljs-built_in">qry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n, l, r));
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre></div>]]></content>
       <categories>
-          
-          <category> 记录 </category>
-          
+        <category>题解</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>线段树</tag>
+        <tag>势能分析</tag>
+      </tags>
+  </entry>
 </search>
