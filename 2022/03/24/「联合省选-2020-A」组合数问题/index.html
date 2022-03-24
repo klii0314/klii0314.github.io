@@ -16,20 +16,22 @@
   <meta name="author" content="klii">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Day 0晚上跟随大部队来到考点附近的酒店，和 $AGC$ 分到了一间房，他还是那么的亲切。 传统艺能出去吃 $M$ 记，吃完回去 $AGC$ 教育了一下我，说考前不能吃东西，否则第二天会宝玲，我没试过，应该是假的。 Day 1开考后看了看 $3$ 题题面，发现都没有想法，自知今天是 $div.1$ ，便开始想暴力。花了大概 $3h$ 将三题的暴力都写了，期望得分 $1+1+1&#x3D;3$，想了想进队无">
+    <meta name="description" content="之前以为是我不会的科技题，没想到是勾巴题（（ 观察到多项式次数 $m\le 1e3$，考虑计算每项的贡献： $$\sum\limits_{i&#x3D;0}^m a_i\sum\limits_{k&#x3D;0}^n k^i x^k \dbinom n k$$ 将 $k^i$ 用第二类斯特林数换掉： $$\sum\limits_{i&#x3D;0}^m a_i\sum\limits_{k&#x3D;0}^nx^k\dbinom n k\">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GDOI2022退役记">
-<meta property="og:url" content="https://klii0314.github.io/2022/04/06/GDOI2022%E9%80%80%E5%BD%B9%E8%AE%B0/index.html">
+<meta property="og:title" content="「联合省选 2020 A」组合数问题">
+<meta property="og:url" content="https://klii0314.github.io/2022/03/24/%E3%80%8C%E8%81%94%E5%90%88%E7%9C%81%E9%80%89-2020-A%E3%80%8D%E7%BB%84%E5%90%88%E6%95%B0%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="klii&#39;s blog">
-<meta property="og:description" content="Day 0晚上跟随大部队来到考点附近的酒店，和 $AGC$ 分到了一间房，他还是那么的亲切。 传统艺能出去吃 $M$ 记，吃完回去 $AGC$ 教育了一下我，说考前不能吃东西，否则第二天会宝玲，我没试过，应该是假的。 Day 1开考后看了看 $3$ 题题面，发现都没有想法，自知今天是 $div.1$ ，便开始想暴力。花了大概 $3h$ 将三题的暴力都写了，期望得分 $1+1+1&#x3D;3$，想了想进队无">
+<meta property="og:description" content="之前以为是我不会的科技题，没想到是勾巴题（（ 观察到多项式次数 $m\le 1e3$，考虑计算每项的贡献： $$\sum\limits_{i&#x3D;0}^m a_i\sum\limits_{k&#x3D;0}^n k^i x^k \dbinom n k$$ 将 $k^i$ 用第二类斯特林数换掉： $$\sum\limits_{i&#x3D;0}^m a_i\sum\limits_{k&#x3D;0}^nx^k\dbinom n k\">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-04-06T14:25:41.000Z">
-<meta property="article:modified_time" content="2022-03-20T23:33:36.091Z">
+<meta property="article:published_time" content="2022-03-24T05:22:36.000Z">
+<meta property="article:modified_time" content="2022-03-24T05:41:41.228Z">
 <meta property="article:author" content="klii">
+<meta property="article:tag" content="斯特林数">
+<meta property="article:tag" content="二项式定理">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>GDOI2022退役记 - klii&#39;s blog</title>
+  <title>「联合省选 2020 A」组合数问题 - klii&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -190,9 +192,9 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="GDOI2022退役记">
+            <span class="h2" id="subtitle" title="「联合省选 2020 A」组合数问题">
               
-                GDOI2022退役记
+                「联合省选 2020 A」组合数问题
               
             </span>
 
@@ -207,8 +209,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-06 22:25" pubdate>
-        April 6, 2022 pm
+      <time datetime="2022-03-24 13:22" pubdate>
+        March 24, 2022 pm
       </time>
     </span>
   
@@ -218,7 +220,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      535 字
+      1.2k 字
     </span>
   
 
@@ -227,7 +229,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5 分钟
+      10 分钟
     </span>
   
 
@@ -268,30 +270,26 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">GDOI2022退役记</h1>
+            <h1 style="display: none">「联合省选 2020 A」组合数问题</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：March 21, 2022 am
+                  本文最后更新于：March 24, 2022 pm
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p>晚上跟随大部队来到考点附近的酒店，和 $AGC$ 分到了一间房，他还是那么的亲切。</p>
-<p>传统艺能出去吃 $M$ 记，吃完回去 $AGC$ 教育了一下我，说考前不能吃东西，否则第二天会宝玲，我没试过，应该是假的。</p>
-<h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><p>开考后看了看 $3$ 题题面，发现都没有想法，自知今天是 $div.1$ ，便开始想暴力。花了大概 $3h$ 将三题的暴力都写了，期望得分 $1+1+1=3$，想了想进队无望了，于是直接开摆。</p>
-<p>最后 $10mins$ 突然发现 $3$ 题都是傻逼题！！1</p>
-<p>我赶紧 $rush$ ，但是显然失败了，如果再给我一分钟我就能赛后一分钟切了。</p>
-<p>出考场，身边的人都在吐槽傻逼题，但是都没调出来，导致暴力分都没。</p>
-<p>我觉得还有救。</p>
-<h1 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h1><p>昨晚摸太晚了，导致今天只睡了 $1h$ 不到，有点小困。</p>
-<p>开题，发现三个傻逼题，怎么今天是普及场！！1</p>
-<p>正序开题，仔细想想 $T1$，发现有点难写，可恶，《摆了摆了。》</p>
-<p>然后发现 $T2,T3$ 都难写，为什么出这种勾巴题？？写了三个暴力就补觉去了，免得被 $d$ “怎么摆烂啊？”。</p>
-<p>出考场发现题目又被喷力，好！！1</p>
-<p>我还是太菜了。</p>
-<h1 id="Day-n"><a href="#Day-n" class="headerlink" title="Day n"></a>Day n</h1><p>$ccf$ 出分了，实际得分 $1+1+1+99+99+99=300,\text{GD rk 114}$ ，不多不少，$\text{AFO}$。</p>
-
+              <p>之前以为是我不会的科技题，没想到是勾巴题（（</p>
+<p>观察到多项式次数 $m\le 1e3$，考虑计算每项的贡献：</p>
+<p>$$\sum\limits_{i=0}^m a_i\sum\limits_{k=0}^n k^i x^k \dbinom n k$$</p>
+<p>将 $k^i$ 用第二类斯特林数换掉：</p>
+<p>$$\sum\limits_{i=0}^m a_i\sum\limits_{k=0}^nx^k\dbinom n k\sum\limits_{j=1}^{\min(k,i)}\dbinom k j\begin{Bmatrix}i\\j\end{Bmatrix}j!$$</p>
+<p>然后推一下柿子：</p>
+<p>$$\begin{aligned}\sum\limits_{i=0}^m a_i\sum\limits_{k=0}^nx^k\dbinom n k\sum\limits_{j=1}^{\min(k,i)}\dbinom k j\begin{Bmatrix}i\\j\end{Bmatrix}j!&amp;=\sum\limits_{i=0}^m\sum\limits_{j=1}^ia_i\begin{Bmatrix}i\\j\end{Bmatrix}j!\sum\limits_{k=j}^nx^k\dbinom n k\dbinom k j\&amp;=\sum\limits_{i=0}^m\sum\limits_{j=1}^ia_i\begin{Bmatrix}i\\j\end{Bmatrix}j!\sum\limits_{k=j}^nx^k\dbinom{n}{j}\dbinom{n-j}{k-j}\&amp;=\sum\limits_{i=0}^m\sum\limits_{j=1}^ia_i\begin{Bmatrix}i\\j\end{Bmatrix}j!\dbinom n j x^j\sum\limits_{k=0}^{n-j}\dbinom{n-j}{k}x^k\&amp;=\sum\limits_{i=0}^m\sum\limits_{j=1}^ia_i\begin{Bmatrix}i\\j\end{Bmatrix}j!\dbinom n j x^j(x+1)^{n-j}\end{aligned}$$</p>
+<p>$$<br>\begin{aligned}<br>y &amp;= f(x) \<br>&amp;= (x+2)^2 \<br>&amp;= x^2+4x+4<br>\end{aligned}<br>$$</p>
+<p>然后直接算就完了，时间复杂度 $\mathrm{O(m^2)}$。</p>
+<p>$\texttt{Code:}$</p>
+<div class="hljs code-wrapper"><pre><code class="hljs cpp"></code></pre></div>
             </div>
             <hr>
             <div>
@@ -300,10 +298,19 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E6%B8%B8%E8%AE%B0/">游记</a>
+                      <a class="hover-with-bg" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
                     
                   </div>
                 
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%96%AF%E7%89%B9%E6%9E%97%E6%95%B0/">斯特林数</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86/">二项式定理</a>
+                    
+                  </div>
                 
               </div>
               
@@ -318,12 +325,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2022/04/06/GDOI2022%E9%80%80%E5%BD%B9%E8%AE%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">GDOI2022退役记</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/24/%E3%80%8C%E8%81%94%E5%90%88%E7%9C%81%E9%80%89-2020-A%E3%80%8D%E7%BB%84%E5%90%88%E6%95%B0%E9%97%AE%E9%A2%98/">
-                        <span class="hidden-mobile">「联合省选 2020 A」组合数问题</span>
+                      <a href="/2022/03/17/CF1017G-The-Tree/">
+                        <span class="hidden-mobile">CF1017G The Tree</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
