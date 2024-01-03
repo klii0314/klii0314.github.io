@@ -16,22 +16,20 @@
   <meta name="author" content="klii">
   <meta name="keywords" content="">
   
-    <meta name="description" content="第一步是巧妙的转化：对于 $a_i&gt;0$，连边 $(i,a_i-1)$。 对于每个序列 $a$，连边后形成若干条链。 假设选出的 $k$ 个点为 $b_1,b_2,…,b_k$，并且 $b_1&lt;b_2&lt;…&lt;b_k$，对应的 $a_{b_1}-1,…,a_{b_k}-1$ 为了方便记作 $c_1,c_2,…,c_k$，则有： $$c_k&lt;c_{k-1}&lt;…&lt;">
+    <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ARC138E Decreasing Subsequence">
-<meta property="og:url" content="https://klii0314.github.io/2022/04/11/ARC138E-Decreasing-Subsequence/index.html">
+<meta property="og:title" content="Re0">
+<meta property="og:url" content="https://klii0314.github.io/2024/01/03/Re0/index.html">
 <meta property="og:site_name" content="klii&#39;s blog">
-<meta property="og:description" content="第一步是巧妙的转化：对于 $a_i&gt;0$，连边 $(i,a_i-1)$。 对于每个序列 $a$，连边后形成若干条链。 假设选出的 $k$ 个点为 $b_1,b_2,…,b_k$，并且 $b_1&lt;b_2&lt;…&lt;b_k$，对应的 $a_{b_1}-1,…,a_{b_k}-1$ 为了方便记作 $c_1,c_2,…,c_k$，则有： $$c_k&lt;c_{k-1}&lt;…&lt;">
+<meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-04-11T00:33:07.000Z">
-<meta property="article:modified_time" content="2022-04-11T00:49:58.673Z">
+<meta property="article:published_time" content="2024-01-03T14:29:29.000Z">
+<meta property="article:modified_time" content="2024-01-03T14:42:03.939Z">
 <meta property="article:author" content="klii">
-<meta property="article:tag" content="图论模型">
-<meta property="article:tag" content="第二类斯特林数">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>ARC138E Decreasing Subsequence - klii&#39;s blog</title>
+  <title>Re0 - klii&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -192,9 +190,9 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="ARC138E Decreasing Subsequence">
+            <span class="h2" id="subtitle" title="Re0">
               
-                ARC138E Decreasing Subsequence
+                Re0
               
             </span>
 
@@ -209,8 +207,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-11 08:33" pubdate>
-        April 11, 2022 am
+      <time datetime="2024-01-03 22:29" pubdate>
+        January 3, 2024 pm
       </time>
     </span>
   
@@ -220,7 +218,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.6k 字
+      246 字
     </span>
   
 
@@ -229,7 +227,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      14 分钟
+      3 分钟
     </span>
   
 
@@ -270,66 +268,27 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">ARC138E Decreasing Subsequence</h1>
+            <h1 style="display: none">Re0</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：April 11, 2022 am
+                  本文最后更新于：January 3, 2024 pm
                 
               </p>
             
             <div class="markdown-body">
-              <p>第一步是巧妙的转化：对于 $a_i&gt;0$，连边 $(i,a_i-1)$。</p>
-<p>对于每个序列 $a$，连边后形成<strong>若干条链</strong>。</p>
-<p>假设选出的 $k$ 个点为 $b_1,b_2,…,b_k$，并且 $b_1&lt;b_2&lt;…&lt;b_k$，对应的 $a_{b_1}-1,…,a_{b_k}-1$ 为了方便记作 $c_1,c_2,…,c_k$，则有：</p>
-<p>$$c_k&lt;c_{k-1}&lt;…&lt;c_1&lt;b_1&lt;b_2&lt;…&lt;b_k$$</p>
-<p>这可以由 $b_1&gt;c_1$，$c$ 递减，$b$ 递增推导出来。</p>
-<p>也就是说，在 $a$ 确定的前提下，在 $[0,n]$ 中选出 $2k$ 个点，它们对应的子序列<strong>有且仅有一种</strong>。</p>
-<p>考虑枚举前 $k$ 个点以及所在链上的其他点的个数 $i$，后 $k$ 个点以及所在链上的其他点的个数 $j$，则方案数为：</p>
-<p>$$\dbinom{n+1}{i+j}\begin{Bmatrix}i\\k\end{Bmatrix}\begin{Bmatrix}j\\k\end{Bmatrix}\sum\limits_{x=1}^{n+1-i-j}\begin{Bmatrix}n+1-i-j\\x\end{Bmatrix}$$</p>
-<p>将 $i$ 个点分成 $j$ 条链的方案数等价于第二类斯特林数，因为链上总是由编号大的指向编号小的。</p>
-<p>注意一下实现做个前缀和就可以做到 $\mathrm{O(n^2)}$。</p>
-<p>$\texttt{Code:}$</p>
-<div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
-<span class="hljs-type">const</span> <span class="hljs-type">int</span> cmd = <span class="hljs-number">1e9</span> + <span class="hljs-number">7</span>;
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> </span>{a += b; <span class="hljs-keyword">return</span> a &lt; cmd ? a : a - cmd;}
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">sub</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> </span>{a -= b; <span class="hljs-keyword">return</span> a &lt; <span class="hljs-number">0</span> ? a + cmd : a;}
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">mul</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> </span>{<span class="hljs-keyword">return</span> <span class="hljs-number">1ll</span> * a * b % cmd;}
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">fpow</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> </span>{
-    <span class="hljs-type">int</span> res = <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">for</span> (; b; b &gt;&gt;= <span class="hljs-number">1</span>, a = <span class="hljs-built_in">mul</span>(a, a))
-        <span class="hljs-keyword">if</span> (b &amp; <span class="hljs-number">1</span>) res = <span class="hljs-built_in">mul</span>(res, a);
-    <span class="hljs-keyword">return</span> res;
-}
-<span class="hljs-type">const</span> <span class="hljs-type">int</span> maxn = <span class="hljs-number">5e3</span> + <span class="hljs-number">5</span>;
-<span class="hljs-type">int</span> n, k, S2[maxn][maxn], fac[maxn], ifac[maxn];
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">C</span><span class="hljs-params">(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> m)</span> </span>{<span class="hljs-keyword">return</span> <span class="hljs-built_in">mul</span>(fac[n], <span class="hljs-built_in">mul</span>(ifac[m], ifac[n - m]));}
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;n, &amp;k);
-    S2[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= n + <span class="hljs-number">1</span>; i++)
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= i; j++)
-        S2[i][j] = <span class="hljs-built_in">add</span>(S2[i - <span class="hljs-number">1</span>][j - <span class="hljs-number">1</span>], <span class="hljs-built_in">mul</span>(S2[i - <span class="hljs-number">1</span>][j], j));
-    fac[<span class="hljs-number">0</span>] = ifac[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n + <span class="hljs-number">1</span>; i++) {
-        fac[i] = <span class="hljs-built_in">mul</span>(fac[i - <span class="hljs-number">1</span>], i);
-        ifac[i] = <span class="hljs-built_in">fpow</span>(fac[i], cmd - <span class="hljs-number">2</span>);
-    }
-    <span class="hljs-type">int</span> ans = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = k + k; i &lt;= n + <span class="hljs-number">1</span>; i++) {
-        <span class="hljs-type">int</span> s1 = <span class="hljs-number">0</span>, s2 = <span class="hljs-number">0</span>;
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = k; j &lt;= i - k; j++)
-            s1 = <span class="hljs-built_in">add</span>(s1, <span class="hljs-built_in">mul</span>(S2[j][k], S2[i - j][k]));
-        <span class="hljs-keyword">if</span> (i &lt; n + <span class="hljs-number">1</span>) {
-            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= n + <span class="hljs-number">1</span> - i; j++)
-                s2 = <span class="hljs-built_in">add</span>(s2, S2[n + <span class="hljs-number">1</span> - i][j]);
-        } <span class="hljs-keyword">else</span> s2 = <span class="hljs-number">1</span>;
-        ans = <span class="hljs-built_in">add</span>(ans, <span class="hljs-built_in">mul</span>(s1, <span class="hljs-built_in">mul</span>(s2, <span class="hljs-built_in">C</span>(n + <span class="hljs-number">1</span>, i))));
-    }
-    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d"</span>, ans);
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-}</code></pre></div>
+              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="4fd1021e116bf0cd86b8e92e0c3b3700f122b03a5a95256b229bbb67bfd818ac">0fbd081a45fb9ed05a8a00432ed5af2de14a78969f5f826b23119ca577bb8be664276eb970fa80ef202c7ab274efd1233dcfacff701077c4b4d9f5a7be336729246ad827421716efed3359715e415dd9f9e761050514d872d6129e0082b4742322779053ad1e0a6effaae4d93dcbc3fe60aebffe35c70090f8bd9e7fc4832f500e65ca4a9fd226be757f16b45a985bf7bb61a890f6927d4fa2038304441d0cd77f3e2a8f36eeb5f3b40bf28a627b90dea7836b1bb0da9fbaba9a5bdf802a0ee43c3bc32ca3106d6340843dc7989d0459e034903d13d1cf19310b9073a38493dde5bf3e9131f5e700ce045e2f153eb22fa1ba8c8de01f0d1d37b055b6f9c8092bd531301163dab345b53553e99d9de43563642c5f26d3eaaf7edd9e7848f5eeeb3b4eba4a1ff83d11b70ae22cd32e3bcd8f38c308f0aed75a52170cd17475bfaf8019f3f3af7ea16ad38eac12a87d85926d6447acfbea9d5b175ec0c174fc66f78b6901f8e437dc060abf29691c0c8621f4b4e09b7a520448f4ed4946fd5f10065b09e8ef95b45f71d79ef2e35ca3892594a7844f42d66403f4d8958c2d17789cf5527c955b102c9f15be9e81d98d2705bd0d957434d0531dea846757439cdf3e5dedb4543180faa0944b517e867386ee664eb8bd133d04e810f1bd1dd37ef24454f972e2dc9c695b9c23d0b5aff8b405dd5e84c84a8162e1f7587e5df36359b5a587d45fa4f390d8603a69d71cb1556567b77504661ee25039076cfb9497e280eb8bf82531d4f140648e31f5b2188c5ab7bd383e4799e861a0279e16fff7741e69d1953566e5070de0480b725a533da26716214d0807fba5d410a87d6c77d5322647e4aa093602ad5911d47b60d78495281b9fab172b16484b79835ef34d0442208ffce76c6d7d0ab656101c385f970b5be5c1351feee38aba538520a2a0554cfecff3d1e94dbd85a4ba0aded2d9de9f271d269a86db63e5e951ff62fcbb8bcbf2cba2d0e7008acdb7d2d0bb557934ef18b47209e21f6c386d664724530952e655f7b6a1479d11f442634481adcd69151c94f39ea307d32b4a66990f39ca5915b8957c22b8d34f19e4ea0563cdca0831b70d87484704e305978af8a19af3a4622b70e87187dd09d5ac2dc8071da5a31f705fd335f422ad81a08e7ba570bc62656147ae6ee889ee408ad66b0bb6c4ffd37fd6575a85ca49427f0271fd0d382dad5839388eb8ef5ae1aee58b5e4d9b42fa90dcc3ae27f8d4e1c8ccf0d3710163c66266a689419dc8c0cae5bdbe60817a6a6edbf7209d9327321227f9ed09bc1d3d8819118b8862398d2dd5379e5fcfcd4f6f0c88305bd0c46e4547fe3f244df299cd4afd5d419202f689bbee3bd7ee22b5c8bd16658ddd5b4dc7b6dedad5be071507633becc812e61722dc452e76b2d3812e82b028427f231f4513125b7c1e654973a547e57a839afdcd62e82817a1ea4e2a5edf3996fd68e1b3196b5490bd7392b26daa47728c2c327de7cd259832faea0f6e11ce54f3f8254d9634c96f1ee9e9a2d62b219781f846bba35ea2add79e0200c7b38813a98e550da82a395a8110535f871ad99ba53452f0efcaf983d111ea94f07483c4e3010b1a457167a6c5044091faa91c83a6a7b9e71eef68c46dbb4a97765146342a3436c8c0be61342bff7c66b83dde81c7879ca8c26ae09e8c848cd88676dd8860998b647890ac713cd5d9157ddee26ae21b73a34473df5abe1d1dcbd1963c1cf3e41c88f3b93dcbf6409139a8452a34f8405539d152af9dc80446ad79edbf7603aed82650f55567a5e2d100e13c38a4422cc3e6105e4db6abd2b6c34a9bb2cf86a9206999e8b95dd1ce4ab31e0ce5de5db06ee5d43396d8e67a0398bb5fa99cda1b45fe67303b5b8e902b9369d4bdfca16cfc04181799e703763c4f127a289498bcee7ed04b6c3caf8a582b3909c691132a5e7181fac76d0ed1e4f96d45fb9dce12dd01bcb8851e6f52910b73bf8e45a1eb4f87fc8f78cfc4512b289f331e9db540d4c12f1ce06e9c7885</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
             </div>
             <hr>
             <div>
@@ -338,19 +297,10 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+                      <a class="hover-with-bg" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
                     
                   </div>
                 
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/%E5%9B%BE%E8%AE%BA%E6%A8%A1%E5%9E%8B/">图论模型</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E7%AC%AC%E4%BA%8C%E7%B1%BB%E6%96%AF%E7%89%B9%E6%9E%97%E6%95%B0/">第二类斯特林数</a>
-                    
-                  </div>
                 
               </div>
               
@@ -365,18 +315,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/01/03/Re0/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Re0</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/24/%E3%80%8C%E8%81%94%E5%90%88%E7%9C%81%E9%80%89-2020-A%E3%80%8D%E7%BB%84%E5%90%88%E6%95%B0%E9%97%AE%E9%A2%98/">
-                        <span class="hidden-mobile">「联合省选 2020 A」组合数问题</span>
+                      <a href="/2022/04/11/ARC138E-Decreasing-Subsequence/">
+                        <span class="hidden-mobile">ARC138E Decreasing Subsequence</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
