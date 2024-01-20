@@ -280,17 +280,6 @@
   
   
   <entry>
-    <title>contact</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>categories</title>
     <link href="/"/>
     <url>/</url>
@@ -313,7 +302,7 @@
   
   
   <entry>
-    <title>tags</title>
+    <title>contact</title>
     <link href="/"/>
     <url>/</url>
     
@@ -325,6 +314,17 @@
   
   <entry>
     <title>search</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>tags</title>
     <link href="/"/>
     <url>/</url>
     
